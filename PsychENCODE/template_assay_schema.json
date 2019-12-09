@@ -1,15 +1,12 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id":"http://example.com/psychENCODE_schema.json",
-  "title": "PsychENCODE WGS Assay Metadata Schema",
-  "description": "Validates PsychENCODE WGS assay metadata",
+  "$id":"http://example.com/template_assay_schema.json",
+  "title": "PsychENCODE Generic Assay Template Schema",
+  "description": "Validates PsychENCODE generic assay template data",
   "type": "object",
   "properties": {
     "specimenID": {
       "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/experimentalData.json#/definitions/specimenID"
-    },
-    "libraryID": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/experimentalData.json#/definitions/libraryID"
     },
     "assay": {
       "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/experimentalData.json#/definitions/assay"
@@ -19,12 +16,6 @@
     },
     "referenceSet": {
       "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/curatedData.json#/definitions/referenceSet"
-    },
-    "RIN": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/experimentalData.json#/definitions/RIN"
-    },
-    "rnaBatch": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/experimentalData.json#/definitions/rnaBatch"
     },
     "libraryBatch": {
       "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/experimentalData.json#/definitions/libraryBatch"
@@ -43,24 +34,17 @@
     },
     "runType": {
       "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/ngs.json#/definitions/runType"
-    },
-    "totalReads": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/ngs.json#/definitions/totalReads"
     }
   },
   "required": [
     "specimenID",
-    "libraryID",
     "assay",
     "platform",
-    "RIN",
-    "rnaBatch",
     "libraryBatch",
     "sequencingBatch",
     "libraryPrep",
     "libraryPreparationMethod",
     "readLength",
-    "runType",
-    "totalReads"
+    "runType"
   ]
 }

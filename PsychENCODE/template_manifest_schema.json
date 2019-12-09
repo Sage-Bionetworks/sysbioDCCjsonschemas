@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id":"http://example.com/psychENCODE_schema.json",
+  "$id":"http://example.com/template_manifest_schema.json",
   "title": "PsychENCODE Manifest Template Schema",
   "description": "Validates PsychENCODE manifest template data",
   "type": "object",

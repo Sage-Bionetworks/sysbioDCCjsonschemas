@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id":"http://example.com/psychENCODE_schema.json",
+  "$id":"http://example.com/assay_snpArray_schema.json",
   "title": "PsychENCODE SNP array Assay Metadata Schema",
   "description": "Validates PsychENCODE SNP array assay metadata",
   "type": "object",

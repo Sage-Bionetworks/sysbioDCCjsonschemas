@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id":"http://example.com/psychENCODE_schema.json",
+  "$id":"http://example.com/individual_animal_schema.json",
   "title": "PsychENCODE Individual Animal Metadata Schema",
   "description": "Validates PsychENCODE individual animal metadata",
   "type": "object",

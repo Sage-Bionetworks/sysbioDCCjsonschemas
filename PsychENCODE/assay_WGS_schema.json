@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id":"http://example.com/psychENCODE_schema.json",
-  "title": "PsychENCODE RNASeq Assay Metadata Schema",
-  "description": "Validates PsychENCODE RNASeq assay metadata",
+  "$id":"http://example.com/assay_WGS_schema.json",
+  "title": "PsychENCODE WGS Assay Metadata Schema",
+  "description": "Validates PsychENCODE WGS assay metadata",
   "type": "object",
   "properties": {
     "specimenID": {
@@ -20,6 +20,9 @@
     "referenceSet": {
       "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/curatedData.json#/definitions/referenceSet"
     },
+    "RIN": {
+      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/experimentalData.json#/definitions/RIN"
+    },
     "rnaBatch": {
       "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/experimentalData.json#/definitions/rnaBatch"
     },
@@ -35,12 +38,6 @@
     "libraryPreparationMethod": {
       "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/ngs.json#/definitions/libraryPreparationMethod"
     },
-    "isStranded": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/ngs.json#/definitions/isStranded"
-    },
-    "readStrandOrigin": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/ngs.json#/definitions/readStrandOrigin"
-    },
     "readLength": {
       "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/ngs.json#/definitions/readLength"
     },
@@ -49,18 +46,6 @@
     },
     "totalReads": {
       "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/ngs.json#/definitions/totalReads"
-    },
-    "validBarcodeReads": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/ngs.json#/definitions/validBarcodeReads"
-    },
-    "numberCells": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/ngs.json#/definitions/numberCells"
-    },
-    "medianGenes": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/ngs.json#/definitions/medianGenes"
-    },
-    "medianUMIs": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/ngs.json#/definitions/medianUMIs"
     }
   },
   "required": [
@@ -74,34 +59,8 @@
     "sequencingBatch",
     "libraryPrep",
     "libraryPreparationMethod",
-    "isStranded",
-    "readStrandOrigin",
     "readLength",
     "runType",
-    "totalReads",
-    "validBarcodeReads",
-    "numberCells",
-    "medianUMIs"
-  ],
-  "allOf": [
-    {
-      "if": {
-        "allOf": [
-          {
-            "properties": {
-              "assay": {
-                "const": "rnaSeq"
-              },
-              "platform": {
-                "const": "10x"
-              }
-            }
-          }
-        ]
-      },
-      "then": {
-        "required": ["medianGenes"]
-      }
-    }
+    "totalReads"
   ]
 }
