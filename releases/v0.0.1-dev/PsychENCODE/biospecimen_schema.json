@@ -1,0 +1,73 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id":"http://example.com/biospecimen_schema.json",
+  "title": "PsychENCODE Biospecimen Metadata Schema",
+  "description": "Validates PsychENCODE biospecimen metadata",
+  "type": "object",
+  "properties": {
+    "individualID": {
+      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/experimentalData.json#/definitions/individualID"
+    },
+    "specimenID": {
+      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/experimentalData.json#/definitions/specimenID"
+    },
+    "organ": {
+      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/experimentalData.json#/definitions/organ"
+    },
+    "organWeight": {
+      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/experimentalData.json#/definitions/organWeight"
+    },
+    "organRIN": {
+      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/experimentalData.json#/definitions/organRIN"
+    },
+    "pH": {
+      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/neuro.json#/definitions/pH"
+    },
+    "tissue": {
+      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/experimentalData.json#/definitions/tissue"
+    },
+    "BrodmannArea": {
+      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/neuro.json#/definitions/BrodmannArea"
+    },
+    "nucleicAcidSource": {
+      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/ngs.json#/definitions/nucleicAcidSource"
+    },
+    "cellType": {
+      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/experimentalData.json#/definitions/cellType"
+    },
+    "reprogrammedCellType": {
+      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/experimentalData.json#/definitions/reprogrammedCellType"
+    },
+    "terminalDifferentiationPoint": {
+      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/experimentalData.json#/definitions/terminalDifferentiationPoint"
+    },
+    "passage": {
+      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/experimentalData.json#/definitions/passage"
+    }
+  },
+  "required": [
+    "individualID",
+    "specimenID",
+    "organ",
+    "tissue",
+    "nucleicAcidSource",
+    "cellType",
+    "reprogrammedCellType",
+    "terminalDifferentiationPoint",
+    "passage"
+  ],
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "organ": {
+            "const": "brain"
+          }
+        }
+      },
+      "then": {
+        "required": ["BrodmannArea"]
+      }
+    } 
+  ]
+}
