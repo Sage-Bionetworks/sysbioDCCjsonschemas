@@ -1,0 +1,182 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/experimentalData.json",
+  "definitions": {
+    "260/230": {
+      "description": "DNA QC metric - ratio of absorbance at 260 nm and 230 nm",
+      "type": "number"
+    },
+    "260/280": {
+      "description": "DNA QC metric - ratio of absorbance at 260 nm and 280 nm",
+      "type": "number"
+    },
+    "arrayBatch": {
+      "description": "Genotyping batch",
+      "type": "string"
+    },
+    "antibodyAmount": {
+      "description": "Antibody amount",
+      "type": "number"
+    },
+    "chromatinAmount": {
+      "description": "Chromatin amount",
+      "type": "number"
+    },
+    "dnaBatch": {
+      "description": "DNA isolation batch",
+      "type": "string"
+    },
+    "FRiP": {
+      "description": "Fraction of all mapped reads that fall into the called peak regions (Fraction of reads in peaks)",
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "GQN": {
+      "description": "Illumina gDNA quality score",
+      "type": "number"
+    },
+    "histoneAntibody": {
+      "description": "Histone antibody catalog number",
+      "type": "string"
+    },
+    "investigatorName": {
+      "description": "Name of the investigator",
+      "type": "string"
+    },
+    "libraryBatch": {
+      "description": "Batch library was prepared in",
+      "type": "string"
+    },
+    "libraryID": {
+      "description": "Library ID as provided by the lab",
+      "type": "string"
+    },
+    "mappedReads": {
+      "description": "Number of uniquely mapped PE reads",
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "meanCoverage": {
+      "description": "Total number of bases covered by ATAC-seq reads/size of genome",
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "meanGCContent": {
+      "description": "Mean GC content per sample",
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "medianGenes": {
+      "description": "QC metric",
+      "type": "integer"
+    },
+    "medianUMIs": {
+      "description": "QC metric",
+      "type": "integer"
+    },
+    "numberCells": {
+      "description": "QC metric",
+      "type": "integer"
+    },
+    "organRIN": {
+      "description": "Organ RIN, as previously measured on organ or region",
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "organWeight": {
+      "description": "Post-mortem weight of organ (in grams)",
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "parent": {
+      "description": "Synapse ID of the folder to upload to",
+      "type": "string"
+    },
+    "passage": {
+      "description": "Number of times a cell culture has been subcultured",
+      "type": "integer",
+      "minimum": 0
+    },
+    "path": {
+      "description": "Directory of the file to be uploaded",
+      "type": "string"
+    },
+    "pcrCycles": {
+      "description": "Number of PCR cycles to amplify transposed DNA fragments",
+      "type": "integer"
+    },
+    "percentAligned": {
+      "description": "Percent of reads aligned to genome reference",
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "PMICertain": {
+      "description": "Is PMI certain, i.e. is time of death known",
+      "anyOf": [
+        {
+          "const": true,
+          "description": "PMI is certain",
+          "source": ""
+        },
+        {
+          "const": false,
+          "description": "PMI is not certain",
+          "source": ""
+        },
+        {
+          "const": "Unknown",
+          "description": "Unknown whether PMI is certain",
+          "source": ""
+        }
+      ]
+    },
+    "reprogrammedCellType": {
+      "description": "Cell type specimen is modeling",
+      "type": "string"
+    },
+    "RIN": {
+      "description": "RNA Integrity Number",
+      "type": "integer",
+      "exclusiveMinimum": 0
+    },
+    "rnaBatch": {
+      "description": "Batch RNA was isolated in",
+      "type": "string"
+    },
+    "rRNARate": {
+      "description": "Ribosomal RNA alignment reate",
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "sequencingBatch": {
+      "description": "Batch library was sequenced in",
+      "type": "string"
+    },
+    "sequencingReplicate": {
+      "description": "Replicates from the same library sequenced multiple times",
+      "type": "integer"
+    },
+    "sexChromosome": {
+      "description": "Sex identified by SNP genotype",
+      "type": "string",
+      "maxLength": 3
+    },
+    "technicalReplicate": {
+      "description": "Replicates from the same biosample, treated identically",
+      "type": "integer"
+    },
+    "totalReads": {
+      "description": "Number of reads in the input FASTQ file",
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "transposaseBatch": {
+      "description": "Transposition reaction batch",
+      "type": "string"
+    },
+    "validBarcodeReads": {
+      "description": "QC metric",
+      "type": "integer"
+    }
+  }
+}
