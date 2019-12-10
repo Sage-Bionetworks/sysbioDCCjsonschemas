@@ -6,49 +6,49 @@
   "type": "object",
   "properties": {
     "ageOfDeath": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/clinicalData.json#/definitions/ageOfDeath"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/ageOfDeath"
     },
     "ageOfDeathUnits": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/clinicalData.json#/definitions/ageOfDeathUnits"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/ageOfDeathUnits"
     },
     "ageOnset": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/clinicalData.json#/definitions/ageOnset"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/ageOnset"
     },
     "alignmentMethod": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/analysis.json#/definitions/alignmentMethod"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/analysis.json#/definitions/alignmentMethod"
     },
     "analysisType": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/analysis.json#/definitions/analysisType"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/analysis.json#/definitions/analysisType"
     },
     "antibodyAmount": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/experimentalData.json#/definitions/antibodyAmount"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/antibodyAmount"
     },
     "assay": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/experimentalData.json#/definitions/assay"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/experimentalData.json#/definitions/assay"
     },
     "assayTarget": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/experimentalData.json#/definitions/assayTarget"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/experimentalData.json#/definitions/assayTarget"
     },
     "BMI": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/clinicalData.json#/definitions/BMI"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/BMI"
     },
     "braak": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/clinicalData.json#/definitions/braak"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/braak"
     },
     "BrodmannArea": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/neuro.json#/definitions/BrodmannArea"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/neuro.json#/definitions/BrodmannArea"
     },
     "causeOfDeath": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/clinicalData.json#/definitions/causeOfDeath"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/causeOfDeath"
     },
     "CDR": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/clinicalData.json#/definitions/CDR"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/CDR"
     },
     "cellType": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/experimentalData.json#/definitions/cellType"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/experimentalData.json#/definitions/cellType"
     },
     "chromatinAmount": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/experimentalData.json#/definitions/chromatinAmount"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/chromatinAmount"
     },
     "consortium": {
       "description": "The name of the consortium",
@@ -61,31 +61,31 @@
       ]
     },
     "dataType": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/experimentalData.json#/definitions/dataType"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/experimentalData.json#/definitions/dataType"
     },
     "dataSubtype": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/experimentalData.json#/definitions/dataSubtype"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/experimentalData.json#/definitions/dataSubtype"
     },
     "dateOfBirth": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/clinicalData.json#/definitions/dateOfBirth"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/dateOfBirth"
     },
     "dateOfDeath": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/clinicalData.json#/definitions/dateOfDeath"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/dateOfDeath"
     },
     "dementia": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/clinicalData.json#/definitions/dementia"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/dementia"
     },
     "familyHistory": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/clinicalData.json#/definitions/familyHistory"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/familyHistory"
     },
     "fileFormat": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/sageCommunity.json#/definitions/fileFormat"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/sageCommunity.json#/definitions/fileFormat"
     },
     "FRiP": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/ngs.json#/definitions/FRiP"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/FRiP"
     },
     "genotypeInferredAncestry": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/clinicalData.json#/definitions/genotypeInferredAncestry"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/genotypeInferredAncestry"
     },
     "grant": {
       "description": "Grant number the data is being submitted for",
@@ -198,190 +198,190 @@
       ]
     },
     "group": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/sageCommunity.json#/definitions/group"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/sageCommunity.json#/definitions/group"
     },
     "histoneAntibody": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/experimentalData.json#/definitions/histoneAntibody"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/histoneAntibody"
     },
     "individualID": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/experimentalData.json#/definitions/individualID"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/experimentalData.json#/definitions/individualID"
     },
     "individualIdSource": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/experimentalData.json#/definitions/individualIdSource"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/experimentalData.json#/definitions/individualIdSource"
     },
     "investigatorName": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/sageCommunity.json#/definitions/investigatorName"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/investigatorName"
     },
     "IQ": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/clinicalData.json#/definitions/IQ"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/IQ"
     },
     "isMultiSpecimen": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/experimentalData.json#/definitions/isMultiSpecimen"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/experimentalData.json#/definitions/isMultiSpecimen"
     },
     "isStranded": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/ngs.json#/definitions/isStranded"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/ngs.json#/definitions/isStranded"
     },
     "libraryBatch": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/experimentalData.json#/definitions/libraryBatch"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/libraryBatch"
     },
     "libraryID": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/experimentalData.json#/definitions/libraryID"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/libraryID"
     },
     "libraryPrep": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/ngs.json#/definitions/libraryPrep"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/ngs.json#/definitions/libraryPrep"
     },
     "libraryPreparationMethod": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/ngs.json#/definitions/libraryPreparationMethod"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/ngs.json#/definitions/libraryPreparationMethod"
     },
     "mannerOfDeath": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/clinicalData.json#/definitions/mannerOfDeath"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/mannerOfDeath"
     },
     "mappedReads": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/ngs.json#/definitions/mappedReads"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/mappedReads"
     },
     "meanCoverage": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/ngs.json#/definitions/meanCoverage"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/meanCoverage"
     },
     "meanGCContent": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/ngs.json#/definitions/meanGCContent"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/meanGCContent"
     },
     "medianGenes": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/ngs.json#/definitions/medianGenes"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/medianGenes"
     },
     "medianUMIs": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/ngs.json#/definitions/medianUMIs"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/medianUMIs"
     },
     "medRecordTox": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/clinicalData.json#/definitions/medRecordTox"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/medRecordTox"
     },
     "metadataType": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/experimentalData.json#/definitions/metadataType"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/experimentalData.json#/definitions/metadataType"
     },
     "neuropathDescription" : {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/clinicalData.json#/definitions/neuropathDescription"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/neuropathDescription"
     },
     "nucleicAcidSource": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/ngs.json#/definitions/nucleicAcidSource"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/ngs.json#/definitions/nucleicAcidSource"
     },
     "numberCells": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/ngs.json#/definitions/numberCells"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/numberCells"
     },
     "organ": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/experimentalData.json#/definitions/organ"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/experimentalData.json#/definitions/organ"
     },
     "organRIN": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/experimentalData.json#/definitions/organRIN"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/organRIN"
     },
     "organWeight": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/experimentalData.json#/definitions/organWeight"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/organWeight"
     },
     "otherDiagnosis": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/clinicalData.json#/definitions/otherDiagnosis"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/otherDiagnosis"
     },
     "otherDiagnosisDetail": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/clinicalData.json#/definitions/otherDiagnosisDetail"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/otherDiagnosisDetail"
     },
     "otherMedicalDx": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/clinicalData.json#/definitions/otherMedicalDx"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/otherMedicalDx"
     },
     "otherMedicalDetail": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/clinicalData.json#/definitions/otherMedicalDetail"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/otherMedicalDetail"
     },
     "parent": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/sageCommunity.json#/definitions/parent"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/parent"
     },
     "passage": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/experimentalData.json#/definitions/passage"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/passage"
     },
     "path": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/sageCommunity.json#/definitions/path"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/path"
     },
     "pcrCycles": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/experimentalData.json#/definitions/pcrCycles"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/pcrCycles"
     },
     "percentAligned": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/ngs.json#/definitions/percentAligned"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/percentAligned"
     },
     "pH": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/neuro.json#/definitions/pH"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/neuro.json#/definitions/pH"
     },
     "platform": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/experimentalData.json#/definitions/platform"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/experimentalData.json#/definitions/platform"
     },
     "PMI": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/neuro.json#/definitions/PMI"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/neuro.json#/definitions/PMI"
     },
     "PMICertain": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/neuro.json#/definitions/PMICertain"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/PMICertain"
     },
     "postmortem": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/clinicalData.json#/definitions/postmortem"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/postmortem"
     },
     "postmortemTox": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/clinicalData.json#/definitions/postmortemTox"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/postmortemTox"
     },
     "postmortemToxSource": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/clinicalData.json#/definitions/postmortemToxSource"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/postmortemToxSource"
     },
     "primaryDiagnosis": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/experimentalData.json#/definitions/diagnosis"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/experimentalData.json#/definitions/diagnosis"
     },
     "primaryDiagnosisDetail": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/clinicalData.json#/definitions/primaryDiagnosisDetail"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/primaryDiagnosisDetail"
     },
     "race": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/clinicalData.json#/definitions/race"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/race"
     },
     "raceDetail": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/clinicalData.json#/definitions/raceDetail"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/raceDetail"
     },
     "readLength": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/ngs.json#/definitions/readLength"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/ngs.json#/definitions/readLength"
     },
     "readPair": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/ngs.json#/definitions/readPair"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/ngs.json#/definitions/readPair"
     },
     "readStrandOrigin": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/ngs.json#/definitions/readStrandOrigin"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/ngs.json#/definitions/readStrandOrigin"
     },
     "referenceSet": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/curatedData.json#/definitions/referenceSet"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/curatedData.json#/definitions/referenceSet"
     },
     "reportedGender": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/clinicalData.json#/definitions/reportedGender"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/reportedGender"
     },
     "reprogrammedCellType": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/experimentalData.json#/definitions/reprogrammedCellType"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/reprogrammedCellType"
     },
     "resourceType": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/sageCommunity.json#/definitions/resourceType"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/sageCommunity.json#/definitions/resourceType"
     },
     "RIN": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/experimentalData.json#/definitions/RIN"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/RIN"
     },
     "rnaBatch": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/experimentalData.json#/definitions/rnaBatch"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/rnaBatch"
     },
     "rRNARate": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/ngs.json#/definitions/rRNARate"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/rRNARate"
     },
     "runType": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/ngs.json#/definitions/runType"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/ngs.json#/definitions/runType"
     },
     "sequencingBatch": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/experimentalData.json#/definitions/sequencingBatch"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/sequencingBatch"
     },
     "sequencingReplicate": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/ngs.json#/definitions/sequencingReplicate"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/sequencingReplicate"
     },
     "sexChromosome": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/experimentalData.json#/definitions/sexChromosome"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/sexChromosome"
     },
     "species": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/experimentalData.json#/definitions/species"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/experimentalData.json#/definitions/species"
     },
     "specimenID": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/experimentalData.json#/definitions/specimenID"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/experimentalData.json#/definitions/specimenID"
     },
     "study": {
       "description": "Study",
@@ -459,28 +459,28 @@
       ]
     },
     "technicalReplicate": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/ngs.json#/definitions/technicalReplicate"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/technicalReplicate"
     },
     "terminalDifferentiationPoint": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/experimentalData.json#/definitions/terminalDifferentiationPoint"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/experimentalData.json#/definitions/terminalDifferentiationPoint"
     },
     "tissue": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/experimentalData.json#/definitions/tissue"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/experimentalData.json#/definitions/tissue"
     },
     "totalReads": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/ngs.json#/definitions/totalReads"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/totalReads"
     },
     "transposaseBatch": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/experimentalData.json#/definitions/transposaseBatch"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/transposaseBatch"
     },
     "treatmentType": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/neuro.json#/definitions/treatmentType"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/neuro.json#/definitions/treatmentType"
     },
     "validBarcodeReads": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/ngs.json#/definitions/validBarcodeReads"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/validBarcodeReads"
     },
     "yearAutopsy": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/clinicalData.json#/definitions/yearAutopsy"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/yearAutopsy"
     }
   },
   "required": [
