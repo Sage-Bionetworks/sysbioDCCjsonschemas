@@ -34,18 +34,7 @@
     },
     "isStranded": {
       "description": "Whether or not the library is stranded.",
-      "anyOf": [
-        {
-          "const": true,
-          "description": "",
-          "source": ""
-        },
-        {
-          "const": false,
-          "description": "",
-          "source": ""
-        }
-      ]
+      "type": "boolean"
     },
     "readPairOrientation": {
       "description": "The relative orientation of the reads in a paired-end protocol",
