@@ -114,17 +114,17 @@
       "description": "Is PMI certain, i.e. is time of death known",
       "anyOf": [
         {
-          "const": true,
+          "const": "true",
           "description": "PMI is certain",
           "source": ""
         },
         {
-          "const": false,
+          "const": "false",
           "description": "PMI is not certain",
           "source": ""
         },
         {
-          "const": "Unknown",
+          "const": "unknown",
           "description": "Unknown whether PMI is certain",
           "source": ""
         }
