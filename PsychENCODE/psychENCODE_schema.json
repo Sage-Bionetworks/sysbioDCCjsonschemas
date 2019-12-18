@@ -21,7 +21,7 @@
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/analysis.json#/definitions/analysisType"
     },
     "antibodyAmount": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/antibodyAmount"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/antibodyAmount"
     },
     "assay": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/experimentalData.json#/definitions/assay"
@@ -48,7 +48,7 @@
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/experimentalData.json#/definitions/cellType"
     },
     "chromatinAmount": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/chromatinAmount"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/chromatinAmount"
     },
     "consortium": {
       "description": "The name of the consortium",
@@ -82,7 +82,7 @@
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/sageCommunity.json#/definitions/fileFormat"
     },
     "FRiP": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/FRiP"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/FRiP"
     },
     "genotypeInferredAncestry": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/genotypeInferredAncestry"
@@ -201,7 +201,7 @@
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/sageCommunity.json#/definitions/group"
     },
     "histoneAntibody": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/histoneAntibody"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/histoneAntibody"
     },
     "individualID": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/experimentalData.json#/definitions/individualID"
@@ -210,7 +210,7 @@
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/experimentalData.json#/definitions/individualIdSource"
     },
     "investigatorName": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/investigatorName"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/investigatorName"
     },
     "IQ": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/IQ"
@@ -222,10 +222,10 @@
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/ngs.json#/definitions/isStranded"
     },
     "libraryBatch": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/libraryBatch"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/libraryBatch"
     },
     "libraryID": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/libraryID"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/libraryID"
     },
     "libraryPrep": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/ngs.json#/definitions/libraryPrep"
@@ -237,19 +237,19 @@
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/mannerOfDeath"
     },
     "mappedReads": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/mappedReads"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/mappedReads"
     },
     "meanCoverage": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/meanCoverage"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/meanCoverage"
     },
     "meanGCContent": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/meanGCContent"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/meanGCContent"
     },
     "medianGenes": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/medianGenes"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/medianGenes"
     },
     "medianUMIs": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/medianUMIs"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/medianUMIs"
     },
     "medRecordTox": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/medRecordTox"
@@ -264,16 +264,16 @@
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/ngs.json#/definitions/nucleicAcidSource"
     },
     "numberCells": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/numberCells"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/numberCells"
     },
     "organ": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/experimentalData.json#/definitions/organ"
     },
     "organRIN": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/organRIN"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/organRIN"
     },
     "organWeight": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/organWeight"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/organWeight"
     },
     "otherDiagnosis": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/otherDiagnosis"
@@ -288,19 +288,19 @@
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/otherMedicalDetail"
     },
     "parent": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/parent"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/parent"
     },
     "passage": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/passage"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/passage"
     },
     "path": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/path"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/path"
     },
     "pcrCycles": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/pcrCycles"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/pcrCycles"
     },
     "percentAligned": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/percentAligned"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/percentAligned"
     },
     "pH": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/neuro.json#/definitions/pH"
@@ -312,7 +312,7 @@
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/neuro.json#/definitions/PMI"
     },
     "PMICertain": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/PMICertain"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/PMICertain"
     },
     "postmortem": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/postmortem"
@@ -351,31 +351,31 @@
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/reportedGender"
     },
     "reprogrammedCellType": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/reprogrammedCellType"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/reprogrammedCellType"
     },
     "resourceType": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/sageCommunity.json#/definitions/resourceType"
     },
     "RIN": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/RIN"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/RIN"
     },
     "rnaBatch": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/rnaBatch"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/rnaBatch"
     },
     "rRNARate": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/rRNARate"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/rRNARate"
     },
     "runType": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/ngs.json#/definitions/runType"
     },
     "sequencingBatch": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/sequencingBatch"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/sequencingBatch"
     },
     "sequencingReplicate": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/sequencingReplicate"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/sequencingReplicate"
     },
     "sexChromosome": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/sexChromosome"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/sexChromosome"
     },
     "species": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/experimentalData.json#/definitions/species"
@@ -459,7 +459,7 @@
       ]
     },
     "technicalReplicate": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/technicalReplicate"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/technicalReplicate"
     },
     "terminalDifferentiationPoint": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/experimentalData.json#/definitions/terminalDifferentiationPoint"
@@ -468,16 +468,16 @@
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/experimentalData.json#/definitions/tissue"
     },
     "totalReads": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/totalReads"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/totalReads"
     },
     "transposaseBatch": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/transposaseBatch"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/transposaseBatch"
     },
     "treatmentType": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/neuro.json#/definitions/treatmentType"
     },
     "validBarcodeReads": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/PEC_schema_refs.json#/definitions/validBarcodeReads"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/validBarcodeReads"
     },
     "yearAutopsy": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/yearAutopsy"
