@@ -551,22 +551,6 @@
         }
       ]
     },
-    "sex": {
-      "description": "Sex at birth, or by sequencing",
-      "type": "string",
-      "anyOf": [
-        {
-          "const": "female",
-          "description": "Female",
-          "source": ""
-        },
-        {
-          "const": "male",
-          "description": "Male",
-          "source": ""
-        }
-      ]
-    },
     "smokePerDay": {
       "description": "Number of cigarettes smoked daily",
       "type": "integer",
