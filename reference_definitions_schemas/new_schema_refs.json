@@ -10,6 +10,10 @@
       "description": "DNA QC metric - ratio of absorbance at 260 nm and 280 nm",
       "type": "number"
     },
+    "antibodyAmount": {
+      "description": "Antibody amount",
+      "type": "number"
+    },
     "arrayBatch": {
       "description": "Genotyping batch",
       "type": "string"
@@ -17,10 +21,6 @@
     "assayID": {
       "description": "Identifying string linked to the assay being run",
       "type": "string"
-    },
-    "antibodyAmount": {
-      "description": "Antibody amount",
-      "type": "number"
     },
     "chromatinAmount": {
       "description": "Chromatin amount",
