@@ -388,6 +388,11 @@
           "const": "label free mass spectrometry",
           "description": "A mass spectrometry assay that allows for measurement for endogenous targets in live cell assays, and eliminates the need for tags, dyes, or specialized reagents or engineered cells.",
           "source": "http://purl.obolibrary.org/obo/ERO_0000708"
+        },
+        {
+          "const": "scrnaSeq",
+          "description": "Single cell sequencing examines the sequence information from individual cells with optimized next generation sequencing (NGS) technologies, providing a higher resolution of cellular differences and a better understanding of the function of an individual cell in the context of its microenvironment.",
+          "source": "http://www.ebi.ac.uk/efo/EFO_0007832"
         }
       ]
     },
@@ -748,6 +753,11 @@
           "const": "JAX",
           "description": "The Jackson Laboratory",
           "source": "https://www.jax.org"
+        },
+        {
+          "const": "UCSF",
+          "description": "University of California - San Francisco",
+          "source": "https://www.ucsf.edu/"
         }
       ]
     },
@@ -1089,14 +1099,19 @@
       "description": "",
       "anyOf": [
         {
+          "const": "Q Exactive Plus",
+          "description": "Thermo Scientific Q Exactive Plus",
+          "source": "http://purl.obolibrary.org/obo/MS_1002634"
+        },
+        {
           "const": "IlluminaNovaseq6000",
           "description": "Illumina Novaseq 6000, high-throughput sequencing",
           "source": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GPL27644."
         },
         {
           "const": "OrbiTrap Fusion",
-          "description": "Thermo Scientific™ Orbitrap Fusion™ Tribrid™ Mass Spectrometer.",
-          "source": "https://www.thermofisher.com/order/catalog/product/IQLAAEGAAPFADBMBCX."
+          "description": "Thermo Scientific Orbitrap Fusion",
+          "source": "http://purl.obolibrary.org/obo/MS_1002416"
         },
         {
           "const": "NanostringnCounter_MouseADPanel",
@@ -1576,7 +1591,7 @@
       "type": "string"
     },
     "sex": {
-      "description": "",
+      "description": "Sex assigned at birth, or by sequencing",
       "anyOf": [
         {
           "const": "male",
