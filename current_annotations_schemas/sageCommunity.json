@@ -83,22 +83,22 @@
         {
           "const": "AMP-AD",
           "description": "Accelerating Medicines Partnership-Alzheimer's Disease",
-          "source": "https://www.synapse.org/ampad"
+          "source": "https://adknowledgeportal.synapse.org/"
         },
         {
           "const": "MODEL-AD",
           "description": "Model Development and Evaluation for Late Onset AD",
-          "source": "https://www.synapse.org/ampad"
+          "source": "https://adknowledgeportal.synapse.org/"
         },
         {
           "const": "M2OVE-AD",
           "description": "Molecular Mechanisms of the Vascular Etiology of Alzheimer's Disease ",
-          "source": "https://www.synapse.org/ampad"
+          "source": "https://adknowledgeportal.synapse.org/"
         },
         {
           "const": "Resilience-AD",
           "description": "Interdisciplinary Research to Understand the Complex Biology of Resilience to Alzheimer's Disease Risk",
-          "source": "https://www.synapse.org/ampad"
+          "source": "https://adknowledgeportal.synapse.org/"
         },
         {
           "const": "BSMN",
