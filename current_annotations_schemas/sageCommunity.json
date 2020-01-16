@@ -141,6 +141,11 @@
       "description": "Defined format of the data file, typically corresponding to extension, but sometimes indicating more general group of files produced by the same tool or software",
       "anyOf": [
         {
+          "const": "Synapse Table",
+          "description": "Table hosted at synapse.org",
+          "source": "https://docs.synapse.org/articles/tables.html"
+        },
+        {
           "const": "bash script",
           "description": "Bash Shell Script",
           "source": "https://en.wikipedia.org/wiki/Shell_script"

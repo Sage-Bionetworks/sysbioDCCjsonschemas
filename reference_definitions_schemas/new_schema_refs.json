@@ -10,13 +10,17 @@
       "description": "DNA QC metric - ratio of absorbance at 260 nm and 280 nm",
       "type": "number"
     },
+    "antibodyAmount": {
+      "description": "Antibody amount",
+      "type": "number"
+    },
     "arrayBatch": {
       "description": "Genotyping batch",
       "type": "string"
     },
-    "antibodyAmount": {
-      "description": "Antibody amount",
-      "type": "number"
+    "assayID": {
+      "description": "Identifying string linked to the assay being run",
+      "type": "string"
     },
     "chromatinAmount": {
       "description": "Chromatin amount",
@@ -114,17 +118,17 @@
       "description": "Is PMI certain, i.e. is time of death known",
       "anyOf": [
         {
-          "const": true,
+          "const": "true",
           "description": "PMI is certain",
           "source": ""
         },
         {
-          "const": false,
+          "const": "false",
           "description": "PMI is not certain",
           "source": ""
         },
         {
-          "const": "Unknown",
+          "const": "unknown",
           "description": "Unknown whether PMI is certain",
           "source": ""
         }

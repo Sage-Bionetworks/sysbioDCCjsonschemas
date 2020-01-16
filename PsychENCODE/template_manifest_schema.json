@@ -6,25 +6,25 @@
   "type": "object",
   "properties": {
     "path": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/sageCommunity.json#/definitions/path"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/path"
     },
     "parent": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/reference_definitions/sageCommunity.json#/definitions/parent"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/parent"
     },
     "individualID": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/experimentalData.json#/definitions/individualID"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/experimentalData.json#/definitions/individualID"
     },
     "specimenID": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/experimentalData.json#/definitions/specimenID"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/experimentalData.json#/definitions/specimenID"
     },
     "isMultiSpecimen": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/experimentalData.json#/definitions/isMultiSpecimen"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/experimentalData.json#/definitions/isMultiSpecimen"
     },
     "assay": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/experimentalData.json#/definitions/assay"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/experimentalData.json#/definitions/assay"
     },
     "fileFormat": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/sageCommunity.json#/definitions/fileFormat"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/sageCommunity.json#/definitions/fileFormat"
     },
     "consortium": {
       "description": "The name of the consortium",
@@ -32,7 +32,7 @@
       "anyOf": [
         {
           "const": "PEC",
-          "description": "PsychENCODE"
+	  "description": "PsychENCODE"
         }
       ]
     },
@@ -110,8 +110,8 @@
           "const": "iPSC-HiC"
         }
       ]
-    }, 
-    "grant": {
+    },
+     "grant": {
       "description": "Grant number the data is being submitted for",
       "type": "string",
       "anyOf": [
@@ -222,19 +222,19 @@
       ]
     },
     "resourceType": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/sageCommunity.json#/definitions/resourceType"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/sageCommunity.json#/definitions/resourceType"
     },
     "dataType": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/experimentalData.json#/definitions/dataType"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/experimentalData.json#/definitions/dataType"
     },
     "dataSubtype": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/experimentalData.json#/definitions/dataSubtype"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/experimentalData.json#/definitions/dataSubtype"
     },
     "metadataType": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/experimentalData.json#/definitions/metadataType"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/experimentalData.json#/definitions/metadataType"
     },
     "analysisType": {
-      "$ref": "https://raw.githubusercontent.com/cw-dvr8/JSON-validation-schemas/master/validation_schemas/current_annotations_schemas/analysis.json#/definitions/analysisType"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/analysis.json#/definitions/analysisType"
     }
   },
   "required": [
@@ -244,6 +244,7 @@
     "specimenID",
     "isMultiSpecimen",
     "fileFormat",
+    "assay",
     "consortium",
     "study",
     "grant",

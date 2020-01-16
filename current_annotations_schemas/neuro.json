@@ -679,18 +679,7 @@
     },
     "isModelSystem": {
       "description": "",
-      "anyOf": [
-        {
-          "const": true,
-          "description": "",
-          "source": ""
-        },
-        {
-          "const": false,
-          "description": "",
-          "source": ""
-        }
-      ]
+      "type": "boolean"
     },
     "modelSystemStrainNomenclature": {
       "description": "",
