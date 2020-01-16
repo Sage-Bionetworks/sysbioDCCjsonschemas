@@ -1,0 +1,711 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id":"http://example.com/psychENCODE_schema.json",
+  "title": "PsychENCODE Metadata Schema",
+  "description": "Validates PsychENCODE metadata",
+  "type": "object",
+  "properties": {
+    "ageOfDeath": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/clinicalData.json#/definitions/ageOfDeath"
+    },
+    "ageOfDeathUnits": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/clinicalData.json#/definitions/ageOfDeathUnits"
+    },
+    "ageOnset": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/clinicalData.json#/definitions/ageOnset"
+    },
+    "alignmentMethod": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/current_annotations_schemas/analysis.json#/definitions/alignmentMethod"
+    },
+    "analysisType": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/current_annotations_schemas/analysis.json#/definitions/analysisType"
+    },
+    "antibodyAmount": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/antibodyAmount"
+    },
+    "assay": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/current_annotations_schemas/experimentalData.json#/definitions/assay"
+    },
+    "assayTarget": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/current_annotations_schemas/experimentalData.json#/definitions/assayTarget"
+    },
+    "BMI": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/clinicalData.json#/definitions/BMI"
+    },
+    "braak": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/clinicalData.json#/definitions/braak"
+    },
+    "BrodmannArea": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/current_annotations_schemas/neuro.json#/definitions/BrodmannArea"
+    },
+    "causeOfDeath": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/clinicalData.json#/definitions/causeOfDeath"
+    },
+    "CDR": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/clinicalData.json#/definitions/CDR"
+    },
+    "cellType": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/current_annotations_schemas/experimentalData.json#/definitions/cellType"
+    },
+    "chromatinAmount": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/chromatinAmount"
+    },
+    "consortium": {
+      "description": "The name of the consortium",
+      "type": "string",
+      "anyOf": [
+        {
+          "const": "PEC",
+	  "description": "PsychENCODE"
+        }
+      ]
+    },
+    "dataType": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/current_annotations_schemas/experimentalData.json#/definitions/dataType"
+    },
+    "dataSubtype": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/current_annotations_schemas/experimentalData.json#/definitions/dataSubtype"
+    },
+    "dateOfBirth": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/clinicalData.json#/definitions/dateOfBirth"
+    },
+    "dateOfDeath": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/clinicalData.json#/definitions/dateOfDeath"
+    },
+    "dementia": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/clinicalData.json#/definitions/dementia"
+    },
+    "familyHistory": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/clinicalData.json#/definitions/familyHistory"
+    },
+    "fileFormat": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/current_annotations_schemas/sageCommunity.json#/definitions/fileFormat"
+    },
+    "FRiP": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/FRiP"
+    },
+    "genotypeInferredAncestry": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/clinicalData.json#/definitions/genotypeInferredAncestry"
+    },
+    "grant": {
+      "description": "Grant number the data is being submitted for",
+      "type": "string",
+      "anyOf": [
+        {
+          "const": "R01MH109677",
+          "description": "Risk Genetic Variants and CIS Regulation of Gene Expression in Bipolar Disorder"
+        },
+        {
+          "const": "R01MH109715",
+          "description": "Mapping the Role of Long Noncoding RNAs in Gene Regulatory Networks in Schizophrenia"
+        },
+        {
+          "const": "R01MH110905",
+          "description": "2/2 Measuring Translational Dynamics and the Proteome to Identify Potential Brain Biomarkers for Psychiatric Disease"
+        },
+        {
+          "const": "R01MH110920",
+          "description": "1/2 Measuring Translational Dynamics and the Proteome to Identify Potential Brain Biomarkers for Psychiatric Disease"
+        },
+        {
+          "const": "R01MH110921",
+          "description": "Molecular Profiling of Schizophrenia"
+        },
+        {
+          "const": "R01MH110926",
+          "description": "1/3 Integrative Genomic Analysis of Human Brain Development and Autism"
+        },
+        {
+          "const": "R01MH110927",
+          "description": "2/3 Integrative Genomic Analysis of Human Brain Development and Autism"
+        },
+        {
+          "const": "R01MH110928",
+          "description": "3/3 Integrative Genomic Analysis of Human Brain Development and Autism"
+        },
+        {
+          "const": "R01MH111721",
+          "description": "Integrative Genomics of the Corticolimbic Circuit in Major Depressive Disorder"
+        },
+        {
+          "const": "R01MH112751",
+          "description": "Functional Methylomics Approaches for Schizophrenia in the Frontal Cortex and Hippocampus"
+        },
+        {
+          "const": "R01MH117291",
+          "description": "2/3 Understanding PTSD Through Postmortem Targeted Brain Multi-Omics"
+        },
+        {
+          "const": "R01MH117292",
+          "description": "3/3 Understanding PTSD Through Postmortem Targeted Brain Multi-Omics"
+        },
+        {
+          "const": "R01MH117293",
+          "description": "1/3 Understanding PTSD Through Postmortem Targeted Brain Multi-Omics"
+        },
+        {
+          "const": "R21MH105853",
+          "description": ""
+        },
+        {
+          "const": "R56MH114899",
+          "description": "2/3 Chromatin Regulation During Brain Development and in ASD"
+        },
+        {
+          "const": "R56MH114901",
+          "description": "3/3 Chromatin Regulation During Brain Development and in ASD"
+        },
+        {
+          "const": "R56MH114911",
+          "description": "1/3 Chromatin Regulation During Brain Development and in ASD"
+        },
+        {
+          "const": "U01DA048279",
+          "description": "Functional Genomic Resource and Integrative Model of Dopaminergic Circuitry Associated with Psychiatric Disease"
+        },
+        {
+          "const": "U01MH116438",
+          "description": "Massively Parallel Characterization of Psychiatric Disease Associated Regulatory Elements in Defined Cell Types"
+        },
+        {
+          "const": "U01MH116441",
+          "description": "Dynamic RNA Modifications in Human Brain Development and Autism"
+        },
+        {
+          "const": "U01MH116442",
+          "description": "The 3D Genome in Transcriptional Regulation Across the Postnatal Life Span, with Implications for Schizophrenia and Bipolar Disorder"
+        },
+        {
+          "const": "U01MH116487",
+          "description": "2/2 Cell Type and Region-Specific Regulatory Networks in Human Brain Development and Disorders"
+        },
+        {
+          "const": "U01MH116488",
+          "description": "1/2 Cell Type and Region-Specific Regulatory Networks in Human Brain Development and Disorders"
+        },
+        {
+          "const": "U01MH116489",
+          "description": "2/2 Discovery and Validation of Neuronal Enhancers Associated with the Development of Psychiatric Disorders"
+        },
+        {
+          "const": "U01MH116529",
+          "description": "Integrated, Cell Type Specific Functional Genomics Analyses of Regulatory Sequence Elements and Their Dynamic Interaction Networks in Neuropsychiatric Brain Tissues"
+        },
+        {
+          "const": "U01MH119509",
+          "description": "Single Cell Transcriptional and Epigenomic Dissection of Schizophrenia and Bipolar Disease"
+        }
+      ]
+    },
+    "group": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/current_annotations_schemas/sageCommunity.json#/definitions/group"
+    },
+    "histoneAntibody": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/histoneAntibody"
+    },
+    "individualID": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/current_annotations_schemas/experimentalData.json#/definitions/individualID"
+    },
+    "individualIdSource": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/current_annotations_schemas/experimentalData.json#/definitions/individualIdSource"
+    },
+    "investigatorName": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/investigatorName"
+    },
+    "IQ": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/clinicalData.json#/definitions/IQ"
+    },
+    "isMultiSpecimen": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/current_annotations_schemas/experimentalData.json#/definitions/isMultiSpecimen"
+    },
+    "isStranded": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/current_annotations_schemas/ngs.json#/definitions/isStranded"
+    },
+    "libraryBatch": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/libraryBatch"
+    },
+    "libraryID": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/libraryID"
+    },
+    "libraryPrep": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/current_annotations_schemas/ngs.json#/definitions/libraryPrep"
+    },
+    "libraryPreparationMethod": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/current_annotations_schemas/ngs.json#/definitions/libraryPreparationMethod"
+    },
+    "mannerOfDeath": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/clinicalData.json#/definitions/mannerOfDeath"
+    },
+    "mappedReads": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/mappedReads"
+    },
+    "meanCoverage": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/meanCoverage"
+    },
+    "meanGCContent": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/meanGCContent"
+    },
+    "medianGenes": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/medianGenes"
+    },
+    "medianUMIs": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/medianUMIs"
+    },
+    "medRecordTox": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/clinicalData.json#/definitions/medRecordTox"
+    },
+    "metadataType": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/current_annotations_schemas/experimentalData.json#/definitions/metadataType"
+    },
+    "neuropathDescription" : {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/clinicalData.json#/definitions/neuropathDescription"
+    },
+    "nucleicAcidSource": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/current_annotations_schemas/ngs.json#/definitions/nucleicAcidSource"
+    },
+    "numberCells": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/numberCells"
+    },
+    "organ": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/current_annotations_schemas/experimentalData.json#/definitions/organ"
+    },
+    "organRIN": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/organRIN"
+    },
+    "organWeight": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/organWeight"
+    },
+    "otherDiagnosis": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/clinicalData.json#/definitions/otherDiagnosis"
+    },
+    "otherDiagnosisDetail": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/clinicalData.json#/definitions/otherDiagnosisDetail"
+    },
+    "otherMedicalDx": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/clinicalData.json#/definitions/otherMedicalDx"
+    },
+    "otherMedicalDetail": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/clinicalData.json#/definitions/otherMedicalDetail"
+    },
+    "parent": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/parent"
+    },
+    "passage": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/passage"
+    },
+    "path": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/path"
+    },
+    "pcrCycles": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/pcrCycles"
+    },
+    "percentAligned": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/percentAligned"
+    },
+    "pH": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/current_annotations_schemas/neuro.json#/definitions/pH"
+    },
+    "platform": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/current_annotations_schemas/experimentalData.json#/definitions/platform"
+    },
+    "PMI": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/current_annotations_schemas/neuro.json#/definitions/PMI"
+    },
+    "PMICertain": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/PMICertain"
+    },
+    "postmortem": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/clinicalData.json#/definitions/postmortem"
+    },
+    "postmortemTox": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/clinicalData.json#/definitions/postmortemTox"
+    },
+    "postmortemToxSource": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/clinicalData.json#/definitions/postmortemToxSource"
+    },
+    "primaryDiagnosis": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/current_annotations_schemas/experimentalData.json#/definitions/diagnosis"
+    },
+    "primaryDiagnosisDetail": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/clinicalData.json#/definitions/primaryDiagnosisDetail"
+    },
+    "race": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/clinicalData.json#/definitions/race"
+    },
+    "raceDetail": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/clinicalData.json#/definitions/raceDetail"
+    },
+    "readLength": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/current_annotations_schemas/ngs.json#/definitions/readLength"
+    },
+    "readPair": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/current_annotations_schemas/ngs.json#/definitions/readPair"
+    },
+    "readStrandOrigin": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/current_annotations_schemas/ngs.json#/definitions/readStrandOrigin"
+    },
+    "referenceSet": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/current_annotations_schemas/curatedData.json#/definitions/referenceSet"
+    },
+    "reportedGender": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/clinicalData.json#/definitions/reportedGender"
+    },
+    "reprogrammedCellType": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/reprogrammedCellType"
+    },
+    "resourceType": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/current_annotations_schemas/sageCommunity.json#/definitions/resourceType"
+    },
+    "RIN": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/RIN"
+    },
+    "rnaBatch": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/rnaBatch"
+    },
+    "rRNARate": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/rRNARate"
+    },
+    "runType": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/current_annotations_schemas/ngs.json#/definitions/runType"
+    },
+    "sequencingBatch": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/sequencingBatch"
+    },
+    "sequencingReplicate": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/sequencingReplicate"
+    },
+    "sexChromosome": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/sexChromosome"
+    },
+    "species": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/current_annotations_schemas/experimentalData.json#/definitions/species"
+    },
+    "specimenID": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/current_annotations_schemas/experimentalData.json#/definitions/specimenID"
+    },
+    "study": {
+      "description": "Study",
+      "type": "string",
+      "anyOf": [
+        {
+          "const": "ASD-MSSM-IncRNA"
+        },
+        {
+          "const": "BipSeq"
+        },
+        {
+          "const": "BrainGVEX"
+        },
+        {
+          "const": "CNON"
+        },
+        {
+          "const": "DopaModel"
+        },
+        {
+          "const": "EpiDiff"
+        },
+        {
+          "const": "EpiGABA"
+        },
+        {
+          "const": "EpiMap"
+        },
+        {
+          "const": "HumanFC"
+        },
+        {
+          "const": "IncRNA Pilot"
+        },
+        {
+          "const": "LIBD-WGBS"
+        },
+        {
+          "const": "MouseHAL"
+        },
+        {
+          "const": "NeuEnhancer"
+        },
+        {
+          "const": "NHP-Chimpanzee"
+        },
+        {
+          "const": "NHP-Macaque"
+        },
+        {
+          "const": "SCZ-MSSM-IncRNA"
+        },
+        {
+          "const": "SingleCellRNAseq"
+        },
+        {
+          "const": "UCLA-ASD"
+        },
+        {
+          "const": "WGBS Pilot"
+        },
+        {
+          "const": "Yale-ASD"
+        },
+        {
+          "const": "iPSC"
+        },
+        {
+          "const": "iPSC-ASD"
+        },
+        {
+          "const": "iPSC-HiC"
+        }
+      ]
+    },
+    "technicalReplicate": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/technicalReplicate"
+    },
+    "terminalDifferentiationPoint": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/current_annotations_schemas/experimentalData.json#/definitions/terminalDifferentiationPoint"
+    },
+    "tissue": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/current_annotations_schemas/experimentalData.json#/definitions/tissue"
+    },
+    "totalReads": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/totalReads"
+    },
+    "transposaseBatch": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/transposaseBatch"
+    },
+    "treatmentType": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/current_annotations_schemas/neuro.json#/definitions/treatmentType"
+    },
+    "validBarcodeReads": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/validBarcodeReads"
+    },
+    "yearAutopsy": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/clinicalData.json#/definitions/yearAutopsy"
+    }
+  },
+  "required": [
+    "assay",
+    "cellType",
+    "consortium",
+    "fileFormat",
+    "grant",
+    "group",
+    "individualID",
+    "individualIdSource",
+    "investigatorName",
+    "isStranded",
+    "libraryID",
+    "libraryPrep",
+    "libraryPreparationMethod",
+    "nucleicAcidSource",
+    "organ",
+    "passage",
+    "platform",
+    "postmortem",
+    "readLength",
+    "readPair",
+    "referenceSet",
+    "reportedGender",
+    "reprogrammedCellType",
+    "RIN",
+    "runType",
+    "sequencingReplicate",
+    "species",
+    "specimenID",
+    "study",
+    "technicalReplicate",
+    "terminalDifferentiationPoint",
+    "tissue"
+  ],
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "species": {
+            "const": "Human"
+          }
+        }
+      },
+      "then": {
+        "required": ["sexChromosome", "race", "raceDetail", "genotypeInferredAncestry", "IQ", "BMI",
+                     "primaryDiagnosis", "primaryDiagnosisDetail", "otherDiagnosis", "familyHistory",
+                     "ageOnset", "neuropathDescription", "dementia", "otherMedicalDx"]
+      }
+    },
+    {
+      "if": {
+        "allOf": [
+          {
+            "properties": {
+              "species": {
+                "const": "Human"
+              },
+              "otherDiagnosis": {
+                "not": {"const": "None"}
+              }
+            },
+	    "required": ["otherDiagnosis"]
+          }
+        ]
+      },
+      "then": {
+        "required": ["otherDiagnosisDetail"]
+      }
+    },
+    {
+      "if": {
+        "allOf": [
+          {
+            "properties": {
+              "species": {
+                "const": "Human"
+              },
+	      "dementia": {
+                "const": true
+              }
+            },
+            "required": ["dementia"]
+          }
+        ]
+      },
+      "then": {
+        "required": ["CDR", "braak"]
+      }
+    },
+    {
+      "if": {
+        "allOf": [
+          {
+            "properties": {
+              "species": {
+                "const": "Human"
+              },
+              "otherMedicalDx": {
+                "not": {"const": "None"}
+              }
+            },
+            "required": ["otherMedicalDx"]
+          }
+        ]
+      },
+      "then": {
+        "required": ["otherMedicalDetail"]
+      }
+    },
+    {
+      "if": {
+        "allOf": [
+          {
+            "properties": {
+              "species": {
+                "const": "Human"
+              },
+              "postmortem": {
+                "const": "true"
+              }
+            },
+	    "required": ["postmortem"]
+          }
+        ]
+      },
+      "then": {
+        "required": ["ageOfDeath", "ageOfDeathUnits", "causeOfDeath", "mannerOfDeath", "postmortemTox",
+	             "postmortemToxSource", "medRecordTox"]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "postmortem": {
+            "const": "true"
+          }
+        }
+      },
+      "then": {
+        "required": ["PMICertain", "PMI", "pH", "organWeight", "organRIN", "yearAutopsy"]
+      }
+    }, 
+    {
+      "if": {
+        "properties": {
+          "organ": {
+            "const": "brain"
+          }
+        }
+      },
+      "then": {
+        "required": ["BrodmannArea"]
+      }
+    }, 
+    {
+      "if": {
+        "properties": {
+          "assay": {
+            "const": "ChIPSeq"
+          }
+        }
+      },
+      "then": {
+        "required": ["assayTarget", "FRiP"]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "assay": {
+            "const": "rnaSeq"
+          }
+        }
+      },
+      "then": {
+        "required": ["rRNARate", "totalReads", "validBarcodeReads", "numberCells", "medianUMIs"]
+      }
+    },
+    {
+      "if": {
+        "allOf": [
+          {
+            "properties": {
+              "assay": {
+                "const": "rnaSeq"
+              },
+              "platform": {
+                "const": "10x"
+              }
+            }
+          }
+        ]
+      },
+      "then": {
+        "required": ["medianGenes"]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "assay": {
+            "const": "ATACSeq"
+          }
+        }
+      },
+      "then": {
+        "required": ["meanCoverage", "meanGCContent"]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "fileFormat": {
+            "anyOf": [
+              {"const": "bai"},
+              {"const": "bam"}
+            ]
+          }
+        }
+      },
+      "then": {
+        "required": ["percentAligned", "totalReads", "mappedReads"]
+      }
+    }
+  ]
+}
