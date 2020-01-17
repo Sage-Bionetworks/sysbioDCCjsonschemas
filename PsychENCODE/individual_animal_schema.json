@@ -6,25 +6,25 @@
   "type": "object",
   "properties": {
     "individualID": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/experimentalData.json#/definitions/individualID"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/current_annotations_schemas/experimentalData.json#/definitions/individualID"
     },
     "individualIdSource": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/experimentalData.json#/definitions/individualIdSource"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/current_annotations_schemas/experimentalData.json#/definitions/individualIdSource"
     },
     "species": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/experimentalData.json#/definitions/species"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/current_annotations_schemas/experimentalData.json#/definitions/species"
     },
     "sexChromosome": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/sexChromosome"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/sexChromosome"
     },
     "dateOfBirth": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/dateOfBirth"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/clinicalData.json#/definitions/dateOfBirth"
     },
     "dateOfDeath": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/dateOfDeath"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/clinicalData.json#/definitions/dateOfDeath"
     },
     "treatmentType": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/neuro.json#/definitions/treatmentType"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/current_annotations_schemas/neuro.json#/definitions/treatmentType"
     }
   },
   "required": [
