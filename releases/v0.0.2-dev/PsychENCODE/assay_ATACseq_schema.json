@@ -26,9 +26,6 @@
     "libraryBatch": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/libraryBatch"
     },
-    "libraryPrep": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/current_annotations_schemas/ngs.json#/definitions/libraryPrep"
-    },
     "libraryPreparationMethod": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/current_annotations_schemas/ngs.json#/definitions/libraryPreparationMethod"
     },
@@ -64,7 +61,6 @@
     "platform",
     "transposaseBatch",
     "libraryBatch",
-    "libraryPrep",
     "libraryPreparationMethod",
     "pcrCycles",
     "sequencingBatch",
