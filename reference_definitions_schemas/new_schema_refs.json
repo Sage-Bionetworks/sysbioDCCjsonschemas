@@ -181,6 +181,10 @@
     "validBarcodeReads": {
       "description": "QC metric",
       "type": "integer"
+    },
+    "validHiCContacts": {
+      "description": "Percent of reads as valid Hi-C interactions (QC metric)",
+      "type": "number"
     }
   }
 }

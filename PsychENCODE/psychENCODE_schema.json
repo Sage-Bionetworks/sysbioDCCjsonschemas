@@ -479,6 +479,9 @@
     "validBarcodeReads": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/validBarcodeReads"
     },
+    "validHiCContacts": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/validHiCContacts"
+    },
     "yearAutopsy": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.2-dev/reference_definitions_schemas/clinicalData.json#/definitions/yearAutopsy"
     }
