@@ -34,6 +34,10 @@
       "description": "Chromatin amount",
       "type": "number"
     },
+    "controlType": {
+      "description": "Control samples suitable for normalization and batch correction",
+      "type": "number"
+    },
     "dnaBatch": {
       "description": "DNA isolation batch",
       "type": "string"
