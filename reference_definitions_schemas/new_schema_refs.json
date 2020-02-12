@@ -30,6 +30,10 @@
       "description": "DNA isolation batch",
       "type": "string"
     },
+    "fragmentation": {
+      "description": "Specifies the mode by which MS2 and MS3 ions are generated",
+      "type": "string"
+    },
     "FRiP": {
       "description": "Fraction of all mapped reads that fall into the called peak regions (Fraction of reads in peaks)",
       "type": "number",
@@ -77,6 +81,10 @@
     "medianUMIs": {
       "description": "QC metric",
       "type": "integer"
+    },
+    "multiconsensusStudyFileID": {
+      "description": "F-number assigned by Termo Proteome Discoverer software to different batches (plexes) of RAW (direct Thermo mass spectrometer output) files",
+      "type": "string"
     },
     "numberCells": {
       "description": "QC metric",
@@ -138,6 +146,10 @@
       "description": "Cell type specimen is modeling",
       "type": "string"
     },
+    "resolution": {
+      "description": "Minimum nominal mass-over-charge(m/z) difference detectable",
+      "type": "number"
+    },
     "RIN": {
       "description": "RNA Integrity Number",
       "type": "integer",
@@ -169,6 +181,10 @@
       "description": "Replicates from the same biosample, treated identically",
       "type": "integer"
     },
+    "TMTType": {
+      "description": "Specifies how TMT reporter ions are quantified",
+      "type": "string"
+    },
     "totalReads": {
       "description": "Number of reads in the input FASTQ file",
       "type": "number",
@@ -181,6 +197,10 @@
     "validBarcodeReads": {
       "description": "QC metric",
       "type": "integer"
+    },
+    "validHiCContacts": {
+      "description": "Percentage of reads as valid Hi-C interactions (QC metric)",
+      "type": "number"
     }
   }
 }
