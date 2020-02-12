@@ -22,6 +22,14 @@
       "description": "Identifying string linked to the assay being run",
       "type": "string"
     },
+    "batch": {
+      "description": "TMT proteomics batch",
+      "type": "string"
+    },
+    "batchChannel": {
+      "description": "TMT channel the sample is labeled with",
+      "type": "string"
+    },
     "chromatinAmount": {
       "description": "Chromatin amount",
       "type": "number"
