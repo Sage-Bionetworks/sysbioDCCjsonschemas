@@ -1,6 +1,6 @@
 ## JSON Validation, Template, and Reference Schemas
 
-### v0.0.3-dev ([view source](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/tree/c946888300d4e4f739ad4e66afb533f8254ffacc)
+### v0.0.3-dev ([view source](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/tree/c946888300d4e4f739ad4e66afb533f8254ffacc))
 
 #### reference_definitions_schemas
 * [clinicalData.json](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/blob/gh-pages/releases/v0.0.3-dev/reference_definitions_schemas/clinicalData.json)
