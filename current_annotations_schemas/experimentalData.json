@@ -10,6 +10,11 @@
       "description": "The technology used to generate the data in this file",
       "anyOf": [
         {
+          "const": "photograph",
+          "description": "An image recorded by a camera.",
+          "source": "http://purl.obolibrary.org/obo/NCIT_C86035"
+        },
+        {
           "const": "Zeno Electronic Walkway",
           "description": "The Zeno walkway utilizes an advanced and patented electronic sensing array technology with a proprietary network interface to sense and deliver the position of two dimensional objects in contact with its surface.",
           "source": "http://www.zenometrics.com/zenowalkway.html"
@@ -1106,7 +1111,7 @@
       "type": "string"
     },
     "platform": {
-      "description": "",
+      "description": "The specific version (manufacturer, model, etc.) of a technology that is used to carry out a laboratory or computational experiment.",
       "anyOf": [
         {
           "const": "Q Exactive Plus",
@@ -1292,6 +1297,16 @@
           "const": "Infinium HumanOmniExpressExome",
           "description": "Infinium HumanOmniExpressExome BeadChip",
           "source": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GPL18224"
+        },
+        {
+          "const": "Illumina NovaSeq 6000",
+          "description": "High-throughput sequencing",
+          "source": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GPL24676"
+        },
+        {
+          "const": "Infinium Omni2.5Exome-8 v1.3",
+          "description": "Infinium Omni2.5Exome-8 v1.3",
+          "source": "https://support.illumina.com/downloads/infinium-omni25exome-8-v1-3-product-files.html"
         }
       ]
     },
