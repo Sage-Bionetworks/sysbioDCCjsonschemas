@@ -22,12 +22,24 @@
       "description": "Identifying string linked to the assay being run",
       "type": "string"
     },
+    "batch": {
+      "description": "TMT proteomics batch",
+      "type": "string"
+    },
+    "batchChannel": {
+      "description": "TMT channel the sample is labeled with",
+      "type": "string"
+    },
     "chromatinAmount": {
       "description": "Chromatin amount",
       "type": "number"
     },
     "dnaBatch": {
       "description": "DNA isolation batch",
+      "type": "string"
+    },
+    "fragmentation": {
+      "description": "Specifies the mode by which MS2 and MS3 ions are generated",
       "type": "string"
     },
     "FRiP": {
@@ -77,6 +89,10 @@
     "medianUMIs": {
       "description": "QC metric",
       "type": "integer"
+    },
+    "multiconsensusStudyFileID": {
+      "description": "F-number assigned by Termo Proteome Discoverer software to different batches (plexes) of RAW (direct Thermo mass spectrometer output) files",
+      "type": "string"
     },
     "numberCells": {
       "description": "QC metric",
@@ -138,6 +154,10 @@
       "description": "Cell type specimen is modeling",
       "type": "string"
     },
+    "resolution": {
+      "description": "Minimum nominal mass-over-charge(m/z) difference detectable",
+      "type": "number"
+    },
     "RIN": {
       "description": "RNA Integrity Number",
       "type": "integer",
@@ -169,6 +189,10 @@
       "description": "Replicates from the same biosample, treated identically",
       "type": "integer"
     },
+    "TMTType": {
+      "description": "Specifies how TMT reporter ions are quantified",
+      "type": "string"
+    },
     "totalReads": {
       "description": "Number of reads in the input FASTQ file",
       "type": "number",
@@ -181,6 +205,10 @@
     "validBarcodeReads": {
       "description": "QC metric",
       "type": "integer"
+    },
+    "validHiCContacts": {
+      "description": "Percentage of reads as valid Hi-C interactions (QC metric)",
+      "type": "number"
     }
   }
 }
