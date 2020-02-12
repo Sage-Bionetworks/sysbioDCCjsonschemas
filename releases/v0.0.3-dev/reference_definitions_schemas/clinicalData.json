@@ -1,0 +1,590 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/clinicalData.json",
+  "definitions":{
+    "ageDxYears": {
+      "description": "Age in years at diagnosis",
+      "type": "string"
+    },
+    "ageOfDeath": {
+      "description": "Age of death",
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "ageOfDeathUnits": {
+      "description": "The death age unit of measure (gestational week or year)",
+      "type": "string"
+    },
+    "ageOnset": {
+      "description": "Age in years of first symptoms",
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "ancestryJewish": {
+      "description": "Does the individual have Jewish ancestry",
+      "type": "string",
+      "anyOf": [
+        {
+          "const": "true",
+          "description": "The individual has Jewish ancestry",
+          "source": ""
+        },
+        {
+          "const": "false",
+          "description": "The individual does not have Jewish ancestry",
+          "source": ""
+        },
+        {
+          "const": "unknown",
+          "description": "Unknown whether the individual has Jewish ancestry",
+          "source": ""
+        }
+      ]
+    },
+    "BMI": {
+      "description": "Body Mass Index",
+      "type": "integer",
+      "minimum": 19,
+      "maximum": 54
+    },
+    "braak": {
+      "description": "Braak stage",
+      "type": "integer",
+      "anyOf": [
+        {
+          "const": 1,
+          "description": "",
+          "source": ""
+        },
+        {
+          "const": 2,
+          "description": "",
+          "source": ""
+        },
+        {
+          "const": 3,
+          "description": "",
+          "source": ""
+        },
+        {
+          "const": 4,
+          "description": "",
+          "source": ""
+        },
+        {
+          "const": 5,
+          "description": "",
+          "source": ""
+        },
+        {
+          "const": 6,
+          "description": "",
+          "source": ""
+        }
+      ]
+    },
+    "breastFed": {
+      "description": "Was the individual breastfed",
+      "type": "string",
+      "anyOf": [
+        {
+          "const": "true",
+          "description": "The individual was breastfed",
+          "source": ""
+        },
+        {
+          "const": "false",
+          "description": "The individual was not breastfed",
+          "source": ""
+        },
+        {
+          "const": "unknown",
+          "description": "Unknown whether the individual was breastfed",
+          "source": ""
+        }
+      ]
+    },
+    "causeOfDeath": {
+      "description": "The specific injury or disease that lead to death",
+      "type": "string"
+    },
+    "CDR": {
+      "description": "Clinical Dementia Rating",
+      "type": "number",
+      "anyOf": [
+        {
+          "const": 0,
+          "description": "None",
+          "source": ""
+        },
+        {
+          "const": 0.5,
+          "description": "Very mild",
+          "source": ""
+        },
+        {
+          "const": 1,
+          "description": "Mild",
+          "source": ""
+        },
+        {
+          "const": 2,
+          "description": "Moderate",
+          "source": ""
+        },
+        {
+          "const": 3,
+          "description": "Severe",
+          "source": ""
+        }
+      ]
+    },
+    "classification": {
+      "description": "Classification",
+      "type": "string"
+    },
+    "consanguinity": {
+      "description": "Is there a family history of consanguinity",
+      "type": "string",
+      "anyOf": [
+        {
+          "const": "true",
+          "description": "There is a family history of consanguinity",
+          "source": ""
+        },
+        {
+          "const": "false",
+          "description": "There is no family history of consanguinity",
+          "source": ""
+        },
+        {
+          "const": "unknown",
+          "description": "Unknown whether there is a family history of consanguinity",
+          "source": ""
+        }
+      ]
+    },
+    "countryOfOrigin": {
+      "description": "Individual country of birth",
+      "type": "string"
+    },
+    "Csection": {
+      "description": "Was the individual born via C-section",
+      "type": "string",
+      "anyOf": [
+        {
+          "const": "true",
+          "description": "The individual was born via C-section",
+          "source": ""
+        },
+        {
+          "const": "false",
+          "description": "The individual was not born via C-section",
+          "source": ""
+        },
+        {
+          "const": "unknown",
+          "description": "Unknown whether the individual was born via C-section",
+          "source": ""
+        }
+      ]
+    },
+    "dateOfBirth": {
+      "description": "Individual date of birth",
+      "type": "string"
+    },
+    "dateOfDeath": {
+      "description": "Individual date of death",
+      "type": "string"
+    },
+    "dementia": {
+      "description": "Is dementia present",
+      "type": "boolean"
+    },
+    "diagnosisPhenotype": {
+      "description": "Diagnosis phenotype",
+      "type": "string"
+    },
+    "diseaseBehaviorStricturing": {
+      "description": "Has there been stricturing",
+      "type": "string",
+      "anyOf": [
+        {
+          "const": "true",
+          "description": "There has been stricturing",
+          "source": ""
+        },
+        {
+          "const": "false",
+          "description": "There has not been stricturing",
+          "source": ""
+        },
+        {
+          "const": "unknown",
+          "description": "Unknown whether there has been stricturing",
+          "source": ""
+        }
+      ]
+    },
+    "diseaseLocation": {
+      "description": "Location of disease/activity",
+      "type": "string"
+    },
+    "EIM": {
+      "description": "Type of extra-intestinal manifestation",
+      "type": "string"
+    },
+    "ethnicity": {
+      "description": "Individual ethnicity",
+      "type": "string"
+    },
+    "familyHistory": {
+      "description": "Is there a family history of the disorder/disease",
+      "type": "string",
+      "anyOf": [
+        {
+          "const": "true",
+          "description": "There is a family history of the disorder/disease",
+          "source": ""
+        },
+        {
+          "const": "false",
+          "description": "There is no family history of the disorder/disease",
+          "source": ""
+        },
+        {
+          "const": "unknown",
+          "description": "Unknown whether there is a family history of the disorder/disease",
+          "source": ""
+        }
+      ]
+    },
+    "firstDegree": {
+      "description": "Is there a first degree relative with the disease",
+      "type": "boolean",
+      "anyOf": [
+        {
+          "const": true,
+          "description": "There is a first degree relative with the disease",
+          "source": ""
+        },
+        {
+          "const": false,
+          "description": "There is not a first degree relative with the disease",
+          "source": ""
+        }
+      ]
+    },
+    "geneticMutation": {
+      "description": "Genetic mutation, if known",
+      "type": "string"
+    },
+    "genotypeInferredAncestry": {
+      "description": "Ancestry inferred from genotype",
+      "type": "string"
+    },
+    "householdSmokingHistory": {
+      "description": "Does someone in the household smoke",
+      "type": "boolean",
+      "anyOf": [
+        {
+          "const": true,
+          "description": "Someone in the household smokes",
+          "source": ""
+        },
+        {
+          "const": false,
+          "description": "No one in the household smokes",
+          "source": ""
+        }
+      ]
+    },
+    "IQ": {
+      "description": "IQ",
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 170
+    },
+    "labAssay": {
+      "description": "Laboratory assay performed",
+      "type": "string"
+    },
+    "labAssayResult": {
+      "description": "Laboratory assay result",
+      "type": "string"
+    },
+    "mannerOfDeath": {
+      "description": "The determination of how the inury or disease lead to death",
+      "type": "string",
+      "anyOf": [
+        {
+          "const": "natural causes",
+          "description": "",
+          "source": "https://ncim.nci.nih.gov/ncimbrowser/ConceptReport.jsp?dictionary=NCI%20Metathesaurus&code=C0277610"
+        },
+        {
+          "const": "accident",
+          "description": "",
+          "source": "https://ncim.nci.nih.gov/ncimbrowser/ConceptReport.jsp?dictionary=NCI%20MetaThesaurus&code=C0000924"
+        },
+        {
+          "const": "suicide",
+          "description": "",
+          "source": "https://ncim.nci.nih.gov/ncimbrowser/ConceptReport.jsp?dictionary=NCI%20MetaThesaurus&code=C0038661"
+        },
+        {
+          "const": "homicide",
+          "description": "",
+          "source": "https://ncim.nci.nih.gov/ncimbrowser/ConceptReport.jsp?dictionary=NCI%20MetaThesaurus&code=C3829672"
+        },
+        {
+          "const": "undetermined",
+          "description": "",
+          "source": "https://ncim.nci.nih.gov/ncimbrowser/ConceptReport.jsp?dictionary=NCI%20MetaThesaurus&code=CL502663"
+        }
+      ]
+    },
+    "maternalSmokingHistory": {
+      "description": "Did the mother smoke while pregnant",
+      "type": "string",
+      "anyOf": [
+        {
+          "const": "true",
+          "description": "The mother smoked while pregnant",
+          "source": ""
+        },
+        {
+          "const": "false",
+          "description": "The mother did not smoke while pregnant",
+          "source": ""
+        },
+        {
+          "const": "unknown",
+          "description": "Unknown whether the mother smoked while pregnant",
+          "source": ""
+        }
+      ]
+    },
+    "medicationAtDx": {
+      "description": "Medication prescribed at diagnosis",
+      "type": "string"
+    },
+    "medRecordTox": {
+      "description": "Is there a medical record toxicology report",
+      "type": "string",
+      "anyOf": [
+        {
+          "const": "true",
+          "description": "There is a medical record toxicology report",
+          "source": ""
+        },
+        {
+          "const": "false",
+          "description": "There is no medical record toxicology report",
+          "source": ""
+        },
+        {
+          "const": "unknown",
+          "description": "Unknown whether there is a medical record toxicology report",
+          "source": ""
+        }
+      ]
+    },
+    "neuropathDescription": {
+      "description": "Description of neuropathology",
+      "type": "string"
+    },
+    "otherDiagnosis": {
+      "description": "Secondary diagnosis",
+      "type": "string"
+    },
+    "otherDiagnosisDetail": {
+      "description": "Subgroup of secondary diagnosis (DSM 5 or ICD 10 code)",
+      "type": "string"
+    },
+    "otherMedicalDx": {
+      "description": "Other medical diagnosis",
+      "type": "string"
+    },
+    "otherMedicalDetail": {
+      "description": "Subgroup of other medical diagnosis (DSM 5 or ICD 10 code)",
+      "type": "string"
+    },
+    "perianalInvolvement": {
+      "description": "Is there perianal involvement",
+      "type": "boolean",
+      "anyOf": [
+        {
+          "const": true,
+          "description": "There is perianal involvement",
+          "source": ""
+        },
+        {
+          "const": false,
+          "description": "There is no perianal involvement",
+          "source": ""
+        }
+      ]
+    },
+    "postmortem": {
+      "description": "Was tissue biopsied or sampled after death",
+      "type": "string",
+      "anyOf": [
+        {
+          "const": "true",
+          "description": "The tissue was biopsied or sampled post mortem",
+          "source": ""
+        },
+        {
+          "const": "false",
+          "description": "The tissue was not biopsied or sampled post mortem",
+          "source": ""
+        },
+        {
+          "const": "unknown",
+          "description": "Unknown whether the tissue was biopsied or sampled post mortem",
+          "source": ""
+        }
+      ]
+    },
+    "postmortemTox": {
+      "description": "Were toxicology tests performed on post-mortem tissue",
+      "type": "string",
+      "anyOf": [
+        {
+          "const": "true",
+          "description": "Post-mortem toxicology tests were performed",
+          "source": ""
+        },
+        {
+          "const": "false",
+          "description": "Post-mortem toxicology tests were not performed",
+          "source": ""
+        },
+        {
+          "const": "unknown",
+          "description": "Unknown whether post-mortem toxicology tests were performed",
+          "source": ""
+        }
+      ]
+    },
+    "postmortemToxSource": {
+      "description": "Tissue used for post-mortem toxicology tests",
+      "type": "string"
+    },
+    "preTermBirth": {
+      "description": "Was the individual born pre-term",
+      "type": "string",
+      "anyOf": [
+        {
+          "const": "true",
+          "description": "The individual was born pre-term",
+          "source": ""
+        },
+        {
+          "const": "false",
+          "description": "The individual was not born pre-term",
+          "source": ""
+        },
+        {
+          "const": "unknown",
+          "description": "Unknown whether the individual was born pre-term",
+          "source": ""
+        }
+      ]
+    },
+    "primaryDiagnosis": {
+      "description": "Primary diagnosis",
+      "type": "string"
+    },
+    "primaryDiagnosisDetail": {
+      "description": "Subgroup of primary diagnosis (DSM 5 or ICD 10 code)",
+      "type": "string"
+    },
+    "race": {
+      "description": "Race",
+      "type": "string"
+    },
+    "raceDetail": {
+      "description": "Race Detail",
+      "type": "string"
+    },
+    "reportedGender": {
+      "description": "Gender as reported by the brain bank",
+      "type": "string",
+      "anyOf": [
+        {
+          "const": "female",
+          "description": "Female",
+          "source": ""
+        },
+        {
+          "const": "male",
+          "description": "Male",
+          "source": ""
+        },
+        {
+          "const": "unknown",
+          "description": "Gender is not reported by the brain bank",
+          "source": ""
+        }
+      ]
+    },
+    "secondDegree": {
+      "description": "Is there a second degree relative with the disease",
+      "type": "string",
+      "anyOf": [
+        {
+          "const": "true",
+          "description": "There is a second degree relative with the disease",
+          "source": ""
+        },
+        {
+          "const": "false",
+          "description": "There is not a second degree relative with the disease",
+          "source": ""
+        },
+        {
+          "const": "unknown",
+          "description": "Unknown whether there is a second degree relative with the disease",
+          "source": ""
+        }
+      ]
+    },
+    "smokePerDay": {
+      "description": "Number of cigarettes smoked daily",
+      "type": "integer",
+      "exclusiveMinimum": 0
+    },
+    "smokingHistory": {
+      "description": "Does the individual have a history of smoking",
+      "type": "boolean",
+      "anyOf": [
+        {
+          "const": true,
+          "description": "The individual has a history of smoking",
+          "source": ""
+        },
+        {
+          "const": false,
+          "description": "The individual does not have a history of smoking",
+          "source": ""
+        }
+      ]
+    },
+    "smokingYears": {
+      "description": "Number of years the individual has smoked",
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "surgicalHistory": {
+      "description": "Type of surgical history",
+      "type": "string"
+    },
+    "yearAutopsy": {
+      "description": "Year autopsy was performed",
+      "type": "integer",
+      "exclusiveMinimum": 0
+    }
+  }
+}
