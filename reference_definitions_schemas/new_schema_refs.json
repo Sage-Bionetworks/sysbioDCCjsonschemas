@@ -176,6 +176,10 @@
       "type": "number",
       "exclusiveMinimum": 0
     },
+    "sampleID": {
+      "description": "Sample ID",
+      "type": "string"
+    },
     "sequencingBatch": {
       "description": "Batch library was sequenced in",
       "type": "string"
