@@ -36,7 +36,7 @@
     },
     "controlType": {
       "description": "Control samples suitable for normalization and batch correction",
-      "type": "number"
+      "type": "string"
     },
     "dnaBatch": {
       "description": "DNA isolation batch",
