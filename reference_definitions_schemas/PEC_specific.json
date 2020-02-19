@@ -136,6 +136,9 @@
           "const": "BrainGVEX"
         },
         {
+          "const": "BrainVar"
+        },
+        {
           "const": "CNON"
         },
         {
@@ -157,6 +160,18 @@
           "const": "IncRNA Pilot"
         },
         {
+          "const": "iPSC"
+        },
+        {
+          "const": "iPSC-ASD"
+        },
+        {
+          "const": "iPSC-HiC"
+        },
+        {
+          "const": "iPSCNeuroDiff"
+        },
+        {
           "const": "LIBD-WGBS"
         },
         {
@@ -164,6 +179,9 @@
         },
         {
           "const": "NeuEnhancer"
+        },
+        {
+          "const": "NeuREs"
         },
         {
           "const": "NHP-Chimpanzee"
@@ -185,15 +203,6 @@
         },
         {
           "const": "Yale-ASD"
-        },
-        {
-          "const": "iPSC"
-        },
-        {
-          "const": "iPSC-ASD"
-        },
-        {
-          "const": "iPSC-HiC"
         }
       ]
     }
