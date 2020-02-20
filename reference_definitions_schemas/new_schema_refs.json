@@ -143,7 +143,17 @@
           "source": ""
         },
         {
+          "const": "TRUE",
+          "description": "PMI is certain",
+          "source": ""
+        },
+        {
           "const": "false",
+          "description": "PMI is not certain",
+          "source": ""
+        },
+        {
+          "const": "FALSE",
           "description": "PMI is not certain",
           "source": ""
         },
