@@ -248,7 +248,27 @@
           "source": ""
         },
         {
+          "const": "True",
+          "description": "There is a family history of the disorder/disease",
+          "source": ""
+        },
+        {
+          "const": "TRUE",
+          "description": "There is a family history of the disorder/disease",
+          "source": ""
+        },
+        {
           "const": "false",
+          "description": "There is no family history of the disorder/disease",
+          "source": ""
+        },
+        {
+          "const": "False",
+          "description": "There is no family history of the disorder/disease",
+          "source": ""
+        },
+        {
+          "const": "FALSE",
           "description": "There is no family history of the disorder/disease",
           "source": ""
         },
@@ -379,7 +399,27 @@
           "source": ""
         },
         {
+          "const": "True",
+          "description": "There is a medical record toxicology report",
+          "source": ""
+        },
+        {
+          "const": "TRUE",
+          "description": "There is a medical record toxicology report",
+          "source": ""
+        },
+        {
           "const": "false",
+          "description": "There is no medical record toxicology report",
+          "source": ""
+        },
+        {
+          "const": "False",
+          "description": "There is no medical record toxicology report",
+          "source": ""
+        },
+        {
+          "const": "FALSE",
           "description": "There is no medical record toxicology report",
           "source": ""
         },
@@ -436,7 +476,27 @@
           "source": ""
         },
         {
+          "const": "True",
+          "description": "The tissue was biopsied or sampled post mortem",
+          "source": ""
+        },
+        {
+          "const": "TRUE",
+          "description": "The tissue was biopsied or sampled post mortem",
+          "source": ""
+        },
+        {
           "const": "false",
+          "description": "The tissue was not biopsied or sampled post mortem",
+          "source": ""
+        },
+        {
+          "const": "False",
+          "description": "The tissue was not biopsied or sampled post mortem",
+          "source": ""
+        },
+        {
+          "const": "FALSE",
           "description": "The tissue was not biopsied or sampled post mortem",
           "source": ""
         },
@@ -457,7 +517,27 @@
           "source": ""
         },
         {
+          "const": "True",
+          "description": "Post-mortem toxicology tests were performed",
+          "source": ""
+        },
+        {
+          "const": "TRUE",
+          "description": "Post-mortem toxicology tests were performed",
+          "source": ""
+        },
+        {
           "const": "false",
+          "description": "Post-mortem toxicology tests were not performed",
+          "source": ""
+        },
+        {
+          "const": "False",
+          "description": "Post-mortem toxicology tests were not performed",
+          "source": ""
+        },
+        {
+          "const": "FALSE",
           "description": "Post-mortem toxicology tests were not performed",
           "source": ""
         },

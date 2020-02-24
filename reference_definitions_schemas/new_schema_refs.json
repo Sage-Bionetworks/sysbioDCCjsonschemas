@@ -34,6 +34,16 @@
       "description": "Chromatin amount",
       "type": "number"
     },
+    "controlType": {
+      "description": "Control samples suitable for normalization and batch correction",
+      "anyOf": [
+        {
+          "const": "GIS",
+          "description": "Global Internal Stanard - a specific control for TMT multi-batch proteomic experiments",
+          "source": ""
+        }
+      ]
+    },
     "dnaBatch": {
       "description": "DNA isolation batch",
       "type": "string"
@@ -139,7 +149,27 @@
           "source": ""
         },
         {
+          "const": "True",
+          "description": "PMI is certain",
+          "source": ""
+        },
+        {
+          "const": "TRUE",
+          "description": "PMI is certain",
+          "source": ""
+        },
+        {
           "const": "false",
+          "description": "PMI is not certain",
+          "source": ""
+        },
+        {
+          "const": "False",
+          "description": "PMI is not certain",
+          "source": ""
+        },
+        {
+          "const": "FALSE",
           "description": "PMI is not certain",
           "source": ""
         },
@@ -171,6 +201,10 @@
       "description": "Ribosomal RNA alignment reate",
       "type": "number",
       "exclusiveMinimum": 0
+    },
+    "sampleID": {
+      "description": "Sample ID",
+      "type": "string"
     },
     "sequencingBatch": {
       "description": "Batch library was sequenced in",
