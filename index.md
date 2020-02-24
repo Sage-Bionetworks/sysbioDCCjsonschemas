@@ -5,6 +5,7 @@
 #### reference_definitions_schemas
 * [clinicalData.json](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/blob/gh-pages/releases/v0.0.3-dev/reference_definitions_schemas/clinicalData.json)
 * [new_schema_refs.json](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/blob/gh-pages/releases/v0.0.3-dev/reference_definitions_schemas/new_schema_refs.json)
+* [PEC_specific.json](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/blob/gh-pages/releases/v0.0.3-dev/reference_definitions_schemas/PEC_specific.json)
 
 #### current_annotations_schemas
 * [analysis.json](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/blob/gh-pages/releases/v0.0.3-dev/current_annotations_schemas/analysis.json)
