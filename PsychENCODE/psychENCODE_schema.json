@@ -5,6 +5,12 @@
   "description": "Validates PsychENCODE metadata",
   "type": "object",
   "properties": {
+    "260/230": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/260~1230"
+    },
+    "260/280": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/260~1280"
+    },
     "ageOfDeath": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/reference_definitions_schemas/clinicalData.json#/definitions/ageOfDeath"
     },
@@ -23,11 +29,20 @@
     "antibodyAmount": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/antibodyAmount"
     },
+    "arrayBatch": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/arrayBatch"
+    },
     "assay": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/current_annotations_schemas/experimentalData.json#/definitions/assay"
     },
     "assayTarget": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/current_annotations_schemas/experimentalData.json#/definitions/assayTarget"
+    },
+    "batch": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/batch"
+    },
+    "batchChannel": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/batchChannel"
     },
     "BMI": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/reference_definitions_schemas/clinicalData.json#/definitions/BMI"
@@ -53,6 +68,9 @@
     "consortium": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/reference_definitions_schemas/PEC_specific.json#/definitions/consortium"
     },
+    "controlType": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/controlType"
+    },
     "dataType": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/current_annotations_schemas/experimentalData.json#/definitions/dataType"
     },
@@ -68,6 +86,9 @@
     "dementia": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/reference_definitions_schemas/clinicalData.json#/definitions/dementia"
     },
+    "dnaBatch": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/dnaBatch"
+    },
     "familyHistory": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/reference_definitions_schemas/clinicalData.json#/definitions/familyHistory"
     },
@@ -77,8 +98,14 @@
     "FRiP": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/FRiP"
     },
+    "fragmentation": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/fragmentation"
+    },
     "genotypeInferredAncestry": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/reference_definitions_schemas/clinicalData.json#/definitions/genotypeInferredAncestry"
+    },
+    "GQN": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/GQN"
     },
     "grant": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/reference_definitions_schemas/PEC_specific.json#/definitions/grant"
@@ -142,6 +169,9 @@
     },
     "metadataType": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/current_annotations_schemas/experimentalData.json#/definitions/metadataType"
+    },
+    "multiconsensusStudyFileID": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/multiconsensusStudyFileID"
     },
     "neuropathDescription" : {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/reference_definitions_schemas/clinicalData.json#/definitions/neuropathDescription"
@@ -239,6 +269,9 @@
     "reprogrammedCellType": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/reprogrammedCellType"
     },
+    "resolution": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/resolution"
+    },
     "resourceType": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/current_annotations_schemas/sageCommunity.json#/definitions/resourceType"
     },
@@ -253,6 +286,9 @@
     },
     "runType": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/current_annotations_schemas/ngs.json#/definitions/runType"
+    },
+    "sampleID": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/sampleID"
     },
     "sequencingBatch": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/sequencingBatch"
@@ -281,6 +317,9 @@
     "tissue": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/current_annotations_schemas/experimentalData.json#/definitions/tissue"
     },
+    "TMTType": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/TMTType"
+    },
     "totalReads": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/totalReads"
     },
@@ -292,6 +331,9 @@
     },
     "validBarcodeReads": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/validBarcodeReads"
+    },
+    "validHiCContacts": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/validHiCContacts"
     },
     "yearAutopsy": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/reference_definitions_schemas/clinicalData.json#/definitions/yearAutopsy"
