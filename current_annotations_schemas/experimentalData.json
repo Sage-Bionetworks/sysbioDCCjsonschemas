@@ -763,6 +763,11 @@
           "const": "UCSF",
           "description": "University of California - San Francisco",
           "source": "https://www.ucsf.edu/"
+        },
+        {
+          "const": "Emory",
+          "description": "Emory University",
+          "source": "https://www.emory.edu/"
         }
       ]
     },

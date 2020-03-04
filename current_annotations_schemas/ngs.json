@@ -97,6 +97,16 @@
           "const": "miRNAenrichment",
           "description": "RNA library with size selection for microRNAs",
           "source": "Sage Bionetworks"
+        },
+        {
+          "const": "PCRfree",
+          "description": "Library preparation without PCR amplification",
+          "source": "Sage Bionetworks"
+        },
+        {
+          "const": "STARRSeq",
+          "description": "Self-transcribing active regulatory region sequencing assay (STARR-Seq)",
+          "source": "http://purl.obolibrary.org/obo/OBI_0002041"
         }
       ]
     },

@@ -18,6 +18,41 @@
       "description": "",
       "anyOf": [
         {
+          "const": "VMC",
+          "description": "The Vascular Mural Cell -derived ApoE Study",
+          "source": "https://www.synapse.org/#!Synapse:syn21624490"
+        },
+        {
+          "const": "snRNAseqAD_TREM2",
+          "description": "The TREM2-impact in Alzheimer’s Disease Study",
+          "source": "https://www.synapse.org/#!Synapse:syn21125841/wiki/597278"
+        },
+        {
+          "const": "StJude_BannerSun",
+          "description": "The collaborative Banner Sun - St. Jude Alzheimer’s disease and related dementias (StJude_BannerSun) study",
+          "source": "https://www.synapse.org/#!Synapse:syn21592732"
+        },
+        {
+          "const": "Jax.IU.Pitt_StrainValidation",
+          "description": "Strain validation data from the Jax.IU.Pitt MODEL-AD grant",
+          "source": "https://www.synapse.org/#!Synapse:syn21595255"
+        },
+        {
+          "const": "UCI_StrainValidation",
+          "description": "Strain validation data from the UCI MODEL-AD grant",
+          "source": "https://www.synapse.org/#!Synapse:syn21595257"
+        },
+        {
+          "const": "Jax.IU.Pitt_PrimaryScreen",
+          "description": "Primary screen data from the Jax.IU.Pitt MODEL-AD grant",
+          "source": "https://www.synapse.org/#!Synapse:syn21595258"
+        },
+        {
+          "const": "UCI_PrimaryScreen",
+          "description": "Primary screen data from the UCI MODEL-AD grant",
+          "source": "https://www.synapse.org/#!Synapse:syn21595261"
+        },
+        {
           "const": "iPSCAstrocytes",
           "description": "The MSSM iPSCAstrocytes study",
           "source": "https://www.synapse.org/#!Synapse:syn10344967"
