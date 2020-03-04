@@ -39,7 +39,7 @@
       "anyOf": [
         {
           "const": "GIS",
-          "description": "Global Internal Stanard - a specific control for TMT multi-batch proteomic experiments",
+          "description": "Global Internal Standard - a specific control for TMT multi-batch proteomic experiments",
           "source": ""
         }
       ]
