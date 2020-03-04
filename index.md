@@ -2,6 +2,20 @@
 
 ### v0.0.3-dev ([view source](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/tree/c946888300d4e4f739ad4e66afb533f8254ffacc))
 
+#### PsychENCODE
+* [assay_ATACseq_schema.json](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/blob/gh-pages/releases/v0.0.2-dev/PsychENCODE/assay_ATACseq_schema.json)
+* [assay_HiC_schema.json](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/blob/gh-pages/releases/v0.0.2-dev/PsychENCODE/assay_HiC_schema.json)
+* [assay_RNAseq_schema.json](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/blob/gh-pages/releases/v0.0.2-dev/PsychENCODE/assay_RNAseq_schema.json)
+* [assay_TMTproteomics_schema.json](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/blob/gh-pages/releases/v0.0.2-dev/PsychENCODE/assay_TMTproteomics_schema.json)
+* [assay_WGS_schema.json](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/blob/gh-pages/releases/v0.0.2-dev/PsychENCODE/assay_WGS_schema.json)
+* [assay_snpArray_schema.json](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/blob/gh-pages/releases/v0.0.2-dev/PsychENCODE/assay_snpArray_schema.json)
+* [biospecimen_schema.json](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/blob/gh-pages/releases/v0.0.2-dev/PsychENCODE/biospecimen_schema.json)
+* [individual_animal_schema.json](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/blob/gh-pages/releases/v0.0.2-dev/PsychENCODE/individual_animal_schema.json)
+* [individual_human_schema.json](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/blob/gh-pages/releases/v0.0.2-dev/PsychENCODE/individual_human_schema.json)
+* [psychENCODE_schema.json](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/blob/gh-pages/releases/v0.0.2-dev/PsychENCODE/psychENCODE_schema.json)
+* [template_assay_schema.json](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/blob/gh-pages/releases/v0.0.2-dev/PsychENCODE/template_assay_schema.json)
+* [template_manifest_schema.json](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/blob/gh-pages/releases/v0.0.2-dev/PsychENCODE/template_manifest_schema.json)
+
 #### reference_definitions_schemas
 * [clinicalData.json](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/blob/gh-pages/releases/v0.0.3-dev/reference_definitions_schemas/clinicalData.json)
 * [new_schema_refs.json](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/blob/gh-pages/releases/v0.0.3-dev/reference_definitions_schemas/new_schema_refs.json)
