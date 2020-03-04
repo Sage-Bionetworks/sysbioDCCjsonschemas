@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id":"http://example.com/individual_animal_schema.json",
+  "title": "PsychENCODE Individual Animal Metadata Schema",
+  "description": "Validates PsychENCODE individual animal metadata",
+  "type": "object",
+  "properties": {
+    "individualID": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/current_annotations_schemas/experimentalData.json#/definitions/individualID"
+    },
+    "individualIdSource": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/current_annotations_schemas/experimentalData.json#/definitions/individualIdSource"
+    },
+    "species": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/current_annotations_schemas/experimentalData.json#/definitions/species"
+    },
+    "sexChromosome": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/sexChromosome"
+    },
+    "dateOfBirth": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/reference_definitions_schemas/clinicalData.json#/definitions/dateOfBirth"
+    },
+    "dateOfDeath": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/reference_definitions_schemas/clinicalData.json#/definitions/dateOfDeath"
+    },
+    "treatmentType": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/current_annotations_schemas/neuro.json#/definitions/treatmentType"
+    }
+  },
+  "required": [
+    "individualID",
+    "individualIdSource",
+    "species",
+    "sexChromosome",
+    "dateOfBirth",
+    "dateOfDeath",
+    "treatmentType"
+  ]
+}

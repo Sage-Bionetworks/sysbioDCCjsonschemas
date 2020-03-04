@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id":"http://example.com/template_assay_schema.json",
+  "title": "PsychENCODE Generic Assay Metadata Schema",
+  "description": "Validates PsychENCODE generic assay template metadata",
+  "type": "object",
+  "properties": {
+    "specimenID": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/current_annotations_schemas/experimentalData.json#/definitions/specimenID"
+    },
+    "assay": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/current_annotations_schemas/experimentalData.json#/definitions/assay"
+    },
+    "platform": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/current_annotations_schemas/experimentalData.json#/definitions/platform"
+    },
+    "referenceSet": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/current_annotations_schemas/curatedData.json#/definitions/referenceSet"
+    },
+    "libraryBatch": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/libraryBatch"
+    },
+    "sequencingBatch": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/sequencingBatch"
+    },
+    "libraryPrep": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/current_annotations_schemas/ngs.json#/definitions/libraryPrep"
+    },
+    "libraryPreparationMethod": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/current_annotations_schemas/ngs.json#/definitions/libraryPreparationMethod"
+    },
+    "readLength": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/current_annotations_schemas/ngs.json#/definitions/readLength"
+    },
+    "runType": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/current_annotations_schemas/ngs.json#/definitions/runType"
+    }
+  },
+  "required": [
+    "specimenID",
+    "assay",
+    "platform",
+    "libraryBatch",
+    "sequencingBatch",
+    "libraryPrep",
+    "libraryPreparationMethod",
+    "readLength",
+    "runType"
+  ]
+}
