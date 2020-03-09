@@ -103,9 +103,6 @@
     },
     "pH": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/current_annotations_schemas/neuro.json#/definitions/pH"
-    },
-    "yearAutopsy": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/reference_definitions_schemas/clinicalData.json#/definitions/yearAutopsy"
     }
   },
   "required": [
@@ -220,7 +217,7 @@
         }
       },
       "then": {
-        "required": ["PMICertain", "PMI", "pH", "organWeight", "organRIN", "yearAutopsy"]
+        "required": ["PMICertain", "PMI", "pH", "organWeight", "organRIN"]
       }
     } 
   ]
