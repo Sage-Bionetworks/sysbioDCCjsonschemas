@@ -199,7 +199,39 @@
     },
     "dementia": {
       "description": "Is dementia present",
-      "type": "boolean"
+      "type": "string",
+      "anyOf": [
+        {
+          "const": "true",
+          "description": "Dementia is present",
+          "source": ""
+        },
+        {
+          "const": "True",
+          "description": "Dementia is present",
+          "source": ""
+        },
+        {
+          "const": "TRUE",
+          "description": "Dementia is present",
+          "source": ""
+        },
+        {
+          "const": "false",
+          "description": "Dementia is not present",
+          "source": ""
+        },
+        {
+          "const": "False",
+          "description": "Dementia is not present",
+          "source": ""
+        },
+        {
+          "const": "FALSE",
+          "description": "Dementia is not present",
+          "source": ""
+        }
+      ]
     },
     "diagnosisPhenotype": {
       "description": "Diagnosis phenotype",
