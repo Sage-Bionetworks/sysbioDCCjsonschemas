@@ -127,6 +127,9 @@
       "type": "string",
       "anyOf": [
         {
+          "const": "3Dchromatin"
+        },
+        {
           "const": "ASD-MSSM-IncRNA"
         },
         {
