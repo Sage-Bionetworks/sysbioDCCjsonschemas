@@ -107,6 +107,11 @@
           "const": "STARRSeq",
           "description": "Self-transcribing active regulatory region sequencing assay (STARR-Seq)",
           "source": "http://purl.obolibrary.org/obo/OBI_0002041"
+        },
+        {
+          "const": "DNALibraryConstruction",
+          "description": "A DNA library constructed from DNA extracted from cells",
+          "source": "https://www.ebi.ac.uk/ols/ontologies/efo/terms?short_form=EFO_0010172"
         }
       ]
     },
@@ -156,27 +161,37 @@
         {
           "const": "bulk cell",
           "description": "All cells from bulk sample",
-          "source": "https://github.com/HumanCellAtlas/metadata-schema/blob/master/json_schema/type/process/sequencing/library_preparation_process.json"
+          "source": "Sage Bionetworks"
         },
         {
           "const": "single cell",
           "description": "Single cell",
-          "source": "https://github.com/HumanCellAtlas/metadata-schema/blob/master/json_schema/type/process/sequencing/library_preparation_process.json"
+          "source": "Sage Bionetworks"
         },
         {
           "const": "bulk nuclei",
           "description": "All nuclei from bulk sample",
-          "source": "https://github.com/HumanCellAtlas/metadata-schema/blob/master/json_schema/type/process/sequencing/library_preparation_process.json"
+          "source": "Sage Bionetworks"
         },
         {
           "const": "single nucleus",
           "description": "Single nuclei",
-          "source": "https://github.com/HumanCellAtlas/metadata-schema/blob/master/json_schema/type/process/sequencing/library_preparation_process.json"
+          "source": "Sage Bionetworks"
         },
         {
           "const": "mitochondria",
           "description": "Mitochondria only",
-          "source": "https://github.com/HumanCellAtlas/metadata-schema/blob/master/json_schema/type/process/sequencing/library_preparation_process.json"
+          "source": "Sage Bionetworks"
+        },
+        {
+          "const": "sorted cells",
+          "description": "Sorted cells",
+          "source": "Sage Bionetworks"
+        },
+        {
+          "const": "sorted nuclei",
+          "description": "Sorted nuclei",
+          "source": "Sage Bionetworks"
         }
       ]
     },
