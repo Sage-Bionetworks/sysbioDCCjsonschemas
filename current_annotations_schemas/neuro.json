@@ -18,6 +18,16 @@
       "description": "",
       "anyOf": [
         {
+          "const": "3Dchromatin",
+          "description": "The neuronal and glial 3D chromatin architecture study",
+          "source": "https://www.synapse.org/#!Synapse:syn21754060"
+        },
+        {
+          "const": "ACOM",
+          "description": "The apoE effects in iPSC-derived Alzheimer’s disease cerebral organoid model study",
+          "source": "https://www.synapse.org/#!Synapse:syn21680862"
+        },
+        {
           "const": "VMC",
           "description": "The Vascular Mural Cell -derived ApoE Study",
           "source": "https://www.synapse.org/#!Synapse:syn21624490"

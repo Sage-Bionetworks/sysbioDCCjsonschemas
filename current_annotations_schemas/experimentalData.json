@@ -10,6 +10,11 @@
       "description": "The technology used to generate the data in this file",
       "anyOf": [
         {
+          "const": "HPLC",
+          "description": "Frequently referred to simply as HPLC, this form of column chromatography is used frequently in biochemistry. The analyte is forced through a column by liquid at high pressure, which decreases the time the separated components remain on the stationary phase.",
+          "source": "http://purl.obolibrary.org/obo/NCIT_C16434"
+        },
+        {
           "const": "photograph",
           "description": "An image recorded by a camera.",
           "source": "http://purl.obolibrary.org/obo/NCIT_C86035"
@@ -768,6 +773,26 @@
           "const": "Emory",
           "description": "Emory University",
           "source": "https://www.emory.edu/"
+        },
+        {
+          "const": "BannerSun",
+          "description": "Banner Sun Health Research Institute",
+          "source": "https://www.bannerhealth.com/locations/sun-city/banner-sun-health-research-institute-santa-fe"
+        },
+        {
+          "const": "TAA",
+          "description": "Tourette Association of America",
+          "source": "https://tourette.org/"
+        },
+        {
+          "const": "HBTRC",
+          "description": "Harvard Brain Tissue Resource Center",
+          "source": "https://hbtrc.mclean.harvard.edu/"
+        },
+        {
+          "const": "Yale",
+          "description": "Yale School of Medicine",
+          "source": "https://medicine.yale.edu/"
         }
       ]
     },
@@ -1118,6 +1143,11 @@
     "platform": {
       "description": "The specific version (manufacturer, model, etc.) of a technology that is used to carry out a laboratory or computational experiment.",
       "anyOf": [
+        {
+          "const": "Q Exactive HF",
+          "description": "Thermo Scientific Q Exactive",
+          "source": "http://purl.obolibrary.org/obo/MS_1002523"
+        },
         {
           "const": "Q Exactive Plus",
           "description": "Thermo Scientific Q Exactive Plus",
@@ -1605,6 +1635,16 @@
           "const": "Juvenile Myelomonocytic Leukemia",
           "description": "A myelodysplastic/myeloproliferative neoplasm of childhood that is characterized by proliferation principally of the granulocytic and monocytic lineages. Myelomonocytic proliferation is seen in the bone marrow and the blood. The leukemic cells may infiltrate any tissue, however liver, spleen, lymph nodes, skin, and respiratory tract are the most common sites of involvement.",
           "source": "http://purl.obolibrary.org/obo/NCIT_C9233"
+        },
+        {
+          "const": "progressive supranuclear palsy",
+          "description": "A movement disease that is characterized by serious and progressive problems with control of gait and balance, along with complex eye movement and thinking problems. It involves gradual deterioration and death of specific volumes of the brain.",
+          "source": "http://purl.obolibrary.org/obo/DOID_678"
+        },
+        {
+          "const": "mild cognitive impairment",
+          "description": "Diminished or impaired mental and/or intellectual function.",
+          "source": "http://purl.obolibrary.org/obo/OMIT_0027843"
         }
       ]
     },
