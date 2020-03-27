@@ -1,5 +1,45 @@
 ## JSON Validation, Template, and Reference Schemas
 
+### v0.0.4-dev ([view source](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/tree/7c7942639c2fb4d901dc1e9b3d91b3b5a341a003))
+
+#### PsychENCODE
+* [assay_ATACseq_schema.json](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/blob/gh-pages/releases/v0.0.4-dev/PsychENCODE/assay_ATACseq_schema.json)
+* [assay_HiC_schema.json](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/blob/gh-pages/releases/v0.0.4-dev/PsychENCODE/assay_HiC_schema.json)
+* [assay_RNAseq_schema.json](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/blob/gh-pages/releases/v0.0.4-dev/PsychENCODE/assay_RNAseq_schema.json)
+* [assay_TMTproteomics_schema.json](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/blob/gh-pages/releases/v0.0.4-dev/PsychENCODE/assay_TMTproteomics_schema.json)
+* [assay_WGS_schema.json](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/blob/gh-pages/releases/v0.0.4-dev/PsychENCODE/assay_WGS_schema.json)
+* [assay_snpArray_schema.json](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/blob/gh-pages/releases/v0.0.4-dev/PsychENCODE/assay_snpArray_schema.json)
+* [biospecimen_schema.json](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/blob/gh-pages/releases/v0.0.4-dev/PsychENCODE/biospecimen_schema.json)
+* [individual_animal_schema.json](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/blob/gh-pages/releases/v0.0.4-dev/PsychENCODE/individual_animal_schema.json)
+* [individual_human_schema.json](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/blob/gh-pages/releases/v0.0.4-dev/PsychENCODE/individual_human_schema.json)
+* [psychENCODE_schema.json](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/blob/gh-pages/releases/v0.0.4-dev/PsychENCODE/psychENCODE_schema.json)
+* [template_assay_schema.json](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/blob/gh-pages/releases/v0.0.4-dev/PsychENCODE/template_assay_schema.json)
+* [template_manifest_schema.json](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/blob/gh-pages/releases/v0.0.4-dev/PsychENCODE/template_manifest_schema.json)
+
+#### reference_definitions_schemas
+* [clinicalData.json](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/blob/gh-pages/releases/v0.0.4-dev/reference_definitions_schemas/clinicalData.json)
+* [new_schema_refs.json](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/blob/gh-pages/releases/v0.0.4-dev/reference_definitions_schemas/new_schema_refs.json)
+* [PEC_specific.json](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/blob/gh-pages/releases/v0.0.4-dev/reference_definitions_schemas/PEC_specific.json)
+
+#### current_annotations_schemas
+* [analysis.json](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/blob/gh-pages/releases/v0.0.4-dev/current_annotations_schemas/analysis.json)
+* [array.json](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/blob/gh-pages/releases/v0.0.4-dev/current_annotations_schemas/array.json)
+* [cancer.json](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/blob/gh-pages/releases/v0.0.4-dev/current_annotations_schemas/cancer.json)
+* [chem.json](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/blob/gh-pages/releases/v0.0.4-dev/current_annotations_schemas/chem.json)
+* [compoundScreen.json](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/blob/gh-pages/releases/v0.0.4-dev/current_annotations_schemas/compoundScreen.json)
+* [curatedData.json](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/blob/gh-pages/releases/v0.0.4-dev/current_annotations_schemas/curatedData.json)
+* [dhart.json](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/blob/gh-pages/releases/v0.0.4-dev/current_annotations_schemas/dhart.json)
+* [experimentalData.json](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/blob/gh-pages/releases/v0.0.4-dev/current_annotations_schemas/experimentalData.json)
+* [genie.json](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/blob/gh-pages/releases/v0.0.4-dev/current_annotations_schemas/genie.json)
+* [immunoAssay.json](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/blob/gh-pages/releases/v0.0.4-dev/current_annotations_schemas/immunoAssay.json)
+* [network.json](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/blob/gh-pages/releases/v0.0.4-dev/current_annotations_schemas/network.json)
+* [neuro.json](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/blob/gh-pages/releases/v0.0.4-dev/current_annotations_schemas/neuro.json)
+* [neurofibromatosis.json](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/blob/gh-pages/releases/v0.0.4-dev/current_annotations_schemas/neurofibromatosis.json)
+* [ngs.json](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/blob/gh-pages/releases/v0.0.4-dev/current_annotations_schemas/ngs.json)
+* [sageCommunity.json](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/blob/gh-pages/releases/v0.0.4-dev/current_annotations_schemas/sageCommunity.json)
+* [tool.json](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/blob/gh-pages/releases/v0.0.4-dev/current_annotations_schemas/tool.json)
+* [toolExtended.json](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/blob/gh-pages/releases/v0.0.4-dev/current_annotations_schemas/toolExtended.json)
+
 ### v0.0.3-dev ([view source](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/tree/c946888300d4e4f739ad4e66afb533f8254ffacc))
 
 #### PsychENCODE
