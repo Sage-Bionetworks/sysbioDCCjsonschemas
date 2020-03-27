@@ -1,0 +1,224 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id":"http://example.com/individual_human_schema.json",
+  "title": "PsychENCODE Individual Human Metadata Schema",
+  "description": "Validates PsychENCODE individual human metadata",
+  "type": "object",
+  "properties": {
+    "individualID": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/current_annotations_schemas/experimentalData.json#/definitions/individualID"
+    },
+    "individualIdSource": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/current_annotations_schemas/experimentalData.json#/definitions/individualIdSource"
+    },
+    "species": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/current_annotations_schemas/experimentalData.json#/definitions/species"
+    },
+    "reportedGender": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/reference_definitions_schemas/clinicalData.json#/definitions/reportedGender"
+    },
+    "postmortem": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/reference_definitions_schemas/clinicalData.json#/definitions/postmortem"
+    },
+    "sexChromosome": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/sexChromosome"
+    },
+    "race": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/reference_definitions_schemas/clinicalData.json#/definitions/race"
+    },
+    "raceDetail": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/reference_definitions_schemas/clinicalData.json#/definitions/raceDetail"
+    },
+    "genotypeInferredAncestry": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/reference_definitions_schemas/clinicalData.json#/definitions/genotypeInferredAncestry"
+    },
+    "IQ": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/reference_definitions_schemas/clinicalData.json#/definitions/IQ"
+    },
+    "BMI": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/reference_definitions_schemas/clinicalData.json#/definitions/BMI"
+    },
+    "primaryDiagnosis": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/current_annotations_schemas/experimentalData.json#/definitions/diagnosis"
+    },
+    "primaryDiagnosisDetail": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/reference_definitions_schemas/clinicalData.json#/definitions/primaryDiagnosisDetail"
+    },
+    "otherDiagnosis": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/reference_definitions_schemas/clinicalData.json#/definitions/otherDiagnosis"
+    },
+    "otherDiagnosisDetail": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/reference_definitions_schemas/clinicalData.json#/definitions/otherDiagnosisDetail"
+    },
+    "familyHistory": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/reference_definitions_schemas/clinicalData.json#/definitions/familyHistory"
+    },
+    "ageOnset": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/reference_definitions_schemas/clinicalData.json#/definitions/ageOnset"
+    },
+    "neuropathDescription" : {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/reference_definitions_schemas/clinicalData.json#/definitions/neuropathDescription"
+    },
+    "dementia": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/reference_definitions_schemas/clinicalData.json#/definitions/dementia"
+    },
+    "CDR": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/reference_definitions_schemas/clinicalData.json#/definitions/CDR"
+    },
+    "braak": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/reference_definitions_schemas/clinicalData.json#/definitions/braak"
+    },
+    "otherMedicalDx": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/reference_definitions_schemas/clinicalData.json#/definitions/otherMedicalDx"
+    },
+    "otherMedicalDetail": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/reference_definitions_schemas/clinicalData.json#/definitions/otherMedicalDetail"
+    },
+    "ageOfDeath": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/reference_definitions_schemas/clinicalData.json#/definitions/ageOfDeath"
+    },
+    "ageOfDeathUnits": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/reference_definitions_schemas/clinicalData.json#/definitions/ageOfDeathUnits"
+    },
+    "causeOfDeath": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/reference_definitions_schemas/clinicalData.json#/definitions/causeOfDeath"
+    },
+    "mannerOfDeath": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/reference_definitions_schemas/clinicalData.json#/definitions/mannerOfDeath"
+    },
+    "postmortemTox": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/reference_definitions_schemas/clinicalData.json#/definitions/postmortemTox"
+    },
+    "postmortemToxSource": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/reference_definitions_schemas/clinicalData.json#/definitions/postmortemToxSource"
+    },
+    "medRecordTox": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/reference_definitions_schemas/clinicalData.json#/definitions/medRecordTox"
+    },
+    "PMICertain": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/PMICertain"
+    },
+    "PMI": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/current_annotations_schemas/neuro.json#/definitions/PMI"
+    },
+    "pH": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/current_annotations_schemas/neuro.json#/definitions/pH"
+    }
+  },
+  "required": [
+    "individualID",
+    "individualIdSource",
+    "species",
+    "reportedGender",
+    "postmortem"
+  ],
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "species": {
+            "const": "Human"
+          }
+        }
+      },
+      "then": {
+        "required": ["sexChromosome", "race", "raceDetail", "genotypeInferredAncestry", "IQ", "BMI",
+                     "primaryDiagnosis", "primaryDiagnosisDetail", "otherDiagnosis", "familyHistory",
+                     "ageOnset", "neuropathDescription", "dementia", "otherMedicalDx"]
+      }
+    },
+    {
+      "if": {
+        "allOf": [
+          {
+            "properties": {
+              "species": {
+                "const": "Human"
+              },
+              "otherDiagnosis": {
+                "not": {"const": "None"}
+              }
+            },
+	    "required": ["otherDiagnosis"]
+          }
+        ]
+      },
+      "then": {
+        "required": ["otherDiagnosisDetail"]
+      }
+    },
+    {
+      "if": {
+        "allOf": [
+          {
+            "properties": {
+              "species": {
+                "const": "Human"
+              },
+	      "dementia": {
+                "const": true
+              }
+            },
+            "required": ["dementia"]
+          }
+        ]
+      },
+      "then": {
+        "required": ["CDR", "braak"]
+      }
+    },
+    {
+      "if": {
+        "allOf": [
+          {
+            "properties": {
+              "species": {
+                "const": "Human"
+              },
+              "otherMedicalDx": {
+                "not": {"const": "None"}
+              }
+            },
+            "required": ["otherMedicalDx"]
+          }
+        ]
+      },
+      "then": {
+        "required": ["otherMedicalDetail"]
+      }
+    },
+    {
+      "if": {
+        "allOf": [
+          {
+            "properties": {
+              "species": {
+                "const": "Human"
+              },
+              "postmortem": {
+                "const": "true"
+              }
+            },
+	    "required": ["postmortem"]
+          }
+        ]
+      },
+      "then": {
+        "required": ["ageOfDeath", "ageOfDeathUnits", "causeOfDeath", "mannerOfDeath", "postmortemTox",
+	             "postmortemToxSource", "medRecordTox"]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "postmortem": {
+            "const": "true"
+          }
+        }
+      },
+      "then": {
+        "required": ["PMICertain", "PMI", "pH", "organWeight", "organRIN"]
+      }
+    } 
+  ]
+}
