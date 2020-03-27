@@ -6,37 +6,37 @@
   "type": "object",
   "properties": {
     "specimenID": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/current_annotations_schemas/experimentalData.json#/definitions/specimenID"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/current_annotations_schemas/experimentalData.json#/definitions/specimenID"
     },
     "assay": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/current_annotations_schemas/experimentalData.json#/definitions/assay"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/current_annotations_schemas/experimentalData.json#/definitions/assay"
     },
     "platform": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/current_annotations_schemas/experimentalData.json#/definitions/platform"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/current_annotations_schemas/experimentalData.json#/definitions/platform"
     },
     "controlType": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/controlType"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/controlType"
     },
     "batch": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/batch"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/batch"
     },
     "batchChannel": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/batchChannel"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/batchChannel"
     },
     "TMTType": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/TMTType"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/TMTType"
     },
     "fragmentation": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/fragmentation"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/fragmentation"
     },
     "resolution": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/resolution"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/resolution"
     },
     "sampleID": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/sampleID"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/sampleID"
     },
     "multiconsensusStudyFileID": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.3-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/multiconsensusStudyFileID"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/multiconsensusStudyFileID"
     }
   },
   "required": [
