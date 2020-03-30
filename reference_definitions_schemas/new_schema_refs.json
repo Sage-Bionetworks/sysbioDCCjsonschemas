@@ -10,10 +10,6 @@
       "description": "DNA QC metric - ratio of absorbance at 260 nm and 280 nm",
       "type": "number"
     },
-    "antibodyAmount": {
-      "description": "Antibody amount",
-      "type": "number"
-    },
     "arrayBatch": {
       "description": "Genotyping batch",
       "type": "string"
@@ -29,10 +25,6 @@
     "batchChannel": {
       "description": "TMT channel the sample is labeled with",
       "type": "string"
-    },
-    "chromatinAmount": {
-      "description": "Chromatin amount",
-      "type": "number"
     },
     "controlType": {
       "description": "Control samples suitable for normalization and batch correction",
