@@ -4,6 +4,8 @@
 
 #### PsychENCODE
 * [assay_ATACseq_schema.json](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/blob/gh-pages/releases/v0.0.4-dev/PsychENCODE/assay_ATACseq_schema.json)
+* [assay_ChIPseq_schema.json](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/blob/gh-pages/releases/v0.0.4-dev/PsychENCODE/assay_ChIPseq_schema.json)
+* [assay_RNAseq_schema.json](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/blob/gh-pages/releases/v0.0.4-dev/PsychENCODE/assay_RNAseq_schema.json)
 * [assay_HiC_schema.json](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/blob/gh-pages/releases/v0.0.4-dev/PsychENCODE/assay_HiC_schema.json)
 * [assay_RNAseq_schema.json](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/blob/gh-pages/releases/v0.0.4-dev/PsychENCODE/assay_RNAseq_schema.json)
 * [assay_TMTproteomics_schema.json](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/blob/gh-pages/releases/v0.0.4-dev/PsychENCODE/assay_TMTproteomics_schema.json)
