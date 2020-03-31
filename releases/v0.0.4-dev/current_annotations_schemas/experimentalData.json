@@ -795,6 +795,11 @@
           "source": "https://hbtrc.mclean.harvard.edu/"
         },
         {
+          "const": "UM-BTB",
+          "description": "University of Maryland Brain and Tissue Bank",
+          "source": "https://www.medschool.umaryland.edu/btbank/"
+        },
+        {
           "const": "Yale",
           "description": "Yale School of Medicine",
           "source": "https://medicine.yale.edu/"
@@ -1172,6 +1177,11 @@
           "const": "NanostringnCounter_MouseADPanel",
           "description": "770 standardized genes covering 30 clinically derived AD-associated modules discovered in the AMP-AD consortium study of human brain tissue.",
           "source": "https://www.nanostring.com/products/gene-expression-panels/gene-expression-panels-overview/ncounter-ad-panels"
+        },
+        {
+          "const": "HiSeq1000",
+          "description": "Illumina HiSeq 1000",
+          "source": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GPL15433"
         },
         {
           "const": "HiSeq3000",

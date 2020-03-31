@@ -8,7 +8,7 @@
     },
     "antibodyAmount": {
       "description": "Amount of antibody used for an assay",
-      "type": "integer"
+      "type": "number"
     },
     "catalogNumber": {
       "description": "The identifier assigned to a product, usually in the list of products published by a reseller or manufacturer",
@@ -16,7 +16,7 @@
     },
     "chromatinAmount": {
       "description": "Amount of chromatin used for an assay",
-      "type": "integer"
+      "type": "number"
     },
     "lotNumber": {
       "description": "A distinctive alpha-numeric identification code assigned by the manufacturer or distributor to a specific quantity of manufactured material or product within a batch",
