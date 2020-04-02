@@ -199,6 +199,9 @@
           "const": "SingleCellRNAseq"
         },
         {
+          "const": "TS-RNAseq"
+        },
+        {
           "const": "UCLA-ASD"
         },
         {
