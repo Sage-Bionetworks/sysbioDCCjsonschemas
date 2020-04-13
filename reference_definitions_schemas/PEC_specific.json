@@ -89,6 +89,10 @@
           "description": "Functional Genomic Resource and Integrative Model of Dopaminergic Circuitry Associated with Psychiatric Disease"
         },
         {
+          "const": "U01MH103339",
+          "description": "Transcriptional and Epigenetic Signatures of Human Brain Development and Autism"
+        },
+        {
           "const": "U01MH116438",
           "description": "Massively Parallel Characterization of Psychiatric Disease Associated Regulatory Elements in Defined Cell Types"
         },
