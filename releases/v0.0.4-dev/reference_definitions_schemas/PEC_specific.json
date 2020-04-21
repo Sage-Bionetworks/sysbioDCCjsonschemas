@@ -93,6 +93,10 @@
           "description": "Transcriptional and Epigenetic Signatures of Human Brain Development and Autism"
         },
         {
+          "const": "U01MH103340",
+          "description": "Genetic Variants Affect Brain Gene Expression and Risks of Psychiatric Disorders"
+        },
+        {
           "const": "U01MH116438",
           "description": "Massively Parallel Characterization of Psychiatric Disease Associated Regulatory Elements in Defined Cell Types"
         },
