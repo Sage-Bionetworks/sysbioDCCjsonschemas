@@ -755,14 +755,34 @@
       "description": "Database or repository to which individual ID maps",
       "anyOf": [
         {
-          "const": "NIMH-HBCC",
-          "description": "The NIH Human Brain Collection Core",
-          "source": "https://www.nimh.nih.gov/labs-at-nimh/research-areas/research-support-services/hbcc/human-brain-collection-core-hbcc.shtml"
+          "const": "BannerSun",
+          "description": "Banner Sun Health Research Institute",
+          "source": "https://www.bannerhealth.com/locations/sun-city/banner-sun-health-research-institute-santa-fe"
+        },
+        {
+          "const": "Emory",
+          "description": "Emory University",
+          "source": "https://www.emory.edu/"
+        },
+        {
+          "const": "HBTRC",
+          "description": "Harvard Brain Tissue Resource Center",
+          "source": "https://hbtrc.mclean.harvard.edu/"
+        },
+        {
+          "const": "JAX",
+          "description": "The Jackson Laboratory",
+          "source": "https://www.jax.org"
         },
         {
           "const": "MSSM",
           "description": "Mount Sinai NIH Brain and Tissue Repository",
           "source": "http://icahn.mssm.edu/research/labs/neuropathology-and-brain-banking"
+        },
+        {
+          "const": "NIMH-HBCC",
+          "description": "The NIH Human Brain Collection Core",
+          "source": "https://www.nimh.nih.gov/labs-at-nimh/research-areas/research-support-services/hbcc/human-brain-collection-core-hbcc.shtml"
         },
         {
           "const": "Penn",
@@ -780,24 +800,14 @@
           "source": "https://www.radc.rush.edu/"
         },
         {
-          "const": "JAX",
-          "description": "The Jackson Laboratory",
-          "source": "https://www.jax.org"
+          "const": "Sestan",
+          "description": "Sestan Lab, Yale School of Medicine",
+          "source": "https://medicine.yale.edu/lab/sestan/"
         },
         {
-          "const": "UCSF",
-          "description": "University of California - San Francisco",
-          "source": "https://www.ucsf.edu/"
-        },
-        {
-          "const": "Emory",
-          "description": "Emory University",
-          "source": "https://www.emory.edu/"
-        },
-        {
-          "const": "BannerSun",
-          "description": "Banner Sun Health Research Institute",
-          "source": "https://www.bannerhealth.com/locations/sun-city/banner-sun-health-research-institute-santa-fe"
+          "const": "SMRI",
+          "description": "Stanley Medical Research Institute",
+          "source": "http://www.stanleyresearch.org/"
         },
         {
           "const": "TAA",
@@ -805,9 +815,9 @@
           "source": "https://tourette.org/"
         },
         {
-          "const": "HBTRC",
-          "description": "Harvard Brain Tissue Resource Center",
-          "source": "https://hbtrc.mclean.harvard.edu/"
+          "const": "UCSF",
+          "description": "University of California - San Francisco",
+          "source": "https://www.ucsf.edu/"
         },
         {
           "const": "UM-BTB",
@@ -818,11 +828,6 @@
           "const": "Yale",
           "description": "Yale School of Medicine",
           "source": "https://medicine.yale.edu/"
-        },
-        {
-          "const": "Sestan",
-          "description": "Sestan Lab, Yale School of Medicine",
-          "source": "https://medicine.yale.edu/lab/sestan/"
         }
       ]
     },
