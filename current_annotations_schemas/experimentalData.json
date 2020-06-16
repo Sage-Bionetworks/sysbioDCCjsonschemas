@@ -755,6 +755,11 @@
       "description": "Database or repository to which individual ID maps",
       "anyOf": [
         {
+          "const": "ABN",
+          "description": "Autism Brain Net",
+          "source": "https://www.autismbrainnet.org/"
+        },
+        {
           "const": "BannerSun",
           "description": "Banner Sun Health Research Institute",
           "source": "https://www.bannerhealth.com/locations/sun-city/banner-sun-health-research-institute-santa-fe"
