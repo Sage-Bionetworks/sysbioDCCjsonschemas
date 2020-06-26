@@ -25,6 +25,10 @@
           "description": "Mapping the Role of Long Noncoding RNAs in Gene Regulatory Networks in Schizophrenia"
         },
         {
+          "const": "R01MH110472",
+          "description": "Transcription Factor Function in Healthy and Psychiatric Disorder-Affected Brains"
+        },
+        {
           "const": "R01MH110905",
           "description": "2/2 Measuring Translational Dynamics and the Proteome to Identify Potential Brain Biomarkers for Psychiatric Disease"
         },
@@ -145,6 +149,9 @@
         },
         {
           "const": "BrainGVEX"
+        },
+        {
+          "const": "BrainTF"
         },
         {
           "const": "BrainVar"
