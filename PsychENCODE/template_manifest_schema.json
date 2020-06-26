@@ -17,6 +17,9 @@
     "specimenID": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/current_annotations_schemas/experimentalData.json#/definitions/specimenID"
     },
+    "isMultiIndividual": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/current_annotations_schemas/experimentalData.json#/definitions/isMultiIndividual"
+    },
     "isMultiSpecimen": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/current_annotations_schemas/experimentalData.json#/definitions/isMultiSpecimen"
     },
