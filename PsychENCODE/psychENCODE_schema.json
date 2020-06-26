@@ -134,6 +134,9 @@
     "IQ": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/reference_definitions_schemas/clinicalData.json#/definitions/IQ"
     },
+    "isMultiIndividual": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/current_annotations_schemas/experimentalData.json#/definitions/isMultiIndividual"
+    },
     "isMultiSpecimen": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/current_annotations_schemas/experimentalData.json#/definitions/isMultiSpecimen"
     },
