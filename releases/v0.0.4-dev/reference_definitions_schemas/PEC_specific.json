@@ -193,6 +193,9 @@
           "const": "iPSCNeuroDiff"
         },
         {
+          "const": "IsoHuB"
+        },
+        {
           "const": "LIBD-WGBS"
         },
         {
@@ -211,7 +214,7 @@
           "const": "NHP-Macaque"
         },
         {
-          "const": "SCZ-MSSM-IncRNA"
+          "const": "SCZ-IncRNA"
         },
         {
           "const": "SingleCellRNAseq"
