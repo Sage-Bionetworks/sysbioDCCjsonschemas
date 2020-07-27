@@ -760,9 +760,19 @@
           "source": "https://www.autismbrainnet.org/"
         },
         {
+          "const": "ABR",
+          "description": "Advanced Biosciences Resources",
+          "source": ""
+        },
+        {
           "const": "BannerSun",
           "description": "Banner Sun Health Research Institute",
           "source": "https://www.bannerhealth.com/locations/sun-city/banner-sun-health-research-institute-santa-fe"
+        },
+        {
+          "const": "Einstein",
+          "description": "Albert Einstein College of Medicine",
+          "source": "https://www.einstein.yu.edu/"
         },
         {
           "const": "Emory",
@@ -785,9 +795,19 @@
           "source": "http://icahn.mssm.edu/research/labs/neuropathology-and-brain-banking"
         },
         {
+          "const": "NDRI",
+          "description": "National Disease Research Interchange",
+          "source": "https://ndriresource.org/"
+        },
+        {
           "const": "NIMH-HBCC",
           "description": "The NIH Human Brain Collection Core",
           "source": "https://www.nimh.nih.gov/labs-at-nimh/research-areas/research-support-services/hbcc/human-brain-collection-core-hbcc.shtml"
+        },
+        {
+          "const": "Novogenix",
+          "description": "Novogenix Laboratories",
+          "source": ""
         },
         {
           "const": "Penn",
@@ -815,6 +835,11 @@
           "source": "http://www.stanleyresearch.org/"
         },
         {
+          "const": "StemExpress",
+          "description": "StemExpress",
+          "source": "https://www.stemexpress.com/"
+        },
+        {
           "const": "TAA",
           "description": "Tourette Association of America",
           "source": "https://tourette.org/"
@@ -828,6 +853,11 @@
           "const": "UM-BTB",
           "description": "University of Maryland Brain and Tissue Bank",
           "source": "https://www.medschool.umaryland.edu/btbank/"
+        },
+        {
+          "const": "UW-CDL",
+          "description": "University of Washington Congenital Defects Lab",
+          "source": ""
         },
         {
           "const": "Yale",
