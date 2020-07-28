@@ -163,9 +163,6 @@
           "const": "CNON"
         },
         {
-          "const": "DevBrain-snRNAseq"
-        },
-        {
           "const": "DopaModel"
         },
         {
@@ -200,6 +197,9 @@
         },
         {
           "const": "LIBD-WGBS"
+        },
+        {
+          "const": "MDDseq"
         },
         {
           "const": "MouseHAL"
