@@ -198,6 +198,11 @@
       "description": "Sample ID",
       "type": "string"
     },
+    "samplingAge": {
+      "description": "Age of the individual when the sample was taken",
+      "type": "number",
+      "maximum": 90
+    },
     "sequencingBatch": {
       "description": "Batch library was sequenced in",
       "type": "string"

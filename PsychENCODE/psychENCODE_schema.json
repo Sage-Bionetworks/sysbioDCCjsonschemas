@@ -302,6 +302,9 @@
     "sampleID": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/sampleID"
     },
+    "samplingAge": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/samplingAge"
+    },
     "sequencingBatch": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/sequencingBatch"
     },
