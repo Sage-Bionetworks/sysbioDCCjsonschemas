@@ -6,64 +6,64 @@
   "type": "object",
   "properties": {
     "specimenID": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/current_annotations_schemas/experimentalData.json#/definitions/specimenID"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/current_annotations_schemas/experimentalData.json#/definitions/specimenID"
     },
     "libraryID": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/libraryID"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/libraryID"
     },
     "assay": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/current_annotations_schemas/experimentalData.json#/definitions/assay"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/current_annotations_schemas/experimentalData.json#/definitions/assay"
     },
     "platform": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/current_annotations_schemas/experimentalData.json#/definitions/platform"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/current_annotations_schemas/experimentalData.json#/definitions/platform"
     },
     "referenceSet": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/current_annotations_schemas/curatedData.json#/definitions/referenceSet"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/current_annotations_schemas/curatedData.json#/definitions/referenceSet"
     },
     "libraryBatch": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/libraryBatch"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/libraryBatch"
     },
     "libraryPreparationMethod": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/current_annotations_schemas/ngs.json#/definitions/libraryPreparationMethod"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/current_annotations_schemas/ngs.json#/definitions/libraryPreparationMethod"
     },
     "sequencingBatch": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/sequencingBatch"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/sequencingBatch"
     },
     "assayTarget": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/current_annotations_schemas/experimentalData.json#/definitions/assayTarget"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/current_annotations_schemas/experimentalData.json#/definitions/assayTarget"
     },
     "antibody": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/current_annotations_schemas/immunoAssays.json#/definitions/antibody"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/current_annotations_schemas/immunoAssays.json#/definitions/antibody"
     },
     "vendor": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/current_annotations_schemas/immunoAssays.json#/definitions/vendor"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/current_annotations_schemas/immunoAssays.json#/definitions/vendor"
     },
     "catalogNumber": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/current_annotations_schemas/immunoAssays.json#/definitions/catalogNumber"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/current_annotations_schemas/immunoAssays.json#/definitions/catalogNumber"
     },
     "lotNumber": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/current_annotations_schemas/immunoAssays.json#/definitions/lotNumber"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/current_annotations_schemas/immunoAssays.json#/definitions/lotNumber"
     },
     "antibodyAmount": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/current_annotations_schemas/immunoAssays.json#/definitions/antibodyAmount"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/current_annotations_schemas/immunoAssays.json#/definitions/antibodyAmount"
     },
     "chromatinAmount": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/current_annotations_schemas/immunoAssays.json#/definitions/chromatinAmount"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/current_annotations_schemas/immunoAssays.json#/definitions/chromatinAmount"
     },
     "isStranded": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/current_annotations_schemas/ngs.json#/definitions/isStranded"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/current_annotations_schemas/ngs.json#/definitions/isStranded"
     },
     "readStrandOrigin": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/current_annotations_schemas/ngs.json#/definitions/readStrandOrigin"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/current_annotations_schemas/ngs.json#/definitions/readStrandOrigin"
     },
     "readLength": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/current_annotations_schemas/ngs.json#/definitions/readLength"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/current_annotations_schemas/ngs.json#/definitions/readLength"
     },
     "runType": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/current_annotations_schemas/ngs.json#/definitions/runType"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/current_annotations_schemas/ngs.json#/definitions/runType"
     },
     "totalReads": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.4-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/totalReads"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/totalReads"
     }
   },
   "required": [
