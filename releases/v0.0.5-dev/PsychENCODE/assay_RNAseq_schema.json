@@ -1,0 +1,106 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id":"http://example.com/assay_RNAseq_schema.json",
+  "title": "PsychENCODE RNASeq Assay Metadata Schema",
+  "description": "Validates PsychENCODE RNASeq assay metadata",
+  "type": "object",
+  "properties": {
+    "specimenID": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/current_annotations_schemas/experimentalData.json#/definitions/specimenID"
+    },
+    "libraryID": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/libraryID"
+    },
+    "assay": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/current_annotations_schemas/experimentalData.json#/definitions/assay"
+    },
+    "platform": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/current_annotations_schemas/experimentalData.json#/definitions/platform"
+    },
+    "referenceSet": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/current_annotations_schemas/curatedData.json#/definitions/referenceSet"
+    },
+    "rnaBatch": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/rnaBatch"
+    },
+    "libraryBatch": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/libraryBatch"
+    },
+    "sequencingBatch": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/sequencingBatch"
+    },
+    "libraryPrep": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/current_annotations_schemas/ngs.json#/definitions/libraryPrep"
+    },
+    "libraryPreparationMethod": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/current_annotations_schemas/ngs.json#/definitions/libraryPreparationMethod"
+    },
+    "isStranded": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/current_annotations_schemas/ngs.json#/definitions/isStranded"
+    },
+    "readStrandOrigin": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/current_annotations_schemas/ngs.json#/definitions/readStrandOrigin"
+    },
+    "readLength": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/current_annotations_schemas/ngs.json#/definitions/readLength"
+    },
+    "runType": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/current_annotations_schemas/ngs.json#/definitions/runType"
+    },
+    "totalReads": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/totalReads"
+    },
+    "validBarcodeReads": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/validBarcodeReads"
+    },
+    "numberCells": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/numberCells"
+    },
+    "medianGenes": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/medianGenes"
+    },
+    "medianUMIs": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/medianUMIs"
+    }
+  },
+  "required": [
+    "specimenID",
+    "libraryID",
+    "assay",
+    "platform",
+    "rnaBatch",
+    "libraryBatch",
+    "sequencingBatch", 
+    "libraryPrep",
+    "libraryPreparationMethod",
+    "isStranded",
+    "readStrandOrigin",
+    "readLength",
+    "runType",
+    "totalReads",
+    "validBarcodeReads",
+    "numberCells",
+    "medianUMIs"
+  ],
+  "allOf": [
+    {
+      "if": {
+        "allOf": [
+          {
+            "properties": {
+              "assay": {
+                "const": "rnaSeq"
+              },
+              "platform": {
+                "const": "10x"
+              }
+            }
+          }
+        ]
+      },
+      "then": {
+        "required": ["medianGenes"]
+      }
+    }
+  ]
+}

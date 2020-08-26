@@ -1,0 +1,73 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id":"http://example.com/biospecimen_schema.json",
+  "title": "PsychENCODE Biospecimen Metadata Schema",
+  "description": "Validates PsychENCODE biospecimen metadata",
+  "type": "object",
+  "properties": {
+    "individualID": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/current_annotations_schemas/experimentalData.json#/definitions/individualID"
+    },
+    "specimenID": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/current_annotations_schemas/experimentalData.json#/definitions/specimenID"
+    },
+    "organ": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/current_annotations_schemas/experimentalData.json#/definitions/organ"
+    },
+    "organWeight": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/organWeight"
+    },
+    "organRIN": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/organRIN"
+    },
+    "tissue": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/current_annotations_schemas/experimentalData.json#/definitions/tissue"
+    },
+    "BrodmannArea": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/current_annotations_schemas/neuro.json#/definitions/BrodmannArea"
+    },
+    "nucleicAcidSource": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/current_annotations_schemas/ngs.json#/definitions/nucleicAcidSource"
+    },
+    "cellType": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/current_annotations_schemas/experimentalData.json#/definitions/cellType"
+    },
+    "reprogrammedCellType": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/reprogrammedCellType"
+    },
+    "terminalDifferentiationPoint": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/current_annotations_schemas/experimentalData.json#/definitions/terminalDifferentiationPoint"
+    },
+    "passage": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/passage"
+    },
+    "samplingAge": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/samplingAge"
+    }
+  },
+  "required": [
+    "individualID",
+    "specimenID",
+    "organ",
+    "tissue",
+    "nucleicAcidSource",
+    "cellType",
+    "reprogrammedCellType",
+    "terminalDifferentiationPoint",
+    "passage"
+  ],
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "organ": {
+            "const": "brain"
+          }
+        }
+      },
+      "then": {
+        "required": ["BrodmannArea"]
+      }
+    }
+  ]
+}

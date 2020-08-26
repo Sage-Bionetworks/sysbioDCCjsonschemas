@@ -1,0 +1,74 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id":"http://example.com/template_manifest_schema.json",
+  "title": "PsychENCODE Manifest Template Schema",
+  "description": "Validates PsychENCODE manifest template data",
+  "type": "object",
+  "properties": {
+    "path": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/path"
+    },
+    "parent": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/parent"
+    },
+    "individualID": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/current_annotations_schemas/experimentalData.json#/definitions/individualID"
+    },
+    "specimenID": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/current_annotations_schemas/experimentalData.json#/definitions/specimenID"
+    },
+    "isMultiIndividual": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/current_annotations_schemas/experimentalData.json#/definitions/isMultiIndividual"
+    },
+    "isMultiSpecimen": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/current_annotations_schemas/experimentalData.json#/definitions/isMultiSpecimen"
+    },
+    "assay": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/current_annotations_schemas/experimentalData.json#/definitions/assay"
+    },
+    "fileFormat": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/current_annotations_schemas/sageCommunity.json#/definitions/fileFormat"
+    },
+    "consortium": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/reference_definitions_schemas/PEC_specific.json#/definitions/consortium"
+    },
+    "study": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/reference_definitions_schemas/PEC_specific.json#/definitions/study"
+    },
+     "grant": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/reference_definitions_schemas/PEC_specific.json#/definitions/grant"
+    },
+    "resourceType": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/current_annotations_schemas/sageCommunity.json#/definitions/resourceType"
+    },
+    "dataType": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/current_annotations_schemas/experimentalData.json#/definitions/dataType"
+    },
+    "dataSubtype": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/current_annotations_schemas/experimentalData.json#/definitions/dataSubtype"
+    },
+    "metadataType": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/current_annotations_schemas/experimentalData.json#/definitions/metadataType"
+    },
+    "analysisType": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/current_annotations_schemas/analysis.json#/definitions/analysisType"
+    }
+  },
+  "required": [
+    "path",
+    "parent",
+    "individualID",
+    "specimenID",
+    "isMultiSpecimen",
+    "fileFormat",
+    "assay",
+    "consortium",
+    "study",
+    "grant",
+    "resourceType",
+    "dataType",
+    "dataSubtype",
+    "metadataType",
+    "analysisType"
+  ]
+}
