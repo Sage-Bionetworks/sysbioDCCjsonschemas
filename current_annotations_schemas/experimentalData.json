@@ -790,6 +790,11 @@
           "source": "https://www.jax.org"
         },
         {
+          "const": "LIBD",
+          "description": "Lieber Institute for Brain Development",
+          "source": "https://www.libd.org"
+        },
+        {
           "const": "MSSM",
           "description": "Mount Sinai NIH Brain and Tissue Repository",
           "source": "http://icahn.mssm.edu/research/labs/neuropathology-and-brain-banking"
@@ -876,6 +881,11 @@
         },
         {
           "const": "posterior inferior parietal cortex",
+          "description": "",
+          "source": "Sage Bionetworks"
+        },
+        {
+          "const": "subgenual anterior cingulate cortex",
           "description": "",
           "source": "Sage Bionetworks"
         },
@@ -1437,6 +1447,16 @@
       "description": "A cell type is a distinct morphological or functional form of cell.",
       "anyOf": [
         {
+          "const": "A549",
+          "description": "An adenocarcinoma cell line established by D.J. Giard in 1972 from lung carcinoma tissue removed from a 58-year-old Caucasian male.",
+          "source": "http://www.ontobee.org/ontology/NCIT?iri=http://purl.obolibrary.org/obo/NCIT_C117127"
+        },
+        {
+          "const": "dopaminergic neurons",
+          "description": "A neuron that releases dopamine from its synapses.",
+          "source": "http://www.ontobee.org/ontology/BTO?iri=http://purl.obolibrary.org/obo/BTO_0004032"
+        },
+        {
           "const": "Schwann cell precusor",
           "description": "A giioblast cell that develops from a migratory neural crest cell. The SCP is embedded among neurons (axons) with minimal extracellular spaces separating them from nerve cell membranes and has no basal lamina. In rodents SCPs are the only cells in the Schwann cell linage that expresses Cdh19.",
           "source": "http://purl.obolibrary.org/obo/CL_0002375"
@@ -1645,6 +1665,11 @@
           "const": "Schizophrenia",
           "description": "A severe emotional disorder of psychotic depth characteristically marked by a retreat from reality with delusion formation, HALLUCINATIONS, emotional disharmony, and regressive behavior.",
           "source": "https://www.ebi.ac.uk/ols/ontologies/efo/terms?iri=http%3A%2F%2Fwww.ebi.ac.uk%2Fefo%2FEFO_0000692"
+        },
+        {
+          "const": "Major Depressive Disorder",
+          "description": "An endogenous depression that is characterized by an all-encompassing low mood accompanied by low self-esteem, and by loss of interest or pleasure in normally enjoyable activies.",
+          "source": "https://www.ebi.ac.uk/ols/ontologies/doid/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FDOID_1470"
         },
         {
           "const": "Autism Spectrum Disorder",

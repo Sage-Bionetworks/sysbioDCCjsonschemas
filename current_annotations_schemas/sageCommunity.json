@@ -246,6 +246,16 @@
           "source": "http://edamontology.org/format_3003"
         },
         {
+          "const": "bim",
+          "description": "Extended variant information file accompanying a .bed binary genotype table.",
+          "source": "https://plink.readthedocs.io/en/latest/plink_fmt/#bim"
+        },
+        {
+          "const": "fam",
+          "description": "Sample information file accompanying a .bed binary genotype table.",
+          "source": "https://plink.readthedocs.io/en/latest/plink_fmt/#fam"
+        },
+        {
           "const": "chp",
           "description": "CHP file contains probe set analysis results generated from Affymetrix software",
           "source": ""
