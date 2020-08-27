@@ -157,7 +157,7 @@
           "const": "BrainVar"
         },
         {
-          "const": "CMC-PEC"
+          "const": "CMC"
         },
         {
           "const": "CNON"
@@ -218,6 +218,9 @@
         },
         {
           "const": "NHP-Macaque"
+        },
+        {
+          "const": "referenceBrain"
         },
         {
           "const": "SCZ-IncRNA"
