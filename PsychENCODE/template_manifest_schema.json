@@ -26,6 +26,9 @@
     "assay": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/current_annotations_schemas/experimentalData.json#/definitions/assay"
     },
+    "libraryID": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/libraryID"
+    },
     "fileFormat": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/current_annotations_schemas/sageCommunity.json#/definitions/fileFormat"
     },
