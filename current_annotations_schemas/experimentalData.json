@@ -1627,6 +1627,11 @@
       "description": "A diagnosis is the result of a medical investigation to identify a disorder from its signs and symptoms.",
       "anyOf": [
         {
+          "const": "Williams Syndrome",
+          "description": "A genetic syndrome caused by mulitple gene deletions from a region of chromosome 7, and characterized by distinctive facial appearance, mild-to-moderate developmental delay, cheerfulness, cardiovascular abnormalities, and infantile hypercalcemia",
+          "source": "https://ncim.nci.nih.gov/ncimbrowser/ConceptReport.jsp?dictionary=NCI%20Metathesaurus&code=C0175702"
+        },
+        {
           "const": "Bladder Cancer",
           "description": "A malignancy originating in tissues of the urinary bladder.",
           "source": "http://identifiers.org/omim/109800"
