@@ -43,7 +43,7 @@
     },
     "BMI": {
       "description": "Body Mass Index",
-      "type": "integer",
+      "type": "number",
       "minimum": 19,
       "maximum": 54
     },
