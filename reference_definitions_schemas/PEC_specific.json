@@ -142,7 +142,7 @@
           "const": "3Dchromatin"
         },
         {
-          "const": "ASD-MSSM-IncRNA"
+          "const": "ASD-MSSM-lncRNA"
         },
         {
           "const": "BipSeq"
@@ -181,7 +181,7 @@
           "const": "HumanFC"
         },
         {
-          "const": "IncRNA Pilot"
+          "const": "lncRNA Pilot"
         },
         {
           "const": "iPSC"
