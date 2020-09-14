@@ -155,6 +155,9 @@
     "libraryPreparationMethod": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/current_annotations_schemas/ngs.json#/definitions/libraryPreparationMethod"
     },
+    "libraryVersion": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/libraryVersion"
+    },
     "lotNumber": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/current_annotations_schemas/immunoAssays.json#/definitions/lotNumber"
     },
