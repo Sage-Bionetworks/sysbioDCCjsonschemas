@@ -70,7 +70,7 @@
       "type": "string"
     },
     "libraryVersion": {
-      "description": "Library version: for example, rnaSeq 10 library version",
+      "description": "Library version: for example, rnaSeq 10X library version",
       "type": "string"
     },
     "mappedReads": {
