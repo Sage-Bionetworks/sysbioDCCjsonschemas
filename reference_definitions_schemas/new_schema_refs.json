@@ -69,6 +69,10 @@
       "description": "Library ID as provided by the lab",
       "type": "string"
     },
+    "libraryVersion": {
+      "description": "Library version: for example, rnaSeq 10 library version",
+      "type": "string"
+    },
     "mappedReads": {
       "description": "Number of uniquely mapped PE reads",
       "type": "number",
