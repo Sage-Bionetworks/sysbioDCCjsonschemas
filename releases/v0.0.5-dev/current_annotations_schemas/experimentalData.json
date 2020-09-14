@@ -825,6 +825,11 @@
           "source": "https://neurobiobank.nih.gov/"
         },
         {
+          "const": "Pritzker",
+          "description": "Pritzker Neuropsychiatric Disorders Research Consortium Brain Bank",
+          "source": "https://pritzkerneuropsych.org/www/about-us/scientific-approach/brain-bank/"
+        },
+        {
           "const": "Rush",
           "description": "Rush Alzheimer's Disease Center",
           "source": "https://www.radc.rush.edu/"
@@ -885,7 +890,17 @@
           "source": "Sage Bionetworks"
         },
         {
+          "const": "subgenual cingulate cortex",
+          "description": "",
+          "source": "Sage Bionetworks"
+        },
+        {
           "const": "subgenual anterior cingulate cortex",
+          "description": "",
+          "source": "Sage Bionetworks"
+        },
+        {
+          "const": "dorsomedial prefrontal cortex",
           "description": "",
           "source": "Sage Bionetworks"
         },
@@ -948,6 +963,11 @@
           "const": "cerebellum",
           "description": "Part of the metencephalon that lies in the posterior cranial fossa behind the brain stem.",
           "source": "https://www.ebi.ac.uk/ols/ontologies/uberon/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FUBERON_0002037"
+        },
+        {
+          "const": "occipital lobe",
+          "description": "One of the four regions of cortex in each cerebral hemisphere. It is located posterior to the temporal lobe and inferior to the parietal lobe.",
+          "source": "https://www.ebi.ac.uk/ols/ontologies/ncit/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FNCIT_C12355"
         },
         {
           "const": "occipital visual cortex",
