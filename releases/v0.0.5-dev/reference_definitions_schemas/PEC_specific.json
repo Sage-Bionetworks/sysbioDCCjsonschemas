@@ -232,6 +232,9 @@
           "const": "SingleCellRNAseq"
         },
         {
+          "const": "SZBDMulti-Seq"
+        },
+        {
           "const": "TS-RNAseq"
         },
         {
