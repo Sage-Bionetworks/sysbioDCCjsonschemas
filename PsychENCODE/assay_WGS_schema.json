@@ -20,14 +20,8 @@
     "referenceSet": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/current_annotations_schemas/curatedData.json#/definitions/referenceSet"
     },
-    "RIN": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/RIN"
-    },
-    "rnaBatch": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/rnaBatch"
-    },
-    "libraryBatch": {
-      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/libraryBatch"
+    "dnaBatch": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/dnaBatch"
     },
     "sequencingBatch": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/sequencingBatch"
@@ -46,21 +40,18 @@
     },
     "totalReads": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/totalReads"
+    },
+    "numberCells": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/numberCells"
+    },
+    "260/280": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/260~1280"
+    },
+    "260/230": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/260~1230"
+    },
+    "GQN": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/GQN"
     }
-  },
-  "required": [
-    "specimenID",
-    "libraryID",
-    "assay",
-    "platform",
-    "RIN",
-    "rnaBatch",
-    "libraryBatch",
-    "sequencingBatch",
-    "libraryPrep",
-    "libraryPreparationMethod",
-    "readLength",
-    "runType",
-    "totalReads"
-  ]
+  }
 }

@@ -101,7 +101,7 @@
       "type": "string"
     },
     "numberCells": {
-      "description": "QC metric",
+      "description": "Number of cells or nuclei sequenced",
       "type": "integer"
     },
     "organRIN": {
