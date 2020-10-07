@@ -40,6 +40,41 @@
       "description": "DNA isolation batch",
       "type": "string"
     },
+    "directionalBSseqLibrary": {
+      "description": "Is the library directional",
+      "anyOf": [
+        {
+          "const": "true",
+          "description": "The library is directional",
+          "source": ""
+        },
+        {
+          "const": "True",
+          "description": "The library is directional",
+          "source": ""
+        },
+        {
+          "const": "TRUE",
+          "description": "The library is directional",
+          "source": ""
+        },
+        {
+          "const": "false",
+          "description": "The library is not directional",
+          "source": ""
+        },
+        {
+          "const": "False",
+          "description": "The library is not directional",
+          "source": ""
+        },
+        {
+          "const": "FALSE",
+          "description": "The library is not directional",
+          "source": ""
+        }
+      ]
+    },
     "fragmentation": {
       "description": "Specifies the mode by which MS2 and MS3 ions are generated",
       "type": "string"
@@ -48,6 +83,10 @@
       "description": "Fraction of all mapped reads that fall into the called peak regions (Fraction of reads in peaks)",
       "type": "number",
       "exclusiveMinimum": 0
+    },
+    "gDNAconc": {
+      "description": "gDNA concentration in ng",
+      "type": "number"
     },
     "GQN": {
       "description": "Illumina gDNA quality score",
@@ -60,6 +99,10 @@
     "investigatorName": {
       "description": "Name of the investigator",
       "type": "string"
+    },
+    "lambdaDNAconc": {
+      "description": "Lambda DNA spike-in concentration in ng",
+      "type": "number"
     },
     "libraryBatch": {
       "description": "Batch library was prepared in",
