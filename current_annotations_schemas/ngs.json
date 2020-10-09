@@ -152,6 +152,11 @@
           "const": "Omni-ATAC",
           "description": "Omni-ATAC-seq library preparation",
           "source": "https://protocolexchange.researchsquare.com/article/nprot-6107/v1"
+        },
+        {
+          "const": "NEBNext",
+          "description": "NEBNext library preparation",
+          "source": "https://www.neb-online.fr/en/neb-en/next-generation-sequencing/nebnext-kits-for-illumina/"
         }
       ]
     },
