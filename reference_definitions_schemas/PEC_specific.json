@@ -229,6 +229,9 @@
           "const": "SCZ-IncRNA"
         },
         {
+          "const": "scOrganomics"
+        },
+        {
           "const": "SingleCellRNAseq"
         },
         {
