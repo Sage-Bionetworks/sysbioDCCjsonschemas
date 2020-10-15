@@ -205,6 +205,9 @@
           "const": "LIBD-WGBS"
         },
         {
+          "const": "LIBD-WGBS-SCZD"
+        },
+        {
           "const": "MDDseq"
         },
         {
