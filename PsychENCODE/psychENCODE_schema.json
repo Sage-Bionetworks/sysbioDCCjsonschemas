@@ -32,6 +32,9 @@
     "antibodyAmount": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/current_annotations_schemas/immunoAssays.json#/definitions/antibodyAmount"
     },
+    "antibodyAmountUnits": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/current_annotations_schemas/immunoAssays.json#/definitions/antibodyAmountUnits"
+    },
     "arrayBatch": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/arrayBatch"
     },
