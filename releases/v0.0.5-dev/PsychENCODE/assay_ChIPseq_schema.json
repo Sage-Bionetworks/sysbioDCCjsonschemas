@@ -47,6 +47,9 @@
     "antibodyAmount": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/current_annotations_schemas/immunoAssays.json#/definitions/antibodyAmount"
     },
+    "antibodyAmountUnits": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/current_annotations_schemas/immunoAssays.json#/definitions/antibodyAmountUnits"
+    },
     "chromatinAmount": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/current_annotations_schemas/immunoAssays.json#/definitions/chromatinAmount"
     },
