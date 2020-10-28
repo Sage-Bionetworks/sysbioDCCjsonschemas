@@ -580,12 +580,12 @@
           "source": ""
         },
         {
-          "const": "GATAD28",
+          "const": "GATAD2A",
           "description": "",
           "source": ""
         },
         {
-          "const": "GATAD2A",
+          "const": "GATAD2B",
           "description": "",
           "source": ""
         },
@@ -800,7 +800,7 @@
           "source": ""
         },
         {
-          "const": "SMARCAS",
+          "const": "SMARCA5",
           "description": "",
           "source": ""
         },
