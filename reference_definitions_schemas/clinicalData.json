@@ -8,8 +8,7 @@
     },
     "ageOfDeath": {
       "description": "Age of death",
-      "type": "number",
-      "exclusiveMinimum": 0
+      "type": "string"
     },
     "ageOfDeathUnits": {
       "description": "The death age unit of measure (gestational week or year)",
