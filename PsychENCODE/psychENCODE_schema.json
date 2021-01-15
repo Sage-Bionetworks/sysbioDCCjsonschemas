@@ -98,6 +98,9 @@
     "dnaBatch": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/dnaBatch"
     },
+    "familialRelationship": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/reference_definitions_schemas/clinicalData.json#/definitions/familialRelationship"
+    },
     "familyHistory": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/reference_definitions_schemas/clinicalData.json#/definitions/familyHistory"
     },
