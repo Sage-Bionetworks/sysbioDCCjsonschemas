@@ -237,6 +237,23 @@
       "description": "Individual ethnicity",
       "type": "string"
     },
+    "familialRelationship": {
+      "description": "Familial relationship to other participant(s)",
+      "type": "string",
+      "anyOf": [
+        {
+          "const": "father",
+          "description": "A male parent",
+          "source": "https://ncim.nci.nih.gov/ncimbrowser/ConceptReport.jsp?dictionary=NCI%20Metathesaurus&code=C0015671"
+        },
+        {
+          "const": "son",
+          "description": "A male human offspring",
+          "source": "https://ncim.nci.nih.gov/ncimbrowser/ConceptReport.jsp?dictionary=NCI%20Metathesaurus&code=C0037683"
+        }
+      ]
+    },
+
     "familyHistory": {
       "description": "Is there a family history of the disorder/disease",
       "type": "string",
