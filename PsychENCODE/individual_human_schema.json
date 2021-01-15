@@ -32,6 +32,9 @@
     "genotypeInferredAncestry": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/reference_definitions_schemas/clinicalData.json#/definitions/genotypeInferredAncestry"
     },
+    "familialRelationship": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/reference_definitions_schemas/clinicalData.json#/definitions/familialRelationship"
+    },
     "IQ": {
       "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.5-dev/reference_definitions_schemas/clinicalData.json#/definitions/IQ"
     },
