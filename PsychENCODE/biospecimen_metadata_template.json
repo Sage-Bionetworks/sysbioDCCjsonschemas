@@ -21,6 +21,9 @@
         "tissue": {
             "$ref": "sage.annotations-experimentalData.tissue"
         },
+        "isPostMortem": {
+            "$ref": "sage.annotations-experimentalData.isPostMortem"
+        },
         "BrodmannArea": {
             "$ref": "sage.annotations-neuro.BrodmannArea"
         },
