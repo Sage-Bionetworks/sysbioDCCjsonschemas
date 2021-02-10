@@ -15,9 +15,6 @@
         "reportedGender": {
             "$ref": "sage.annotations-demographics.reportedGender"
         },
-        "postmortem": {
-            "$ref": "sage.annotations-clinical.postmortem"
-        },
         "sexChromosome": {
             "$ref": "sage.annotations-clinical.sexChromosome"
         },
