@@ -30,9 +30,6 @@
         "resolution": {
             "$ref": "sage.annotations-experimentalData.resolution"
         },
-        "sampleID": {
-            "$ref": "sage.annotations-experimentalData.sampleID"
-        },
         "multiconsensusStudyFileID": {
             "$ref": "sage.annotations-experimentalData.multiconsensusStudyFileID"
         }
