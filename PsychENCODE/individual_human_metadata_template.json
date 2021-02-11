@@ -21,6 +21,9 @@
         "race": {
             "$ref": "sage.annotations-demographics.race"
         },
+        "ethnicity": {
+            "$ref": "sage.annotations-demographics.ethnicity"
+        },
         "genotypeInferredAncestry": {
             "$ref": "sage.annotations-clinical.genotypeInferredAncestry"
         },
