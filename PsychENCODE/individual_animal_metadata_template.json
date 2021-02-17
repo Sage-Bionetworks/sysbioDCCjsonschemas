@@ -15,11 +15,11 @@
         "sexChromosome": {
             "$ref": "sage.annotations-clinical.sexChromosome"
         },
-        "dateOfBirth": {
-            "$ref": "sage.annotations-demographics.dateOfBirth"
+        "dateBirth": {
+            "$ref": "sage.annotations-demographics.dateBirth"
         },
-        "dateOfDeath": {
-            "$ref": "sage.annotations-demographics.dateOfDeath"
+        "dateDeath": {
+            "$ref": "sage.annotations-demographics.dateDeath"
         },
         "treatmentType": {
             "$ref": "sage.annotations-neuro.treatmentType"

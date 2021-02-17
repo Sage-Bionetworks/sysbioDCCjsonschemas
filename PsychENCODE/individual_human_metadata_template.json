@@ -72,17 +72,17 @@
         "otherMedicalDetail": {
             "$ref": "sage.annotations-experimentalData.diagnosisDetail"
         },
-        "ageOfDeath": {
-            "$ref": "sage.annotations-demographics.ageOfDeath"
+        "ageDeath": {
+            "$ref": "sage.annotations-demographics.ageDeath"
         },
-        "ageOfDeathUnits": {
-            "$ref": "sage.annotations-demographics.ageOfDeathUnits"
+        "ageDeathUnits": {
+            "$ref": "sage.annotations-demographics.ageDeathUnits"
         },
-        "causeOfDeath": {
-            "$ref": "sage.annotations-clinical.causeOfDeath"
+        "causeDeath": {
+            "$ref": "sage.annotations-clinical.causeDeath"
         },
-        "mannerOfDeath": {
-            "$ref": "sage.annotations-clinical.mannerOfDeath"
+        "mannerDeath": {
+            "$ref": "sage.annotations-clinical.mannerDeath"
         },
         "postmortemTox": {
             "$ref": "sage.annotations-clinical.postmortemTox"
