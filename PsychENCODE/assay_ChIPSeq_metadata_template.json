@@ -51,6 +51,9 @@
         "chromatinAmount": {
             "$ref": "sage.annotations-immunoAssays.chromatinAmount"
         },
+        "chromatinAmountUnits": {
+            "$ref": "sage.annotations-immunoAssays.chromatinAmountUnits"
+        },
         "isStranded": {
             "$ref": "sage.annotations-ngs.isStranded"
         },
