@@ -1,0 +1,37 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id":"sysbio.metadataTemplates-AD.biospecimen.drosophila",
+    "description": "SysBio AD drosophila biospecimen metadata template schema",
+    "properties": {
+        "specimenID": {
+            "$ref": "sage.annotations-experimentalData.specimenID"
+        },
+        "bodyPart": {
+            "$ref": "sage.annotations-experimentalData.bodyPart"
+        },
+        "tissueWeight": {
+            "$ref": "sage.annotations-experimentalData.tissueWeight"
+        },
+        "nucleicAcidSource": {
+            "$ref": "sage.annotations-ngs.nucleicAcidSource"
+        },
+        "genotype": {
+            "$ref": "sage.annotations-clinical.genotype"
+        },
+        "ageDays": {
+            "$ref": "sage.annotations-demographics.ageDays"
+        },
+        "nIndividuals": {
+            "$ref": "sage.annotations-experimentalData.nIndividuals"
+        },
+        "nMale": {
+            "$ref": "sage.annotations-experimentalData.nMale"
+        },
+        "nFemale": {
+            "$ref": "sage.annotations-experimentalData.nFemale"
+        },
+        "temperature": {
+            "$ref": "sage.annotations-experimentalData.temperature"
+        }
+    }
+}
