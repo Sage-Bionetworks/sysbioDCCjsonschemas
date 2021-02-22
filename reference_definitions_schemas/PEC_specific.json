@@ -241,6 +241,9 @@
           "const": "SingleCellRNAseq"
         },
         {
+          "const": "snMultiRegionDevelopmentalTranscriptomics"
+        },
+        {
           "const": "SZBDMulti-Seq"
         },
         {
