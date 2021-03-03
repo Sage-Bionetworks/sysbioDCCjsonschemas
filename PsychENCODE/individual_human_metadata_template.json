@@ -1,7 +1,7 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id":"sysbio.metadataTemplates-individual.human",
-    "description": "SysBio individual human metadata template schema",
+    "$id":"sysbio.metadataTemplates-pec.individual.human",
+    "description": "SysBio PEC individual human metadata template schema",
     "properties": {
         "individualID": {
             "$ref": "sage.annotations-experimentalData.individualID"
