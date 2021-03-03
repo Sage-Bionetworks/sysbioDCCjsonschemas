@@ -21,8 +21,29 @@
         "dateDeath": {
             "$ref": "sage.annotations-demographics.dateDeath"
         },
-        "treatmentType": {
-            "$ref": "sage.annotations-neuro.treatmentType"
+        "sex": {
+            "$ref": "sage.annotations-experimentalData.sex"
+        },
+        "genotype": {
+            "$ref": "sage.annotations-clinical.genotype"
+        },
+        "genotypeBackground": {
+            "$ref": "sage.annotations-clinical.genotypeBackground"
+        },
+        "room": {
+            "$ref": "sage.annotations-clinical.room"
+        },
+        "litter": {
+            "$ref": "sage.annotations-clinical.litter"
+        },
+        "matingID": {
+            "$ref": "sage.annotations-clinical.matingID"
+        },
+        "treatmentDose": {
+            "$ref": "sage.annotations-neuro.treatmentDose"
+        },
+        "modelSystemName": {
+            "$ref": "sage.annotations-neuro.modelSystemName"
         }
     }
 }
