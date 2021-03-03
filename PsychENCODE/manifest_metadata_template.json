@@ -31,7 +31,7 @@
             "$ref": "sage.annotations-sageCommunity.fileFormat"
         },
         "consortium": {
-            "$ref": "sysbio.annotations-PECSpecific.consortium"
+            "const": "PEC"
         },
         "study": {
             "$ref": "sysbio.annotations-PECSpecific.study"
