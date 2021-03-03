@@ -1,0 +1,58 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id":"sysbio.metadataTemplates-assay.rnaSeq",
+    "description": "SysBio rnaSeq metadata template schema",
+    "properties": {
+        "specimenID": {
+            "$ref": "sage.annotations-experimentalData.specimenID"
+        },
+        "libraryID": {
+            "$ref": "sage.annotations-ngs.libraryID"
+        },
+        "assay": {
+          "$ref": "sage.annotations-experimentalData.assay"
+        },
+        "platform": {
+            "$ref": "sage.annotations-experimentalData.platform"
+        },
+        "RIN": {
+            "$ref": "sage.annotations-qc.RIN"
+        },
+        "referenceSet": {
+            "$ref": "sage.annotations-curatedData.referenceSet"
+        },
+        "rnaBatch": {
+            "$ref": "sage.annotations-batch.rnaBatch"
+        },
+        "libraryBatch": {
+            "$ref": "sage.annotations-batch.libraryBatch"
+        },
+        "sequencingBatch": {
+            "$ref": "sage.annotations-batch.sequencingBatch"
+        },
+        "libraryPrep": {
+            "$ref": "sage.annotations-ngs.libraryPrep"
+        },
+        "libraryPreparationMethod": {
+            "$ref": "sage.annotations-ngs.libraryPreparationMethod"
+        },
+        "libraryVersion": {
+            "$ref": "sage.annotations-ngs.libraryVersion"
+        },
+        "isStranded": {
+            "$ref": "sage.annotations-ngs.isStranded"
+        },
+        "readStrandOrigin": {
+            "$ref": "sage.annotations-ngs.readStrandOrigin"
+        },
+        "readLength": {
+            "$ref": "sage.annotations-ngs.readLength"
+        },
+        "runType": {
+            "$ref": "sage.annotations-ngs.runType"
+        },
+        "totalReads": {
+            "$ref": "sage.annotations-experimentalData.totalReads"
+        }
+    }
+}
