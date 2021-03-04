@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id":"sysbio.metadataTemplates-AD.manifest",
+    "$id":"sysbio.metadataTemplates-ad.manifest",
     "description": "AD manifest template schema",
     "properties": {
         "path": {

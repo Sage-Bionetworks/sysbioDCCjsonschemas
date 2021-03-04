@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id":"sysbio.metadataTemplates-AD.biospecimen",
+    "$id":"sysbio.metadataTemplates-ad.biospecimen",
     "description": "SysBio AD biospecimen metadata template schema",
     "properties": {
         "individualID": {
