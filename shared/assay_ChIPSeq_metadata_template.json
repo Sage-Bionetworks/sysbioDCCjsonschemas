@@ -1,0 +1,73 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id":"sysbio.metadataTemplates-assay.ChIPSeq",
+    "description": "SysBio ChIPSeq metadata template schema",
+    "properties": {
+        "specimenID": {
+          "$ref": "sage.annotations-experimentalData.specimenID"
+        },
+        "libraryID": {
+            "$ref": "sage.annotations-ngs.libraryID"
+        },
+        "assay": {
+            "$ref": "sage.annotations-experimentalData.assay"
+        },
+        "platform": {
+            "$ref": "sage.annotations-experimentalData.platform"
+        },
+        "referenceSet": {
+            "$ref": "sage.annotations-curatedData.referenceSet"
+        },
+        "libraryBatch": {
+            "$ref": "sage.annotations.batch.libraryBatch"
+        },
+        "libraryPreparationMethod": {
+            "$ref": "sage.annotations.ngs.libraryPreparationMethod"
+        },
+        "sequencingBatch": {
+            "$ref": "sage.annotations-batch.sequencingBatch"
+        },
+        "assayTarget": {
+            "$ref": "sage.annotations-experimentalData.assayTarget"
+        },
+        "antibody": {
+            "$ref": "sage.annotations-immunoAssays.antibody"
+        },
+        "vendor": {
+            "$ref": "sage.annotations-immunoAssays.vendor"
+        },
+        "catalogNumber": {
+            "$ref": "sage.annotations-immunoAssays.catalogNumber"
+        },
+        "lotNumber": {
+            "$ref": "sage.annotations-immunoAssays.lotNumber"
+        },
+        "antibodyAmount": {
+            "$ref": "sage.annotations-immunoAssays.antibodyAmount"
+        },
+        "antibodyAmountUnits": {
+            "$ref": "sage.annotations-immunoAssays.antibodyAmountUnits"
+        },
+        "chromatinAmount": {
+            "$ref": "sage.annotations-immunoAssays.chromatinAmount"
+        },
+        "chromatinAmountUnits": {
+            "$ref": "sage.annotations-immunoAssays.chromatinAmountUnits"
+        },
+        "isStranded": {
+            "$ref": "sage.annotations-ngs.isStranded"
+        },
+        "readStrandOrigin": {
+            "$ref": "sage.annotations-ngs.readStrandOrigin"
+        },
+        "readLength": {
+            "$ref": "sage.annotations-ngs.readLength"
+        },
+        "runType": {
+            "$ref": "sage.annotations-ngs.runType"
+        },
+        "totalReads": {
+            "$ref": "sage.annotations-experimentalData.totalReads"
+        }
+    }
+}
