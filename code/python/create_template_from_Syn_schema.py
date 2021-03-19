@@ -17,7 +17,7 @@ Input parameters: Full name of the registered schema, including
                   Full pathname to the output template file
                   Desired output - either csv or excel
 
-Outputs: csv template file or Excel workbook
+Outputs: csv template files or Excel workbook
 
 Execution: create_template_from_Syn_schema.py <JSON schema name>
              <output file> <csv/excel>
@@ -39,7 +39,7 @@ def get_alias_dictionary(json_schema):
              there are occasions where the property references a schema with
              a different name. For example, in the PEC snpArray template
              schema, the property is 260/280 but the schema it references is
-             qc260280 because Synapse does not allow non-alphanumeric
+             ratio260over280 because Synapse does not allow non-alphanumeric
              characters in the schema name and also requires that the schema
              name starts with a character.
 
