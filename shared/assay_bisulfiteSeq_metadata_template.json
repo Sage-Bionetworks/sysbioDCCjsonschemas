@@ -1,0 +1,67 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id":"sysbio.metadataTemplates-assay.bisulfiteSeq",
+    "description": "SysBio bisulfiteSeq (aka WGBS) metadata template schema",
+    "properties": {
+        "specimenID": {
+            "$ref": "sage.annotations-experimentalData.specimenID"
+        },
+        "libraryID": {
+            "$ref": "sage.annotations-ngs.libraryID"
+        },
+        "assay": {
+            "$ref": "sage.annotations-experimentalData.assay"
+        },
+        "platform": {
+            "$ref": "sage.annotations-experimentalDAta.platform"
+        },
+        "referenceSet": {
+            "$ref": "sage.annotations-curatedData.referenceSet"
+        },
+        "dnaBatch": {
+            "$ref": "sage.annotations-batch.dnaBatch"
+        },
+        "libraryBatch": {
+            "$ref": "sage.annotations-batch.libraryBatch"
+        },
+        "sequencingBatch": {
+            "$ref": "sage.annotations-batch.sequencingBatch"
+        },
+        "libraryPrep": {
+            "$ref": "sage.annotations-ngs.libraryPrep"
+        },
+        "libraryPreparationMethod": {
+            "$ref": "sage.annotations-ngs.libraryPreparationMethod"
+        },
+        "isStranded": {
+            "$ref": "sage.annotations-ngs.isStranded"
+        },
+        "readStrandOrigin": {
+            "$ref": "sage.annotations-ngs.readStrandOrigin"
+        },
+        "readLength": {
+          "$ref": "sage.annotations-ngs.readLength"
+        },
+        "runType": {
+            "$ref": "sage.annotations-ngs.runType"
+        },
+        "totalReads": {
+            "$ref": "sage.annotations-experimentalData.totalReads"
+        },
+        "directionalBSseqLibrary": {
+            "$ref": "sage.annotations-ngs.directionalBSseqLibrary"
+        },
+        "gDNAconc": {
+            "$ref": "sage.annotations-experimentalData.gDNAconc"
+        },
+        "lambdaDNAconc": {
+            "$ref": "sage.annotations-experimentalData.lambdaDNAconc"
+        },
+        "pcrCycles": {
+            "$ref": "sage.annotations-experimentalDAta.pcrCycles"
+        },
+        "meanCoverage": {
+            "$ref": "sage.annotations-qc.meanCoverage"
+        }
+    }
+}
