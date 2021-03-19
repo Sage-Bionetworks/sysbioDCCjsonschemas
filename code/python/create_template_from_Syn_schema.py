@@ -17,7 +17,7 @@ Input parameters: Full name of the registered schema, including
                   Full pathname to the output template file
                   Desired output - either csv or excel
 
-Outputs: csv template file or Excel workbook
+Outputs: csv template files or Excel workbook
 
 Execution: create_template_from_Syn_schema.py <JSON schema name>
              <output file> <csv/excel>
