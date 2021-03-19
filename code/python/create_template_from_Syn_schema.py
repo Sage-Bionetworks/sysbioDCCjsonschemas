@@ -87,8 +87,6 @@ def get_Syn_definitions_values(json_schema, synlogin):
           Synapse
     """
 
-    import pandas as pd
-
     definitions_columns = ["key", "type", "description", "required", "maximumSize"]
     definitions_df = pd.DataFrame(columns=definitions_columns)
     values_columns = ["key", "value", "valueDescription", "source"]
