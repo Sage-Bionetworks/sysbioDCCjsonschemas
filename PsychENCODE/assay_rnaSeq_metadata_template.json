@@ -15,6 +15,9 @@
         "platform": {
             "$ref": "sage.annotations-experimentalData.platform"
         },
+        "RIN": {
+            "$ref": "sage.annotations-qc.RIN"
+        },
         "referenceSet": {
             "$ref": "sage.annotations-curatedData.referenceSet"
         },
