@@ -19,10 +19,10 @@
             "$ref": "sage.annotations-curatedData.referenceSet"
         },
         "libraryBatch": {
-            "$ref": "sage.annotations.batch.libraryBatch"
+            "$ref": "sage.annotations-batch.libraryBatch"
         },
         "libraryPreparationMethod": {
-            "$ref": "sage.annotations.ngs.libraryPreparationMethod"
+            "$ref": "sage.annotations-ngs.libraryPreparationMethod"
         },
         "sequencingBatch": {
             "$ref": "sage.annotations-batch.sequencingBatch"
