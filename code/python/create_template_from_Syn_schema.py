@@ -27,139 +27,7 @@ import argparse
 import os
 import pandas as pd
 import synapseclient
-
-VALUES_LIST_KEYWORDS = ["anyOf", "enum"]
-
-def get_alias_dictionary(json_schema):
-    """
-    Function: get_alias_dictionary
-
-    Purpose: Given a dereferenced Synapse schema, return a dictionary of schema
-             names and their associated properties. This is necessary because
-             there are occasions where the property references a schema with
-             a different name. For example, in the PEC snpArray template
-             schema, the property is 260/280 but the schema it references is
-             ratio260over280 because Synapse does not allow non-alphanumeric
-             characters in the schema name and also requires that the schema
-             name starts with a character.
-
-    Input parameters: A dereferenced Synapse schema
-
-    Returns: A dictionary with the schema name as the key and the schema
-             property as the value.
-    """
-    alias_dict = {}
-    schema_properties = json_schema["validationSchema"]["properties"]
-
-    for key_val in schema_properties:
-        key = schema_properties[key_val]["$ref"].split(".")[-1]
-        alias_dict[key] = key_val
-
-    return alias_dict
-
-
-def get_Syn_definitions_values(json_schema, synlogin):
-    """
-    Function: get_Syn_definitions_values
-
-    Purpose: Return pandas dataframes of schema properties needed to generate
-             templates.
-
-    Input parameters: File object pointing to the JSON schema file
-                      Synapse object created in the main program to log into
-                      Synapse.
-
-    Returns: A dataframe of key types, definitions, required keys, and maximum
-             sizes
-                 definitions_df["key"] - string
-                 definitions_df["type"] - string
-                 definitions_df["description"] - string
-                 definitions_df["required"] - Boolean
-                 definitions_df["maximumSize"] - integer
-
-             A dataframe of key values lists
-                 values_df["key"] - string
-                 values_df["value"] - string
-                 values_df["valueDescription"] - string
-                 values_df["source"] - string
-
-    Note: This function is used with JSON schemas that are registered in
-          Synapse
-    """
-
-    definitions_columns = ["key", "type", "description", "required", "maximumSize"]
-    definitions_df = pd.DataFrame(columns=definitions_columns)
-    values_columns = ["key", "value", "valueDescription", "source"]
-    values_df = pd.DataFrame(columns=values_columns)
-
-    # Get a list of schema aliases in case the property name is different
-    # from the schema name.
-    alias_dict = get_alias_dictionary(json_schema)
-
-    schema_defs = json_schema["validationSchema"]["definitions"]
-    for full_schema_name in schema_defs:
-        definitions_dict = {}
-
-        # The pattern of the schema name is organization-module.key
-        key = full_schema_name.split("-")[1].split(".")[1]
-        definitions_dict["key"] = alias_dict[key]
-        schema_values = schema_defs[full_schema_name]
-
-        if schema_values:
-            if "type" in schema_values:
-                definitions_dict["type"] = schema_values["type"]
-
-            if "description" in schema_values:
-                definitions_dict["description"] = schema_values["description"]
-
-            if "maximumSize" in schema_values:
-                definitions_dict["maximumSize"] = schema_values["maximumSize"]
-
-            if (("required" in json_schema["validationSchema"])
-                and (key in json_schema["validationSchema"]["required"])):
-                definitions_dict["required"] = True
-            else:
-                definitions_dict["required"] = False
-
-            definitions_df = definitions_df.append(definitions_dict, ignore_index=True)
-
-            # If the term is a redefinition of an existing term, resolve the
-            # existing reference in order to get the values list. If the
-            # existing object contains a values list (anyOf or enum), add it
-            # to the redefined terms keys.
-            if "properties" in schema_values:
-                existing_schema = synlogin._waitForAsync("/schema/type/validation/async",
-                                                         {"$id": schema_values["properties"][key]["$ref"]})
-
-                if any([value_key in existing_schema["validationSchema"] for value_key in VALUES_LIST_KEYWORDS]):
-                    vkey = list(set(VALUES_LIST_KEYWORDS).intersection(existing_schema["validationSchema"]))[0]
-                    schema_values[vkey] = existing_schema["validationSchema"][vkey]
-
-            values_dict = {}
-            if "pattern" in schema_values:
-                values_dict["key"] = alias_dict[key]
-                values_dict["value"] = schema_values["pattern"]
-                values_df = values_df.append(values_dict, ignore_index=True)
-
-            elif any([value_key in schema_values for value_key in VALUES_LIST_KEYWORDS]):
-                vkey = list(set(VALUES_LIST_KEYWORDS).intersection(schema_values))[0]
-                for value_row in schema_values[vkey]:
-                    values_dict["key"] = alias_dict[key]
-
-                    if "const" in value_row:
-                        values_dict["value"] = value_row["const"]
-
-                    if "description" in value_row:
-                        values_dict["valueDescription"] = value_row["description"]
-
-                    if "source" in value_row:
-                        values_dict["source"] = value_row["source"]
-
-                    values_df = values_df.append(values_dict, ignore_index=True)
-                    values_dict = {}
-
-    return(definitions_df, values_df)
-
+import schemaTools
 
 def template_csv(template_file_name, template_df, dictionary_df, values_df):
     """
@@ -253,8 +121,8 @@ def main():
 
     args = parser.parse_args()
 
-    json_schema = syn._waitForAsync("/schema/type/validation/async", {"$id": args.json_schema_name})
-    definitions_df, values_df = get_Syn_definitions_values(json_schema, syn)
+    json_schema = syn.restGET(f"/schema/type/registered/{args.json_schema_name}")
+    definitions_df, values_df = schemaTools.get_Syn_definitions_values(json_schema, syn)
     definitions_df = definitions_df[["key", "description"]]
     template_df = pd.DataFrame(columns=definitions_df["key"].tolist())
 
