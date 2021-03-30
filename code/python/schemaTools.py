@@ -48,13 +48,20 @@ def get_Syn_definitions_values(json_schema, synlogin):
 
     for key in json_schema["properties"]:
 
-        # Dereference the term schema.
-        term_schema = synlogin._waitForAsync("/schema/type/validation/async",
-                                             {"$id": json_schema["properties"][key]["$ref"]})
+        if "$ref" in json_schema["properties"][key]:
+            # Dereference the term schema.
+            term_schema = synlogin._waitForAsync("/schema/type/validation/async",
+                                                 {"$id": json_schema["properties"][key]["$ref"]})
 
-        schema_defs = term_schema["validationSchema"]
+            schema_defs = term_schema["validationSchema"]
+            schema_module = json_schema["properties"][key]["$ref"].split("-")[1].split(".")[0]
+        else:
+            schema_defs = json_schema["properties"][key]
+            schema_module = ""
+
         definitions_dict = {}
         definitions_dict["key"] = key
+        definitions_dict["module"] = schema_module
 
         if "type" in schema_defs:
             definitions_dict["type"] = schema_defs["type"]
@@ -89,6 +96,11 @@ def get_Syn_definitions_values(json_schema, synlogin):
         if "pattern" in schema_defs:
             values_dict["key"] = key
             values_dict["value"] = schema_defs["pattern"]
+            values_df = values_df.append(values_dict, ignore_index=True)
+
+        elif "const" in schema_defs:
+            values_dict["key"] = key
+            values_dict["value"] = schema_defs["const"]
             values_df = values_df.append(values_dict, ignore_index=True)
 
         elif any([value_key in schema_defs for value_key in VALUES_LIST_KEYWORDS]):
