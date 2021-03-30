@@ -66,6 +66,23 @@ def get_Syn_definitions_values(json_schema, synlogin):
         if "type" in schema_defs:
             definitions_dict["type"] = schema_defs["type"]
 
+            # If the type is Boolean, create a true/false values list.
+            if schema_defs["type"].upper() == "BOOLEAN":
+                schema_defs["anyOf"] = []
+                tf_dict = {}
+                tf_dict["const"] = "false"
+                schema_defs["anyOf"].append(tf_dict.copy())
+                tf_dict["const"] = "False"
+                schema_defs["anyOf"].append(tf_dict.copy())
+                tf_dict["const"] = "FALSE"
+                schema_defs["anyOf"].append(tf_dict.copy())
+                tf_dict["const"] = "true"
+                schema_defs["anyOf"].append(tf_dict.copy())
+                tf_dict["const"] = "True"
+                schema_defs["anyOf"].append(tf_dict.copy())
+                tf_dict["const"] = "TRUE"
+                schema_defs["anyOf"].append(tf_dict.copy())
+
         if "description" in schema_defs:
             definitions_dict["description"] = schema_defs["description"]
 
