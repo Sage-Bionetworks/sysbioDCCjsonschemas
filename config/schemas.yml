@@ -1,0 +1,100 @@
+sysbio.metadataTemplates-assay.16SrRNAseq:
+  output-name: "template_assay_16SrRNAseq.xlsx"
+  AMP-AD: "syn25011038"
+
+sysbio.metadataTemplates-assay.ATACSeq:
+  output-name: "template_assay_ATACSeq.xlsx"
+  AMP-AD: "syn25011038"
+  PEC: "syn25011042"
+
+sysbio.metadataTemplates-assay.bisulfiteSeq:
+  output-name: "template_assay_bisulfiteSeq.xlsx"
+  AMP-AD: "syn25011038"
+  PEC: "syn25011042"
+
+sysbio.metadataTemplates-assay.ChIPSeq:
+  output-name: "template_assay_ChIPSeq.xlsx"
+  AMP-AD: "syn25011038"
+  PEC: "syn25011042"
+
+sysbio.metadataTemplates-assay.HIC:
+  output-name: "template_assay_HI-C.xlsx"
+  AMP-AD: "syn25011038"
+  PEC: "syn25011042"
+
+sysbio.metadataTemplates-assay.metabolomics:
+  output-name: "template_assay_metabolomics.xlsx"
+  AMP-AD: "syn25011038"
+
+sysbio.metadataTemplates-assay.nanostring:
+  output-name: "template_assay_nanostring.xlsx"
+  AMP-AD: "syn25011038"
+
+sysbio.metadataTemplates-assay.rnaArray:
+  output-name: "template_assay_rnaArray.xlsx"
+  AMP-AD: "syn25011038"
+
+sysbio.metadataTemplates-assay.rnaSeq:
+  output-name: "template_assay_rnaSeq.xlsx"
+  AMP-AD: "syn25011038"
+
+sysbio.metadataTemplates-assay.scrnaSeq:
+  output-name: "template_assay_scrnaSeq.xlsx"
+  AMP-AD: "syn25011038"
+  PEC: "syn25011042"
+
+sysbio.metadataTemplates-assay.snpArray:
+  output-name: "template_assay_snpArray.xlsx"
+  AMP-AD: "syn25011038"
+  PEC: "syn25011042"
+
+sysbio.metadataTemplates-assay.TMTquantitation:
+  output-name: "template_assay_TMTquantitation.xlsx"
+  AMP-AD: "syn25011038"
+  PEC: "syn25011042"
+
+sysbio.metadataTemplates-assay.wholeExomeSeq:
+  output-name: "template_assay_wholeExomeSeq.xlsx"
+  AMP-AD: "syn25011038"
+
+sysbio.metadataTemplates-assay.wholeGenomeSeq:
+  output-name: "template_assay_wholeGenomeSeq.xlsx"
+  AMP-AD: "syn25011038"
+  PEC: "syn25011042"
+
+sysbio.metadataTemplates-biospecimen.drosophila:
+  output-name: "template_biospecimen_drosophila.xlsx"
+  AMP-AD: "syn25011038"
+
+sysbio.metadataTemplates-individual.animal:
+  output-name: "template_individual_animal.xlsx"
+  AMP-AD: "syn25011038"
+  PEC: "syn25011042"
+
+sysbio.metadataTemplates-AD.biospecimen:
+  output-name: "template_biospecimen.xlsx"
+  AMP-AD: "syn25011038"
+
+sysbio.metadataTemplates-ad.individual.human:
+  output-name: "template_individual_human.xlsx"
+  AMP-AD: "syn25011038"
+
+sysbio.metadataTemplates-AD.manifest:
+  output-name: "template_manifest.xlsx"
+  AMP-AD: "syn25011038"
+
+sysbio.metadataTemplates-pec.assay.rnaSeq:
+  output-name: "template_assay_rnaSeq.xlsx"
+  PEC: "syn25011042"
+
+sysbio.metadataTemplates-pec.biospecimen:
+  output-name: "template_biospecimen.xlsx"
+  PEC: "syn25011042"
+
+sysbio.metadataTemplates-pec.individual.human:
+  output-name: "template_individual_human.xlsx"
+  PEC: "syn25011042"
+
+sysbio.metadataTemplates-pec.manifest:
+  output-name: "template_manifest.xlsx"
+  PEC: "syn25011042"
