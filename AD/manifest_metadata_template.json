@@ -50,6 +50,9 @@
         },
         "isModelSystem": {
             "$ref": "sage.annotations-neuro.isModelSystem"
+        },
+        "chromosome": {
+            "$ref": "sage.annotations-experimentalData.chromosome"
         }
     }
 }
