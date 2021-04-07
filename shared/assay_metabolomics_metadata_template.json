@@ -32,6 +32,9 @@
         },
         "softwareName": {
             "$ref": "sage.annotations-tool.softwareName"
+        },
+        "spectrometerFrequency": {
+            "$ref": "sage.annotations-experimentalData.spectrometerFrequency"
         }
     }
 }
