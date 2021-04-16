@@ -15,9 +15,6 @@
         "platform": {
             "$ref": "sage.annotations-experimentalData.platform"
         },
-        "sampleBarcode": {
-            "$ref": "sage.annotations-ngs.sampleBarcode"
-        },
         "RIN": {
             "$ref": "sage.annotations-qc.RIN"
         },
@@ -41,9 +38,6 @@
         },
         "libraryVersion": {
             "$ref": "sage.annotations-ngs.libraryVersion"
-        },
-        "libraryType": {
-            "$ref": "sage.annotations-ngs.libraryType"
         },
         "isStranded": {
             "$ref": "sage.annotations-ngs.isStranded"
