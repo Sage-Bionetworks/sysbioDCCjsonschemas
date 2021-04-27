@@ -34,10 +34,10 @@
             "const": "PEC"
         },
         "study": {
-            "$ref": "sage.annotations-PECSpecific.study"
+            "$ref": "sage.annotations-PsychENCODESpecific.study"
         },
         "grant": {
-            "$ref": "sage.annotations-PECSpecific.grant"
+            "$ref": "sage.annotations-PsychENCODESpecific.grant"
         },
         "resourceType": {
             "$ref": "sage.annotations-sageCommunity.resourceType"
