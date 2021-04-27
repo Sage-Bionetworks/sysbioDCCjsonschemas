@@ -34,10 +34,10 @@
             "const": "PEC"
         },
         "study": {
-            "$ref": "sysbio.annotations-PECSpecific.study"
+            "$ref": "sage.annotations-PECSpecific.study"
         },
         "grant": {
-            "$ref": "sysbio.annotations-PECSpecific.grant"
+            "$ref": "sage.annotations-PECSpecific.grant"
         },
         "resourceType": {
             "$ref": "sage.annotations-sageCommunity.resourceType"
