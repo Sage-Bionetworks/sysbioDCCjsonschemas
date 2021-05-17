@@ -1,0 +1,104 @@
+sysbio.metadataTemplates-ad.biospecimen:
+        schema_name: "template_biospecimen.xlsx"
+        AD: "syn18512044"
+
+sysbio.metadataTemplates-ad.individual.human:
+        schema_name: "template_individual_human.xlsx"
+        AD: "syn18512044"
+
+sysbio.metadataTemplates-ad.manifest:
+        schema_name: "template_manifest.xlsx"
+        AD: "syn18512044"
+
+sysbio.metadataTemplates-assay.16SrRNAseq:
+        schema_name: "template_assay_16SrRNAseq.xlsx"
+        AD: "syn18512044"
+
+sysbio.metadataTemplates-assay.ATACSeq:
+        schema_name: "template_assay_ATACSeq.xlsx"
+        AD: "syn18512044"
+        PsychENCODE: "syn20729790"
+
+sysbio.metadataTemplates-assay.bisulfiteSeq:
+        schema_name: "template_assay_bisulfiteSeq.xlsx"
+        AD: "syn18512044"
+        PsychENCODE: "syn20729790"
+
+sysbio.metadataTemplates-assay.ChIPSeq:
+        schema_name: "template_assay_ChIPSeq.xlsx"
+        AD: "syn18512044"
+        PsychENCODE: "syn20729790"
+
+sysbio.metadataTemplates-assay.HIC:
+        schema_name: "template_assay_HI-C.xlsx"
+        AD: "syn18512044"
+        PsychENCODE: "syn20729790"
+
+sysbio.metadataTemplates-assay.metabolomics:
+        schema_name: "template_assay_metabolomics.xlsx"
+        AD: "syn18512044"
+
+sysbio.metadataTemplates-assay.methylationArray:
+        schema_name: "template_assay_methylationArray.xlsx"
+        AD: "syn18512044"
+
+sysbio.metadataTemplates-assay.nanostring:
+        schema_name: "template_assay_nanostring.xlsx"
+        AD: "syn18512044"
+
+sysbio.metadataTemplates-assay.rnaArray:
+        schema_name: "template_assay_rnaArray.xlsx"
+        AD: "syn18512044"
+
+sysbio.metadataTemplates-assay.rnaSeq:
+        schema_name: "template_assay_rnaSeq.xlsx"
+        AD: "syn18512044"
+
+sysbio.metadataTemplates-assay.scrnaSeq:
+        schema_name: "template_assay_scrnaSeq.xlsx"
+        AD: "syn18512044"
+        PsychENCODE: "syn20729790"
+
+sysbio.metadataTemplates-assay.snpArray:
+        schema_name: "template_assay_snpArray.xlsx"
+        AD: "syn18512044"
+        PsychENCODE: "syn20729790"
+
+sysbio.metadataTemplates-assay.TMTquantitation:
+        schema_name: "template_assay_TMTquantitation.xlsx"
+        AD: "syn18512044"
+        PsychENCODE: "syn20729790"
+
+sysbio.metadataTemplates-assay.wholeExomeSeq:
+        schema_name: "template_assay_wholeExomeSeq.xlsx"
+        AD: "syn18512044"
+
+sysbio.metadataTemplates-assay.wholeGenomeSeq:
+        schema_name: "template_assay_wholeGenomeSeq.xlsx"
+        AD: "syn18512044"
+        PsychENCODE: "syn20729790"
+
+sysbio.metadataTemplates-biospecimen.drosophila:
+        schema_name: "template_biospecimen_drosophila.xlsx"
+        AD: "syn18512044"
+
+sysbio.metadataTemplates-individual.animal:
+        schema_name: "template_individual_animal.xlsx"
+        AD: "syn18512044"
+        PsychENCODE: "syn20729790"
+
+sysbio.metadataTemplates-pec.assay.rnaSeq:
+        schema_name: "template_assay_rnaSeq.xlsx"
+        PsychENCODE: "syn20729790"
+
+sysbio.metadataTemplates-pec.biospecimen:
+        schema_name: "template_biospecimen.xlsx"
+        PsychENCODE: "syn20729790"
+
+sysbio.metadataTemplates-pec.individual.human:
+        schema_name: "template_individual_human.xlsx"
+        PsychENCODE: "syn20729790"
+
+sysbio.metadataTemplates-pec.manifest:
+        schema_name: "template_manifest.xlsx"
+        PsychENCODE: "syn20729790"
