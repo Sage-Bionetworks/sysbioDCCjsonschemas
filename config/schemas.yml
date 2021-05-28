@@ -41,6 +41,7 @@ sysbio.metadataTemplates-assay.metabolomics:
 sysbio.metadataTemplates-assay.methylationArray:
         schema_name: "template_assay_methylationArray.xlsx"
         AD: "syn18512044"
+        PsychENCODE: "syn20729790"
 
 sysbio.metadataTemplates-assay.nanostring:
         schema_name: "template_assay_nanostring.xlsx"
@@ -102,3 +103,4 @@ sysbio.metadataTemplates-pec.individual.human:
 sysbio.metadataTemplates-pec.manifest:
         schema_name: "template_manifest.xlsx"
         PsychENCODE: "syn20729790"
+        
