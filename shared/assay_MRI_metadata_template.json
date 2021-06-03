@@ -1,0 +1,34 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id":"sysbio.metadataTemplates-assay.MRI",
+    "description": "SysBio MRI metadata template schema",
+    "properties": {
+        "individualID": {
+            "$ref": "sage.annotations-experimentalData.individualID"
+        },
+        "scanID": {
+            "$ref": "sage.annotations-experimentalData.scanID"
+        },
+        "platform": {
+          "$ref": "sage.annotations-experimentalData.platform"
+        },
+        "MRItype": {
+          "$ref": "sage.annotations-experimentalData.MRItype"
+        },
+        "fieldStrength": {
+          "$ref": "sage.annotations-experimentalData.fieldStrength"
+        },
+        "filename": {
+          "$ref": "sage.annotations-experimentalData.filename"
+        },
+        "contrastAgent": {
+          "$ref": "sage.annotations-experimentalData.contrastAgent"
+        },
+        "ageAssessment": {
+          "$ref": "sage.annotations-experimentalData.ageAssessment"
+        },
+        "ageAssessmentUnits": {
+          "$ref": "sage.annotations-experimentalData.ageAssessmentUnits"
+        }
+    }
+}
