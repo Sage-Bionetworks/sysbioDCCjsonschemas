@@ -19,7 +19,7 @@
           "$ref": "sage.annotations-experimentalData.fieldStrength"
         },
         "filename": {
-          "$ref": "sage.annotations-experimentalData.filename"
+          "$ref": "sage.annotations-manifestKeys.filename"
         },
         "contrastAgent": {
           "$ref": "sage.annotations-experimentalData.contrastAgent"
