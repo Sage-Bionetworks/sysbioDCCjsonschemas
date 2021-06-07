@@ -13,7 +13,7 @@
           "$ref": "sage.annotations-experimentalData.ligand"
         },
         "filename": {
-          "$ref": "sage.annotations-experimentalData.filename"
+          "$ref": "sage.annotations-manifestKeys.filename"
         },
         "platform": {
           "$ref": "sage.annotations-experimentalData.platform"
