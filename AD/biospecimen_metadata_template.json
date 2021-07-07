@@ -15,12 +15,6 @@
         "organ": {
             "$ref": "sage.annotations-experimentalData.organ"
         },
-        "organWeight": {
-            "$ref": "sage.annotations-experimentalData.organWeight"
-        },
-        "organRIN": {
-            "$ref": "sage.annotations-qc.organRIN"
-        },
         "tissue": {
             "$ref": "sage.annotations-experimentalData.tissue"
         },
@@ -36,17 +30,11 @@
         "cellType": {
             "$ref": "sage.annotations-experimentalData.cellType"
         },
-        "reprogrammedCellType": {
-            "$ref": "sage.annotations-experimentalData.reprogrammedCellType"
-        },
-        "terminalDifferentiationPoint": {
-            "$ref": "sage.annotations-experimentalData.terminalDifferentiationPoint"
-        },
-        "passage": {
-            "$ref": "sage.annotations-experimentalData.passage"
-        },
         "samplingAge": {
             "$ref": "sage.annotations-experimentalData.samplingAge"
+        },
+        "samplingAgeUnits": {
+            "$ref": "sage.annotations-experimentalData.samplingAgeUnits"
         },
         "sampleStatus": {
             "$ref": "sage.annotations-experimentalData.sampleStatus"
