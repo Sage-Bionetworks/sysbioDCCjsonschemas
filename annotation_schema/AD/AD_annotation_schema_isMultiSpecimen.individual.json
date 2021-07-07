@@ -1,0 +1,31 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id":"sysbio.annotations-ad.isMultiSpecimen.individual",
+    "description": "SysBio AD annotations sub-schema for isMultiSpecimen on files associated with an individual",
+    "properties": {
+        "individualID": {
+            "$ref": "sage.annotations-experimentalData.individualID"
+        },
+        "isMultiSpecimen": {
+            "$ref": "sage.annotations-experimentalData.isMultiSpecimen"  
+        },
+        "sex": {
+            "$ref": "sage.annotations-experimentalData.sex"
+        }
+    },
+    "if":{
+        "properties": {
+            "isMultiSpecimen": {
+                "const": false
+            }
+        },
+        "required": [ "isMultiSpecimen" ]
+    },
+    "then": {
+        "required": [
+            "individualID",
+            "sex"
+        ]
+    },
+    "else": true
+}
