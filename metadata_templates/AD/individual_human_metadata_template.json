@@ -96,5 +96,10 @@
         "pH": {
             "$ref": "sage.annotations-neuro.pH"
         }
-    }
+    },
+    "required": [
+        "individualID",
+        "sex",
+        "species"
+    ]
 }

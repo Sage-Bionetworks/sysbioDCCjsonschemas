@@ -60,5 +60,12 @@
         "assay": {
             "$ref": "sage.annotations-experimentalData.assay"
         }
-    }
+    },
+    "required": [
+        "individualID",
+        "specimenID",
+        "assay",
+        "organ",
+        "tissue"
+    ]
 }

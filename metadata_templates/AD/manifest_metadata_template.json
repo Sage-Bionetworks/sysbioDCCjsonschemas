@@ -54,5 +54,12 @@
         "chromosome": {
             "$ref": "sage.annotations-experimentalData.chromosome"
         }
-    }
+    },
+    "required": [
+        "path",
+        "parent",
+        "consortium",
+        "study",
+        "resourceType"
+    ]
 }
