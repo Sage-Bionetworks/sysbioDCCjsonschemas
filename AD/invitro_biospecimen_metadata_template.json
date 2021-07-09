@@ -1,0 +1,52 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id":"sysbio.metadataTemplates-ad.invitroBiospecimen",
+    "description": "SysBio AD in vitro biospecimen metadata template schema",
+    "properties": {
+        "individualID": {
+            "$ref": "sage.annotations-experimentalData.individualID"
+        },
+        "specimenID": {
+            "$ref": "sage.annotations-experimentalData.specimenID"
+        },
+        "specimenIdSource": {
+            "$ref": "sage.annotations-experimentalData.specimenIdSource"
+        },
+        "modelSystemType": {
+          "$ref": "sage.annotations-experimentalData.modelSystemType"
+        },
+        "sourceCell": {
+          "$ref": "sage.annotations-experimentalData.sourceCell"
+        },
+        "cellType": {
+            "$ref": "sage.annotations-experimentalData.cellType"
+        },
+        "reprogrammingMethod": {
+          "$ref": "sage.annotations-experimentalData.reprogrammingMethod"
+        },
+        "differentiationMethod": {
+          "$ref": "sage.annotations-experimentalData.differentiationMethod"
+        },
+        "passage": {
+            "$ref": "sage.annotations-experimentalData.passage"
+        },
+        "terminalDifferentiationPoint": {
+            "$ref": "sage.annotations-experimentalData.terminalDifferentiationPoint"
+        },
+        "samplingAge": {
+            "$ref": "sage.annotations-experimentalData.samplingAge"
+        },
+        "samplingAgeUnits": {
+            "$ref": "sage.annotations-experimentalData.samplingAgeUnits"
+        },
+        "treatmentType": {
+            "$ref": "sage.annotations-neuro.treatmentType"
+        },
+        "nucleicAcidSource": {
+            "$ref": "sage.annotations-ngs.nucleicAcidSource"
+        },
+        "assay": {
+            "$ref": "sage.annotations-experimentalData.assay"
+        }
+    }
+}
