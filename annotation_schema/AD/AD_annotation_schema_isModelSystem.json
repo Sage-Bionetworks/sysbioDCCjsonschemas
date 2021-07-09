@@ -73,6 +73,7 @@
                     "properties": {
                         "modelSystemType": {
                             "enum": [
+                                "cerebral organoid"
                                 "iPSC",
                                 "organoid"
                             ]
@@ -93,7 +94,7 @@
                 "if": {
                     "properties": {
                         "modelSystemType": {
-                            "const": [ "immortalized cell type" ]
+                            "const": [ "immortalized cell line" ]
                         }
                     },
                     "required": [ "modelSystemType" ]
