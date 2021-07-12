@@ -57,5 +57,12 @@
         "validBarcodeReads": {
             "$ref": "sage.annotations-qc.validBarcodeReads"
         }
-    }
+    },
+    "required": [
+        "specimenID",
+        "platform",
+        "readLength",
+        "libraryPrep",
+        "runType"
+    ]
 }
