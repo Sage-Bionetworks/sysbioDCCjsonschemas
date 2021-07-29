@@ -98,7 +98,8 @@ The annotation table can be updated with a single command. Example:
 ```bash
 python3 code/python/create_Syn_table_from_Syn_schemas.py \
   --config_file config/schemas.yml \
-  --consortium PsychENCODE new_table \
+  --consortium PsychENCODE \
+  new_table \
   --parent_synapse_id syn21786765 \
   --synapse_table_name pec_annots
 ```
