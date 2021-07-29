@@ -10,7 +10,7 @@ sysbio.metadataTemplates-ad.manifest:
         schema_name: "template_manifest.xlsx"
         AD: "syn18512044"
 
-sysbio.metadataTemplates-assay.16SrRNAseq:
+sysbio.metadataTemplates-assay.sixteenSrRNAseq:
         schema_name: "template_assay_16SrRNAseq.xlsx"
         AD: "syn18512044"
 
