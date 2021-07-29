@@ -69,6 +69,11 @@ If you'd like to use an existing image, then pull the docker image from Docker H
 docker pull aryllen/sysbiodccjsonschemas:latest
 docker run --rm -it aryllen/sysbiodccjsonschemas:latest
 ```
+Because the docker image is not currently auto-deployed, it may be out of date with the repo. It is recommend to build the image locally if you are: 
+
+- adding a new key to an existing template
+- adding an entirely new template
+- generating the annotation table when a new template has been added to the config
 
 #### Usage
 
@@ -123,4 +128,3 @@ Since the metadata template script does not upload the template to Synapse, ther
    ```bash
    synapse store --parentid syn20729790 template_assay_STARRSeq.xlsx
    ```
-
