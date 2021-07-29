@@ -25,13 +25,13 @@
             "$ref": "sage.annotations-sageCommunity.fileFormat"
         },
         "consortium": {
-            "$ref": "sysbio.annotations-PECSpecific.consortium"
+            "$ref": "sage.annotations-sageCommunity.consortium"
         },
         "study": {
-            "$ref": "sysbio.annotations-PECSpecific.study"
+            "$ref": "sage.annotations-neuro.study"
         },
         "grant": {
-            "$ref": "sysbio.annotations-PECSpecific.grant"
+            "$ref": "sage.annotations-neuro.grant"
         },
         "resourceType": {
             "$ref": "sage.annotations-sageCommunity.resourceType"
