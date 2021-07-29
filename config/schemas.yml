@@ -99,6 +99,11 @@ sysbio.metadataTemplates-biospecimen.drosophila:
         schema_name: "template_biospecimen_drosophila.xlsx"
         AD: "syn18512044"
 
+sysbio.metadataTemplates-biospecimen.invitro:
+        schema_name: "template_biospecimen_invitro.xlsx"
+        AD: "syn18512044"
+        PEC: "syn20729790"
+
 sysbio.metadataTemplates-individual.animal:
         schema_name: "template_individual_animal.xlsx"
         AD: "syn18512044"
