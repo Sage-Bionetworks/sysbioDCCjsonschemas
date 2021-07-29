@@ -96,7 +96,11 @@ The docker container opens in bash at the top level of the sysbioDCCjsonschemas 
 The annotation table can be updated with a single command. Example:
 
 ```bash
-python3 code/python/create_Syn_table_from_Syn_schemas.py --config_file config/schemas.yml --consortium PsychENCODE new_table --parent_synapse_id syn21786765 --synapse_table_name pec_annots
+python3 code/python/create_Syn_table_from_Syn_schemas.py \
+  --config_file config/schemas.yml \
+  --consortium PsychENCODE new_table \
+  --parent_synapse_id syn21786765 \
+  --synapse_table_name pec_annots
 ```
 
 ##### Generate Metadata Template
@@ -106,7 +110,9 @@ Since the metadata template script does not upload the template to Synapse, ther
 1. Generate the metadata template(s). Example:
 
    ```bash
-   python3 create_template_from_Syn_schema.py sysbio.metadataTemplates-assay.STARRSeq template_assay_STARRSeq.xlsx excel
+   python3 create_template_from_Syn_schema.py \
+     sysbio.metadataTemplates-assay.STARRSeq \
+     template_assay_STARRSeq.xlsx excel
    ```
 
 2. Store the metadata template in Synapse. Example:
