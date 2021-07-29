@@ -69,7 +69,7 @@ If you'd like to use an existing image, then pull the docker image from Docker H
 docker pull aryllen/sysbiodccjsonschemas:latest
 docker run --rm -it aryllen/sysbiodccjsonschemas:latest
 ```
-Because the docker image is not currently auto-deployed, it may be out of date with the repo. It is recommend to build the image locally if you are: 
+Because the docker image is not currently auto-deployed, it may be out of date with the repo. It is recommend to build the image locally or use `git pull` within the container to get the latest version if you are: 
 
 - adding a new key to an existing template
 - adding an entirely new template
