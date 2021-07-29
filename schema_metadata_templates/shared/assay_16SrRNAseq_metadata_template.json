@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id":"sysbio.metadataTemplates-assay.16SrRNAseq",
+    "$id":"sysbio.metadataTemplates-assay.sixteenSrRNAseq",
     "description": "SysBio 16SrRNAseq metadata template schema",
     "properties": {
         "specimenID": {
