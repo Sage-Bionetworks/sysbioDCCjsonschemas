@@ -16,7 +16,7 @@
             "$ref": "sage.annotations-batch.dnaBatch"
         },
         "arrayBatch": {
-            "$ref": "sage.annotatons-batch.arrayBatch"
+            "$ref": "sage.annotations-batch.arrayBatch"
         },
         "ratio260over280": {
             "$ref": "sage.annotations-qc.ratio260over280"
@@ -28,10 +28,10 @@
             "$ref": "sage.annotations-qc.GQN"
         },
         "SentrixID": {
-            "$ref": ""
+            "$ref": "sage.annotations-experimentalData.SentrixID"
         },
         "SentrixRowColumn": {
-            "$ref": ""
+            "$ref": "sage.annotations-experimentalData.SentrixRowColumn"
         }
     }
 }
