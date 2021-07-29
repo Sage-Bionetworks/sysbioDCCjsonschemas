@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id":"sysbio.metadataTemplates-invitro.biospecimen",
+    "$id":"sysbio.metadataTemplates-biospecimen.invitro",
     "description": "SysBio in vitro biospecimen metadata template schema",
     "properties": {
         "individualID": {
