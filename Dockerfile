@@ -8,7 +8,8 @@ RUN pip install \
 	synapseclient \
 	XlsxWriter
 
-RUN git clone https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas.git
+RUN mkdir sysbioDCCjsonschemas
+COPY . sysbioDCCjsonschemas
 
 WORKDIR sysbioDCCjsonschemas
 
