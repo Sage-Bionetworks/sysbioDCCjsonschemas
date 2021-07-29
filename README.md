@@ -48,6 +48,8 @@ Parameters:
 
 This repo contains a Dockerfile that can be used to build a docker image locally. Alternatively, the docker image is on Docker Hub under [aryllen/sysbioDCCjsonschemas](https://hub.docker.com/repository/docker/aryllen/sysbiodccjsonschemas).
 
+Note that the images available on Docker Hub may not be up to date with the sysbioDCCjsonschemas. You can either follow the instructions below for building locally below; simply make sure you pull the latest version. Alternatively, you can still pull the image, but would need to update to the latest version. Once you are in the container, pull the latest version with `git pull`.
+
 ##### Build Image Locally
 
 If you'd like to build the docker image locally, clone this repo and open a terminal in the sysbioDCCjsonschemas folder. Then build image and run interactively.
