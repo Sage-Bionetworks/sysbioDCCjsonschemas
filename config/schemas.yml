@@ -77,6 +77,10 @@ sysbio.metadataTemplates-assay.snpArray:
         AD: "syn18512044"
         PsychENCODE: "syn20729790"
 
+sysbio.metadataTemplates-assay.STARRSeq:
+        schema_name: "template_assay_STARRSeq.xlsx"
+        PsychENCODE: "syn20729790"
+
 sysbio.metadataTemplates-assay.TMTquantitation:
         schema_name: "template_assay_TMTquantitation.xlsx"
         AD: "syn18512044"
