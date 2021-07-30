@@ -1,3 +1,5 @@
+# NOTE: Build without caching to ensure latest version of git repo
+#       docker build --no-cache -t sysbiodccjsonschemas .
 FROM python:3.9
 
 RUN pip install \
@@ -8,8 +10,7 @@ RUN pip install \
 	synapseclient \
 	XlsxWriter
 
-RUN mkdir sysbioDCCjsonschemas
-COPY . sysbioDCCjsonschemas
+RUN git clone https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas.git
 
 WORKDIR sysbioDCCjsonschemas
 
