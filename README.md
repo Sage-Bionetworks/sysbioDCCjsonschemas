@@ -19,6 +19,8 @@ Annotation schema can be found in the schema_annotations folder and are organize
 
 There are python scripts in the code/python folder for generating metadata templates and annotation tables based on the metadata template schemas registered in Synapse.
 
+**NOTE:** The scripts in this repository assume the latest versions of all JSON schema are registered. If you have added or changed a schema, ensure the schema has been registered before running the scripts.
+
 #### Annotations Table
 
 create_Syn_table_from_Syn_schemas.py will generate a Synapse table of all terms found in a set of metadata templates. The set is determined by consortium using the config file (config/schemas.yml). There are options to create a new table or overwrite an existing table.
@@ -48,8 +50,6 @@ Parameters:
 
 This repo contains a Dockerfile that can be used to build a docker image locally. Alternatively, the docker image is on Docker Hub under [aryllen/sysbioDCCjsonschemas](https://hub.docker.com/repository/docker/aryllen/sysbiodccjsonschemas).
 
-Note that the images available on Docker Hub may not be up to date with the sysbioDCCjsonschemas. You can either follow the instructions below for building locally below; simply make sure you pull the latest version. Alternatively, you can still pull the image, but would need to update to the latest version. Once you are in the container, pull the latest version with `git pull`.
-
 ##### Build Image Locally
 
 If you'd like to build the docker image locally, clone this repo and open a terminal in the sysbioDCCjsonschemas folder. Then build image and run interactively.
@@ -57,7 +57,7 @@ If you'd like to build the docker image locally, clone this repo and open a term
 ```bash
 git clone https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas.git
 cd sysbioDCCjsonschemas
-docker build -t sysbiodccjsonschemas .
+docker build --no-cache -t sysbiodccjsonschemas .
 docker run --rm -it sysbiodccjsonschemas
 ```
 
