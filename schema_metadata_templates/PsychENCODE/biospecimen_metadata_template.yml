@@ -1,0 +1,22 @@
+main-schema:
+    $schema: http://json-schema.org/draft-07/schema#
+    $id: sysbio.metadataTemplates-pec.biospecimen-0.0.1
+    description: SysBio PEC biospecimen metadata template schema
+    type: object
+    properties:
+        individualID: *experimentalData_individualID
+        specimenID: *experimentalData_specimenID
+        organ: *experimentalData_organ
+        organWeight: *experimentalData_organWeight
+        organRIN: *qc_organRIN
+        tissue: *experimentalData_tissue
+        isPostMortem: *experimentalData_isPostMortem
+        BrodmannArea: *neuro_BrodmannArea
+        nucleicAcidSource: *ngs_nucleicAcidSource
+        cellType: *experimentalData_cellType
+        reprogrammedCellType: *experimentalData_reprogrammedCellType
+        terminalDifferentiationPoint: *experimentalData_terminalDifferentiationPoint
+        passage: *experimentalData_passage
+        samplingAge: *experimentalData_samplingAge
+        sampleStatus: *experimentalData_sampleStatus
+

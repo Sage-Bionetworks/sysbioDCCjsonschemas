@@ -1,0 +1,13 @@
+main-schema:
+    $schema: http://json-schema.org/draft-07/schema#
+    $id: sysbio.metadataTemplates-assay.rnaArray-0.0.1
+    description: SysBio rnaArray metadata template schema
+    type: object
+    properties:
+        specimenID: *experimentalData_specimenID
+        assay: *experimentalData_assay
+        RIN: *qc_RIN
+        platform: *experimentalData_platform
+        rnaBatch: *batch_rnaBatch
+        arrayBatch: *batch_arrayBatch
+

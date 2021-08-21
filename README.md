@@ -1,7 +1,11 @@
 # sysbioDCCjsonschemas
 This repository holds the JSON schemas for the Systems Biology (SysBio) DCC.
 
-## Metadata Templates
+## Schemas
+
+### Organization
+
+#### Metadata Templates
 
 The metadata templates are located in the schema_metadata_templates folder and are organized by consortium.
 
@@ -9,11 +13,70 @@ The metadata templates are located in the schema_metadata_templates folder and a
 - **AD:** The AD folder contains all the templates specific to the AD consortium.
 - **PsychENCODE:** The PsychENCODE folder contains all the templates specific to the PsychENCODE consortium.
 
-## Annotation Schema
+#### Annotation Schema
 
 Annotation schema can be found in the schema_annotations folder and are organized by consortium.
 
 - **AD:** The AD annotation schema is not currently set on any projects and will be updated to a new format.
+
+### Format
+
+For readability, both the metadata template and annotation schema are stored as yaml files. Since yaml structure is highly dependent on indentation and does not have concepts such as if-else logic, these schema require special care.
+
+The schemas also rely on the use of anchors and aliases to simplify version dependency for terms. This is handled by a Synapse table with columns: key, alias, version, schema, module. Before registering schema, the table will be turned into a set of anchors for you to reference via their alias. For example, the keys for analysis and assay would be turned into the following yaml snippet.
+
+```yaml
+anchors:
+    analysis_analysisType: &analysis_analysisType
+        $ref: sage.annotations-analysis.analysisType-0.0.9
+    experimentalData_assay: &experimentalData_assay
+        $ref: sage.annotations-experimentalData.assay-0.0.15
+```
+
+The '&module_key' serves as an anchor for referencing the key in the schema via an alias (*module_key). Note that the naming convention for synapseAnnotations schema is 'module.key', but for the purposes of combining yaml and json, the naming convention for anchors and aliases should be 'module_key'.
+
+```yaml
+main-schema:
+    $schema: http://json-schema.org/draft-07/schema#
+    $id: my.organization-example.schema-0.0.1
+    description: Simple example schema
+    properties:
+        analysisType: *analysis_analysisType
+        assay: *experimentalData_assay
+    required:
+        - analysisType
+        - assay
+```
+
+Note: The alias table allows for reusing schema with different names. For example, both 'primaryDiagnosis' and 'otherDiagnosis' would use the same 'sage.annotations-experimentalData.diagnosis' schema. The table only needs a single entry for alias 'experimentalData_diagnosis'. The new names for the term would be given in the schema itself. For example:
+
+``` yaml
+primaryDiagnosis: *experimentalData_diagnosis
+otherDiagnosis: *experimentalData_diagnosis
+```
+
+Every schema, for metadata templates or annotations, should have a section called main-schema (see first example). It's possible to break up the schema into many sections and use anchors/aliases to reduce duplication or simplify your schema. The main-schema should be the last schema in the file. However, all parts must combine correctly via 'main-schema' for registration. For example, the AD annotation schema breaks out the logic for species/model systems and multispecimens, giving each of these sections an anchor so they can be referred to in 'main-schema'.
+
+### Updating an Existing Schema
+
+#### Adding a new key
+
+1. Add key to schema table
+2. Add key to yaml schema where needed (use *alias to reference the term as a property)
+3. Increment version in yaml schema
+4. Merge if checks pass; automation should register the schema in Synapse and update the dictionary table(s)
+
+#### Adding a new value to a key
+
+1. Update term in synapseAnnotations
+2. Wait until next day for automation PR; merge if checks pass; automation should register the schema in Synapse and update the dictionary table(s)
+
+### Adding a New Schema
+
+1. Add any keys missing from alias.yml
+2. Create new template with version 0.0.1 and section name called 'main-schema'
+3. Add template to yaml config
+4. Merge if checks pass; automation should register the schema in Synapse, update the dictionary table(s), and generate metadata templates
 
 ## Code
 

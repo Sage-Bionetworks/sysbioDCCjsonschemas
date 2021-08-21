@@ -1,0 +1,40 @@
+main-schema:
+    $schema: http://json-schema.org/draft-07/schema#
+    $id: sysbio.metadataTemplates-pec.individual.human-0.0.1
+    description: SysBio PEC individual human metadata template schema
+    type: object
+    properties:
+        individualID: *experimentalData_individualID
+        individualIdSource: *experimentalData_individualIdSource
+        species: *experimentalData_species
+        reportedGender: *demographics_reportedGender
+        sexChromosome: *clinical_sexChromosome
+        race: *demographics_race
+        ethnicity: *demographics_ethnicity
+        genotypeInferredAncestry: *clinical_genotypeInferredAncestry
+        familialRelationship: *demographics_familialRelationship
+        IQ: *clinical_IQ
+        BMI: *clinical_BMI
+        primaryDiagnosis: *experimentalData_diagnosis
+        primaryDiagnosisDetail: *experimentalData_diagnosisDetail
+        otherDiagnosis: *experimentalData_diagnosis
+        otherDiagnosisDetail: *experimentalData_diagnosisDetail
+        familyHistory: *clinical_familyHistory
+        ageOnset: *clinical_ageOnset
+        neuropathDescription: *clinical_neuropathDescription
+        dementia: *clinical_dementia
+        CDR: *clinical_CDR
+        Braak: *clinical_Braak
+        otherMedicalDx: *experimentalData_otherMedicalDx
+        otherMedicalDetail: *experimentalData_diagnosisDetail
+        ageDeath: *demographics_ageDeath
+        ageDeathUnits: *demographics_ageDeathUnits
+        causeDeath: *clinical_causeDeath
+        mannerDeath: *clinical_mannerDeath
+        postmortemTox: *clinical_postmortemTox
+        postmortemToxSource: *clinical_postmortemToxSource
+        medRecordTox: *clinical_medRecordTox
+        PMICertain: *neuro_PMICertain
+        PMI: *neuro_PMI
+        pH: *neuro_pH
+

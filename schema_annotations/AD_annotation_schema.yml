@@ -1,0 +1,511 @@
+subschema_isModelSystem: &isModelSystemAD
+  allOf:
+    -
+      properties:
+        isModelSystem: *neuro_isModelSystem
+      required:
+        - isModelSystem
+    -
+      if:
+        properties:
+          isModelSystem:
+            type: boolean
+            enum:
+              - true
+        required:
+          - isModelSystem
+      then:
+        allOf:
+          -
+            properties:
+              modelSystemType: *experimentalData_modelSystemType
+              species: *experimentalData_species
+            required:
+              - modelSystemType
+              - species
+          -
+            if:
+              properties:
+                modelSystemType:
+                  type: string
+                  enum:
+                    - "primary cell culture"
+              required:
+                - modelSystemType
+            then:
+              properties:
+                cellType: *experimentalData_cellType
+                organ: *experimentalData_organ
+                tissue: *experimentalData_tissue
+              required:
+                - cellType
+                - organ
+                - tissue
+          -
+            if:
+              properties:
+                modelSystemType:
+                  type: string
+                  enum:
+                    - "cerebral organoid"
+                    - iPSC
+                    - organoid
+              required:
+                - modelSystemType
+            then:
+              properties:
+                cellType: *experimentalData_cellType
+                differentiationMethod: *experimentalData_differentiationMethod
+                sourceCell: *experimentalData_sourceCell
+              required:
+                - cellType
+                - differentiationMethod
+                - sourceCell
+          -
+            if:
+              properties:
+                modelSystemType:
+                  type: string
+                  enum:
+                    - "immortalized cell line"
+              required:
+                - modelSystemType
+            then:
+              properties:
+                cellType: *experimentalData_cellType
+              required:
+                - cellType
+          -
+            if:
+              properties:
+                modelSystemType:
+                  type: string
+                  enum:
+                    - animal
+              required:
+                - modelSystemType
+            then:
+              properties:
+                organ: *experimentalData_organ
+                tissue: *experimentalData_tissue
+              required:
+                - organ
+                - tissue
+          -
+            if:
+              properties:
+                consortium:
+                  type: string
+                  enum:
+                    - MODEL-AD
+                species:
+                  type: string
+                  enum:
+                    - Mouse
+              required:
+                - consortium
+                - species
+            then:
+              properties:
+                modelSystemName: *neuro_modelSystemName
+              required:
+                - modelSystemName
+    -
+      if:
+        properties:
+          species:
+            type: string
+            enum:
+              - Human
+        required:
+          - species
+      then:
+        properties:
+          organ: *experimentalData_organ
+          tissue: *experimentalData_tissue
+        required:
+          - organ
+          - tissue
+
+subschema_isMultiSpecimen_individual: &isMultiSpecimen_Individual
+  allOf:
+    -
+      properties:
+        isMultiSpecimen: *experimentalData_isMultiSpecimen
+      required:
+        - isMultiSpecimen
+    -
+      if:
+        properties:
+          isMultiSpecimen:
+            type: boolean
+            enum:
+              - false
+        required:
+          - isMultiSpecimen      
+      then:
+        properties:
+          individualID: *experimentalData_individualID
+          sex: *experimentalData_sex
+        required:
+          - individualID
+          - sex
+
+subschema_isMultiSpecimen_specimen: &isMultiSpecimen_Specimen
+  allOf:
+    -
+      properties:
+        isMultiSpecimen: *experimentalData_isMultiSpecimen
+      required:
+        - isMultiSpecimen
+    -
+      if:
+        properties:
+          isMultiSpecimen:
+            enum:
+              - false
+        required:
+          - isMultiSpecimen      
+      then:
+        properties:
+          individualID: *experimentalData_individualID
+          sex: *experimentalData_sex
+          specimenID: *experimentalData_specimenID
+        required:
+          - individualID
+          - sex
+          - specimenID
+
+main:
+  $schema: http://json-schema.org/draft-07/schema#
+  $id: nkauer-ad.main-0.0.5
+  description: "SysBio AD annotations schema"
+  type: object
+  properties:
+    consortium: *sageCommunity_consortium
+    fileFormat: *sageCommunity_fileFormat
+    resourceType: *sageCommunity_resourceType
+    study: *neuro_study
+  allOf:
+    - 
+      required:
+        - consortium
+        - fileFormat
+        - resourceType
+        - study
+    - 
+      if:
+        properties:
+          consortium:
+            type: string
+            enum:
+              - CDCP
+        required:
+          - consortium
+      else:
+        properties:
+          grant: *neuro_grant
+        required:
+          - grant
+    -
+      if:
+        properties:
+          resourceType:
+            type: string
+            enum:
+              - metadata
+        required:
+          - resourceType
+      then:
+        allOf:
+          -
+            properties:
+              *experimentalData_metadataType
+            required:
+              - metadataType
+          -
+            if:
+              properties:
+                metadataType:
+                  type: string
+                  enum:
+                    - biospecimen
+                    - individual
+              required:
+                - metadataType
+            then:
+              properties:
+                dataType:
+                  type: string
+                  enum:
+                    - clinical
+              required:
+                - dataType
+            else:
+              properties:
+                assay: *experimentalData_assay
+                dataType: *experimentalData_dataType
+              required:
+                - assay
+                - dataType
+          -
+            if:
+              properties:
+                metadataType:
+                  type: string
+                  enum:
+                    - biospecimen
+              required:
+                - metadataType
+            then:
+              properties:
+                isMultiSpecimen:
+                  type: boolean
+                  enum:
+                    - true
+              required:
+                - isMultiSpecimen
+    -
+      if:
+        properties:
+          resourceType:
+            type: string
+            enum:
+              - analysis
+        required:
+          - resourceType
+      then:
+        properties:
+          analysisType: *analysis_analysisType
+        required:
+          - analysisType
+    -
+      if:
+        properties:
+          resourceType:
+            type: string
+            enum:
+              - experimentalData
+        required:
+          - resourceType
+      then:
+        allOf:
+          - 
+            *isModelSystemAD
+          -
+            properties:
+              assay: *experimentalData_assay
+              dataType: *experimentalData_dataType
+              dataSubtype: *experimentalData_dataSubtype
+              isMultiSpecimen: *experimentalData_isMultiSpecimen
+              platform: *experimentalData_platform
+            required:
+              - assay
+              - dataType
+              - dataSubtype
+              - isMultiSpecimen
+              - platform
+          -
+            if:
+              properties:
+                dataType:
+                  type: string
+                  enum:
+                    - chromatinActivity
+                    - epigenetics
+              required:
+                - dataType
+            then:
+              allOf:
+                -
+                  *isMultiSpecimen_Specimen
+                -
+                  if:
+                    properties:
+                      assay:
+                        type: string
+                        enum:
+                          - ATACseq
+                          - HI-C
+                    required:
+                      - assay
+                  then:
+                    properties:
+                      libraryPrep: *ngs_libraryPrep
+                      readLength: *ngs_readLength
+                      runType: *ngs_runType
+                    required:
+                      - libraryPrep
+                      - readLength
+                      - runType
+                -
+                  if:
+                    properties:
+                      assay:
+                        type: string
+                        enum:
+                          - ChIPSeq
+                    required:
+                      - assay
+                  then:
+                    properties:
+                      assayTarget: *experimentalData_assayTarget
+                      libraryPrep: *ngs_libraryPrep
+                      readLength: *ngs_readLength
+                      runType: *ngs_runType
+                    required:
+                      - assayTarget
+                      - libraryPrep
+                      - readLength
+                      - runType
+          -
+            if:
+              properties:
+                dataType:
+                  type: string
+                  enum:
+                    - geneExpression
+              required:
+                - dataType
+            then:
+              allOf:
+                -
+                  *isMultiSpecimen_Specimen
+                -
+                  if:
+                    properties:
+                      assay:
+                        type: string
+                        enum:
+                          - rnaSeq
+                          - scRNAseq
+                    required:
+                      - assay
+                  then:
+                    properties:
+                      libraryPrep: *ngs_libraryPrep
+                      nucleicAcidSource: *ngs_nucleicAcidSource
+                      readLength: *ngs_readLength
+                      runType: *ngs_runType
+                    required:
+                      - libraryPrep
+                      - nucleicAcidSource
+                      - readLength
+                      - runType
+                -
+                  if:
+                    properties:
+                      assay:
+                        type: string
+                        enum:
+                          - nanostring
+                    required:
+                      - assay
+                  then:
+                    properties:
+                      libraryPrep: *ngs_libraryPrep
+                    required:
+                      - libraryPrep
+          -
+            if:
+              properties:
+                dataType:
+                  enum:
+                    - genomicVariants
+              required:
+                - dataType
+            then:
+              allOf:
+                -
+                  *isMultiSpecimen_Specimen
+                -
+                  properties:
+                    libraryPrep: *ngs_libraryPrep
+                    nucleicAcidSource: *ngs_nucleicAcidSource
+                    readLength: *ngs_readLength
+                    runType: *ngs_runType
+                  required:
+                    - libraryPrep
+                    - nucleicAcidSource
+                    - readLength
+                    - runType
+          -
+            if:
+              properties:
+                dataType:
+                  type: string
+                  enum:
+                    - image
+              required:
+                - dataType
+            then:
+              allOf:
+                -
+                  *isMultiSpecimen_Individual
+          -
+            if:
+              properties:
+                dataType:
+                  type: string
+                  enum:
+                    - immunoassay
+                    - metabolomics
+              required:
+                - dataType
+            then:
+              allOf:
+                -
+                  *isMultiSpecimen_Specimen
+          -
+            if:
+              properties:
+                dataType:
+                  type: string
+                  enum:
+                    - metagenomics
+              required:
+                - dataType
+            then:
+              allOf:
+                -
+                  *isMultiSpecimen_Specimen
+                -
+                  properties:
+                    assayTarget: *experimentalData_assayTarget
+                    libraryPrep: *ngs_libraryPrep
+                    readLength: *ngs_readLength
+                    runType: *ngs_runType
+                  required:
+                    - assayTarget
+                    - libraryPrep
+                    - readLength
+                    - runType
+          -
+            if:
+              properties:
+                dataType:
+                  type: string
+                  enum:
+                    - proteomics
+              required:
+                - dataType
+            then:
+              allOf:
+                -
+                  *isMultiSpecimen_Specimen
+                -
+                  if:
+                    properties:
+                      assay:
+                        type: string
+                        enum:
+                          - "TMT quantitation"
+                    required:
+                      - assay
+                  then:
+                    properties:
+                      batch: *batch_batch
+                      batchChannel: *batch_batchChannel
+                    required:
+                      - batch
+                      - batchChannel

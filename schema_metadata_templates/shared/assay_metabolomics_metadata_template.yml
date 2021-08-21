@@ -1,0 +1,18 @@
+main-schema:
+    $schema: http://json-schema.org/draft-07/schema#
+    $id: sysbio.metadataTemplates-assay.metabolomics-0.0.1
+    description: SysBio metabolomics metadata template schema
+    type: object
+    properties:
+        specimenID: *experimentalData_specimenID
+        assay: *experimentalData_assay
+        batch: *batch_batch
+        platform: *experimentalData_platform
+        platformLocation: *experimentalData_platformLocation
+        ionMode: *experimentalData_ionMode
+        metaboliteType: *experimentalData_metaboliteType
+        batchSize: *experimentalData_batchSize
+        controlType: *experimentalData_controlType
+        softwareName: *tool_softwareName
+        spectrometerFrequency: *experimentalData_spectrometerFrequency
+

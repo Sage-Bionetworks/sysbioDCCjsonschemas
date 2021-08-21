@@ -1,0 +1,14 @@
+main-schema:
+    $schema: http://json-schema.org/draft-07/schema#
+    $id: sysbio.metadataTemplates-assay.PET-0.0.1
+    description: SysBio PET metadata template schema
+    type: object
+    properties:
+        individualID: *experimentalData_individualID
+        scanID: *experimentalData_scanID
+        ligand: *experimentalData_ligand
+        filename: *manifestKeys_filename
+        platform: *experimentalData_platform
+        ageAssessment: *experimentalData_ageAssessment
+        ageAssessmentUnits: *experimentalData_ageAssessmentUnits
+

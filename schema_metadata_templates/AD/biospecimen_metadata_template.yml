@@ -1,0 +1,26 @@
+main-schema:
+    $schema: http://json-schema.org/draft-07/schema#
+    $id: sysbio.metadataTemplates-ad.biospecimen-0.0.1
+    description: SysBio AD biospecimen metadata template schema
+    properties:
+        individualID: *experimentalData_individualID
+        specimenID: *experimentalData_specimenID
+        specimenIdSource: *experimentalData_specimenIdSource
+        assay: *experimentalData_assay
+        organ: *experimentalData_organ
+        tissue: *experimentalData_tissue
+        isPostMortem: *experimentalData_isPostMortem
+        BrodmannArea: *neuro_BrodmannArea
+        nucleicAcidSource: *ngs_nucleicAcidSource
+        cellType: *experimentalData_cellType
+        samplingAge: *experimentalData_samplingAge
+        samplingAgeUnits: *experimentalData_samplingAgeUnits
+        sampleStatus: *experimentalData_sampleStatus
+        fastingState: *experimentalData_fastingState
+        visitNumber: *experimentalData_visitNumber
+    required:
+        - individualID
+        - specimenID
+        - assay
+        - organ
+        - tissue

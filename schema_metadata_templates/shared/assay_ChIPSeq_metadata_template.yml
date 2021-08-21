@@ -1,0 +1,29 @@
+main-schema:
+    $schema: http://json-schema.org/draft-07/schema#
+    $id: sysbio.metadataTemplates-assay.ChIPSeq-0.0.1
+    description: SysBio ChIPSeq metadata template schema
+    type: object
+    properties:
+        specimenID: *experimentalData_specimenID
+        libraryID: *ngs_libraryID
+        assay: *experimentalData_assay
+        platform: *experimentalData_platform
+        referenceSet: *curatedData_referenceSet
+        libraryBatch: *batch_libraryBatch
+        libraryPreparationMethod: *ngs_libraryPreparationMethod
+        sequencingBatch: *batch_sequencingBatch
+        assayTarget: *experimentalData_assayTarget
+        antibody: *immunoAssays_antibody
+        vendor: *immunoAssays_vendor
+        catalogNumber: *immunoAssays_catalogNumber
+        lotNumber: *immunoAssays_lotNumber
+        antibodyAmount: *immunoAssays_antibodyAmount
+        antibodyAmountUnits: *immunoAssays_antibodyAmountUnits
+        chromatinAmount: *immunoAssays_chromatinAmount
+        chromatinAmountUnits: *immunoAssays_chromatinAmountUnits
+        isStranded: *ngs_isStranded
+        readStrandOrigin: *ngs_readStrandOrigin
+        readLength: *ngs_readLength
+        runType: *ngs_runType
+        totalReads: *experimentalData_totalReads
+

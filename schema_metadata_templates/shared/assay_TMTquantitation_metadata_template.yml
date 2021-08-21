@@ -1,0 +1,17 @@
+main-schema:
+    $schema: http://json-schema.org/draft-07/schema#
+    $id: sysbio.metadataTemplates-assay.TMTquantitation-0.0.1
+    description: SysBio TMTquantitation (aka proteomics) metadata template schema
+    type: object
+    properties:
+        specimenID: *experimentalData_specimenID
+        assay: *experimentalData_assay
+        platform: *experimentalData_platform
+        controlType: *experimentalData_controlType
+        batch: *batch_batch
+        batchChannel: *batch_batchChannel
+        TMTType: *experimentalData_TMTType
+        fragmentation: *experimentalData_fragmentation
+        resolution: *experimentalData_resolution
+        multiconsensusStudyFileID: *experimentalData_multiconsensusStudyFileID
+

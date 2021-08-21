@@ -1,0 +1,42 @@
+main-schema:
+    $schema: http://json-schema.org/draft-07/schema#
+    $id: sysbio.metadataTemplates-ad.individual.human-0.0.1
+    description: SysBio AD individual human metadata template schema
+    properties:
+        individualID: *experimentalData_individualID
+        individualIdSource: *experimentalData_individualIdSource
+        species: *experimentalData_species
+        reportedGender: *demographics_reportedGender
+        sex: *experimentalData_sex
+        sexChromosome: *clinical_sexChromosome
+        race: *demographics_race
+        ethnicity: *demographics_ethnicity
+        yearsEducation: *demographics_yearsEducation
+        apoeGenotype: *clinical_apoeGenotype
+        genotypeInferredAncestry: *clinical_genotypeInferredAncestry
+        familialRelationship: *demographics_familialRelationship
+        primaryDiagnosis: *experimentalData_diagnosis
+        primaryDiagnosisDetail: *experimentalData_diagnosisDetail
+        otherDiagnosis: *experimentalData_diagnosis
+        otherDiagnosisDetail: *experimentalData_diagnosisDetail
+        otherMedicalDX: *experimentalData_otherMedicalDX
+        otherMedicalDXDetail: *experimentalData_diagnosisDetail
+        ageDeath: *demographics_ageDeath
+        ageDeathUnits: *demographics_ageDeathUnits
+        causeDeath: *clinical_causeDeath
+        mannerDeath: *clinical_mannerDeath
+        PMI: *neuro_PMI
+        PMICertain: *neuro_PMICertain
+        familyHistory: *clinical_familyHistory
+        ageOnset: *clinical_ageOnset
+        neuropathDescription: *clinical_neuropathDescription
+        Braak: *clinical_Braak
+        CERAD: *clinical_CERAD
+        brainWeight: *experimentalData_brainWeight
+        pH: *neuro_pH
+    required:
+        - individualID
+        - sex
+        - species
+    ]
+}

@@ -1,0 +1,22 @@
+main-schema:
+    $schema: http://json-schema.org/draft-07/schema#
+    $id: sysbio.metadataTemplates-biospecimen.invitro-0.0.1
+    description: SysBio in vitro biospecimen metadata template schema
+    type: object
+    properties:
+        individualID: *experimentalData_individualID
+        specimenID: *experimentalData_specimenID
+        specimenIdSource: *experimentalData_specimenIdSource
+        modelSystemType: *experimentalData_modelSystemType
+        sourceCell: *experimentalData_sourceCell
+        cellType: *experimentalData_cellType
+        reprogrammingMethod: *experimentalData_reprogrammingMethod
+        differentiationMethod: *experimentalData_differentiationMethod
+        passage: *experimentalData_passage
+        terminalDifferentiationPoint: *experimentalData_terminalDifferentiationPoint
+        samplingAge: *experimentalData_samplingAge
+        samplingAgeUnits: *experimentalData_samplingAgeUnits
+        treatmentType: *neuro_treatmentType
+        nucleicAcidSource: *ngs_nucleicAcidSource
+        assay: *experimentalData_assay
+

@@ -1,0 +1,16 @@
+main-schema:
+    $schema: http://json-schema.org/draft-07/schema#
+    $id: sysbio.metadataTemplates-assay.MRI-0.0.1
+    description: SysBio MRI metadata template schema
+    type: object
+    properties:
+        individualID: *experimentalData_individualID
+        scanID: *experimentalData_scanID
+        platform: *experimentalData_platform
+        MRItype: *experimentalData_MRItype
+        fieldStrength: *experimentalData_fieldStrength
+        filename: *manifestKeys_filename
+        contrastAgent: *experimentalData_contrastAgent
+        ageAssessment: *experimentalData_ageAssessment
+        ageAssessmentUnits: *experimentalData_ageAssessmentUnits
+

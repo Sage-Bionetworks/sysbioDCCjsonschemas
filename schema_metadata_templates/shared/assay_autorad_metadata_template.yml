@@ -1,0 +1,13 @@
+main-schema:
+    $schema: http://json-schema.org/draft-07/schema#
+    $id: sysbio.metadataTemplates-assay.autorad-0.0.1
+    description: SysBio autoradiography metadata template schema
+    type: object
+    properties:
+        individualID: *experimentalData_individualID
+        scanID: *experimentalData_scanID
+        filename: *manifestKeys_filename
+        platform: *experimentalData_platform
+        ageAssessment: *experimentalData_ageAssessment
+        ageAssessmentUnits: *experimentalData_ageAssessmentUnits
+

@@ -1,0 +1,21 @@
+main-schema:
+    $schema: http://json-schema.org/draft-07/schema#
+    $id: sysbio.metadataTemplates-assay.HIC-0.0.1
+    description: SysBio HI-C metadata template schema
+    type: object
+    properties:
+        specimenID: *experimentalData_specimenID
+        libraryID: *ngs_libraryID
+        assay: *experimentalData_assay
+        platform: *experimentalData_platform
+        referenceSet: *curatedData_referenceSet
+        libraryBatch: *batch_libraryBatch
+        libraryPrep: *ngs_libraryPrep
+        libraryPreparationMethod: *ngs_libraryPreparationMethod
+        pcrCycles: *experimentalData_pcrCycles
+        sequencingBatch: *batch_sequencingBatch
+        readLength: *ngs_readLength
+        runType: *ngs_runType
+        totalReads: *experimentalData_totalReads
+        validHiCContacts: *qc_validHiCContacts
+

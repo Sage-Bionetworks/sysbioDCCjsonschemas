@@ -1,0 +1,30 @@
+main-schema:
+    $schema: http://json-schema.org/draft-07/schema#
+    $id: sysbio.metadataTemplates-pec.assay.rnaSeq-0.0.1
+    description: SysBio PEC rnaSeq metadata template schema
+    type: object
+    properties:
+        specimenID: *experimentalData_specimenID
+        libraryID: *ngs_libraryID
+        assay: *experimentalData_assay
+        platform: *experimentalData_platform
+        sampleBarcode: *ngs_sampleBarcode
+        RIN: *qc_RIN
+        referenceSet: *curatedData_referenceSet
+        rnaBatch: *batch_rnaBatch
+        libraryBatch: *batch_libraryBatch
+        sequencingBatch: *batch_sequencingBatch
+        libraryPrep: *ngs_libraryPrep
+        libraryPreparationMethod: *ngs_libraryPreparationMethod
+        libraryVersion: *ngs_libraryVersion
+        libraryType: *ngs_libraryType
+        isStranded: *ngs_isStranded
+        readStrandOrigin: *ngs_readStrandOrigin
+        readLength: *ngs_readLength
+        runType: *ngs_runType
+        totalReads: *experimentalData_totalReads
+        validBarcodeReads: *qc_validBarcodeReads
+        numberCells: *experimentalData_numberCells
+        medianGenes: *qc_medianGenes
+        medianUMIs: *qc_medianUMIs
+

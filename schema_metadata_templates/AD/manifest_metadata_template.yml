@@ -1,0 +1,30 @@
+main-schema:
+    $schema: http://json-schema.org/draft-07/schema#
+    $id: sysbio.metadataTemplates-ad.manifest-0.0.1
+    description: AD manifest template schema
+    type: object
+    properties:
+        path: *manifestKeys_path
+        parent: *manifestKeys_parent
+        individualID: *experimentalData_individualID
+        specimenID: *experimentalData_specimenID
+        isMultiSpecimen: *experimentalData_isMultiSpecimen
+        assay: *experimentalData_assay
+        fileFormat: *sageCommunity_fileFormat
+        consortium: *sageCommunity_consortium
+        study: *neuro_study
+        grant: *neuro_grant
+        resourceType: *sageCommunity_resourceType
+        dataType: *experimentalData_dataType
+        dataSubtype: *experimentalData_dataSubtype
+        metadataType: *experimentalData_metadataType
+        analysisType: *analysis_analysisType
+        isModelSystem: *neuro_isModelSystem
+        chromosome: *experimentalData_chromosome
+    required:
+        - path
+        - parent
+        - consortium
+        - study
+        - resourceType
+

@@ -1,0 +1,21 @@
+main-schema:
+    $schema: http://json-schema.org/draft-07/schema#
+    $id: sysbio.metadataTemplates-individual.animal-0.0.1
+    description: SysBio individual animal metadata template schema
+    type: object
+    properties:
+        individualID: *experimentalData_individualID
+        individualIdSource: *experimentalData_individualIdSource
+        species: *experimentalData_species
+        sexChromosome: *clinical_sexChromosome
+        dateBirth: *demographics_dateBirth
+        dateDeath: *demographics_dateDeath
+        sex: *experimentalData_sex
+        genotype: *clinical_genotype
+        genotypeBackground: *clinical_genotypeBackground
+        room: *clinical_room
+        litter: *clinical_litter
+        matingID: *clinical_matingID
+        treatmentDose: *neuro_treatmentDose
+        modelSystemName: *neuro_modelSystemName
+

@@ -1,0 +1,17 @@
+main-schema:
+    $schema: http://json-schema.org/draft-07/schema#
+    $id: sysbio.metadataTemplates-biospecimen.drosophila-0.0.1
+    description: SysBio drosophila biospecimen metadata template schema
+    type: object
+    properties:
+        specimenID: *experimentalData_specimenID
+        bodyPart: *experimentalData_bodyPart
+        tissueWeight: *experimentalData_tissueWeight
+        nucleicAcidSource: *ngs_nucleicAcidSource
+        genotype: *clinical_genotype
+        ageDays: *demographics_ageDays
+        nIndividuals: *experimentalData_nIndividuals
+        nMale: *experimentalData_nMale
+        nFemale: *experimentalData_nFemale
+        temperature: *experimentalData_temperature
+

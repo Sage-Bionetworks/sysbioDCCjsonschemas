@@ -1,0 +1,15 @@
+main-schema:
+    $schema: http://json-schema.org/draft-07/schema#
+    $id: sysbio.metadataTemplates-assay.snpArray-0.0.1
+    description: SysBio snpArray metadata template schema
+    type: object
+    properties:
+        specimenID: *experimentalData_specimenID
+        assay: *experimentalData_assay
+        platform: *experimentalData_platform
+        dnaBatch: *batch_dnaBatch
+        arrayBatch: *batch_arrayBatch
+        ratio260over280: *qc_ratio260over280
+        ratio260over230: *qc_ratio260over230
+        GQN: *qc_GQN
+

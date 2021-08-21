@@ -1,0 +1,23 @@
+main-schema:
+    $schema: http://json-schema.org/draft-07/schema#
+    $id: sysbio.metadataTemplates-assay.ATACSeq-0.0.1
+    description: SysBio ATACseq metadata template schema
+    type: object
+    properties:
+        specimenID: *experimentalData_specimenID
+        libraryID: *ngs_libraryID
+        assay: *experimentalData_assay
+        platform: *experimentalData_platform
+        referenceSet: *curatedData_referenceSet
+        transposaseBatch: *batch_transposaseBatch
+        libraryBatch: *batch_libraryBatch
+        libraryPreparationMethod: *ngs_libraryPreparationMethod
+        pcrCycles: *experimentalData_pcrCycles
+        sequencingBatch: *batch_sequencingBatch
+        isStranded: *ngs_isStranded
+        readStrandOrigin: *ngs_readStrandOrigin
+        readLength: *ngs_readLength
+        runType: *ngs_runType
+        meanCoverage: *qc_meanCoverage
+        meanGCContent: *qc_meanGCContent
+

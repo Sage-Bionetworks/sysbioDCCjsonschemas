@@ -1,0 +1,18 @@
+main-schema:
+    $schema: http://json-schema.org/draft-07/schema#
+    $id: sysbio.metadataTemplates-assay.nanostring-0.0.1
+    description: SysBio nanostring metadata template schema
+    type: object
+    properties:
+        specimenID: *experimentalData_specimenID
+        assay: *experimentalData_assay
+        platform: *experimentalData_platform
+        RIN: *qc_RIN
+        rnaBatch: *batch_rnaBatch
+        libraryBatch: *batch_libraryBatch
+        nanostringBatch: *batch_nanostringBatch
+        libraryPrep: *ngs_libraryPrep
+        libraryPreparationMethod: *ngs_libraryPreparationMethod
+        geneRLF: *experimentalData_geneRLF
+        bindingDensity: *experimentalData_bindingDensity
+

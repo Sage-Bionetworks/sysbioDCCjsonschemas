@@ -1,0 +1,22 @@
+main-schema:
+    $schema: http://json-schema.org/draft-07/schema#
+    $id: sysbio.metadataTemplates-assay.wholeExomeSeq-0.0.1
+    description: SysBio wholeExomeSeq metadata template schema
+    type: object
+    properties:
+        specimenID: *experimentalData_specimenID
+        libraryID: *ngs_libraryID
+        assay: *experimentalData_assay
+        platform: *experimentalData_platform
+        referenceSet: *curatedData_referenceSet
+        dnaBatch: *batch_dnaBatch
+        sequencingBatch: *batch_sequencingBatch
+        libraryPrep: *ngs_libraryPrep
+        libraryPreparationMethod: *ngs_libraryPreparationMethod
+        readLength: *ngs_readLength
+        runType: *ngs_runType
+        totalReads: *experimentalData_totalReads
+        ratio260over280: *qc_ratio260over280
+        ratio260over230: *qc_ratio260over230
+        GQN: *qc_GQN
+
