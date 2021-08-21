@@ -61,21 +61,21 @@ Every schema, for metadata templates or annotations, should have a section calle
 
 #### Adding a new key
 
-1. Add key to schema table
+1. Add schema for the key to schema table ([SysBio DCC table](https://www.synapse.org/#!Synapse:syn26047116/tables/)) as new row, if missing
 2. Add key to yaml schema where needed (use *alias to reference the term as a property)
 3. Increment version in yaml schema
 4. Merge if checks pass; automation should register the schema in Synapse and update the dictionary table(s)
 
 #### Adding a new value to a key
 
-1. Update term in synapseAnnotations
+1. Update term in [synapseAnnotations](https://github.com/Sage-Bionetworks/synapseAnnotations)
 2. Wait until next day for automation PR; merge if checks pass; automation should register the schema in Synapse and update the dictionary table(s)
 
 ### Adding a New Schema
 
-1. Add any keys missing from alias.yml
+1. Add schemas for the keys to schema table ([SysBio DCC table](https://www.synapse.org/#!Synapse:syn26047116/tables/)) as new rows, if missing
 2. Create new template with version 0.0.1 and section name called 'main-schema'
-3. Add template to yaml config
+3. If a metadata template, add to [schemas.yml config](https://github.com/Sage-Bionetworks/sysbioDCCjsonschemas/blob/yaml-schema/config/schemas.yml)
 4. Merge if checks pass; automation should register the schema in Synapse, update the dictionary table(s), and generate metadata templates
 
 ## Code
