@@ -48,7 +48,7 @@ Parameters:
 
 ### Docker
 
-This repo contains a Dockerfile that can be used to build a docker image locally. Alternatively, the docker image is on Docker Hub under [aryllen/sysbioDCCjsonschemas](https://hub.docker.com/repository/docker/aryllen/sysbiodccjsonschemas).
+This repo contains a Dockerfile that can be used to build a docker image locally. Alternatively, the docker image is on Docker Hub under [sagebionetworks/sysbioDCCjsonschemas](https://hub.docker.com/repository/docker/sagebionetworks/sysbiodccjsonschemas).
 
 ##### Build Image Locally
 
@@ -63,11 +63,11 @@ docker run --rm -it sysbiodccjsonschemas
 
 ##### Pull Existing Image
 
-If you'd like to use an existing image, then pull the docker image from Docker Hub. Below assumes pulling the latest version of the image. To use a different version, replace `latest` with the [desired tag](https://hub.docker.com/repository/docker/aryllen/sysbiodccjsonschemas/tags?page=1&ordering=last_updated). The container can be run interactively once the image is pulled.
+If you'd like to use an existing image, then pull the docker image from Docker Hub. Below assumes pulling the latest version of the image. To use a different version, replace `latest` with the [desired tag](https://hub.docker.com/repository/docker/sagebionetworks/sysbiodccjsonschemas/tags?page=1&ordering=last_updated). The container can be run interactively once the image is pulled.
 
 ```
-docker pull aryllen/sysbiodccjsonschemas:latest
-docker run --rm -it aryllen/sysbiodccjsonschemas:latest
+docker pull sagebionetworks/sysbiodccjsonschemas:latest
+docker run --rm -it sagebionetworks/sysbiodccjsonschemas:latest
 ```
 Because the docker image is not currently auto-deployed, it may be out of date with the repo. It is recommend to build the image locally or use `git pull` within the container to get the latest version if you are: 
 
