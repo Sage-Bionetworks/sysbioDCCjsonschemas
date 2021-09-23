@@ -1,0 +1,1122 @@
+{
+    "$id": "sysbio.annotation-ad.main-0.0.1",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "description": "SysBio AD annotations schema",
+    "type": "object",
+    "properties": {
+        "consortium": {
+            "$ref": "sage.annotations-sageCommunity.consortium-0.0.4"
+        },
+        "fileFormat": {
+            "$ref": "sage.annotations-sageCommunity.fileFormat-0.0.4"
+        },
+        "resourceType": {
+            "$ref": "sage.annotations-sageCommunity.resourceType-0.0.5"
+        },
+        "study": {
+            "items": {
+                "$ref": "sage.annotations-neuro.study-0.0.32"
+            },
+            "type": "array"
+        }
+    },
+    "allOf": [
+        {
+            "required": [
+                "consortium",
+                "fileFormat",
+                "resourceType",
+                "study"
+            ]
+        },
+        {
+            "else": {
+                "properties": {
+                    "grant": {
+                        "items": {
+                            "$ref": "sage.annotations-neuro.grant-0.0.2"
+                        },
+                        "type": "array"
+                    }
+                },
+                "required": [
+                    "grant"
+                ]
+            },
+            "if": {
+                "properties": {
+                    "consortium": {
+                        "enum": [
+                            "CDCP"
+                        ],
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "consortium"
+                ]
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "resourceType": {
+                        "enum": [
+                            "metadata"
+                        ],
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "resourceType"
+                ]
+            },
+            "then": {
+                "allOf": [
+                    {
+                        "properties": {
+                            "metadataType": {
+                                "$ref": "sage.annotations-experimentalData.metadataType-0.0.3"
+                            }
+                        },
+                        "required": [
+                            "metadataType"
+                        ]
+                    },
+                    {
+                        "else": {
+                            "properties": {
+                                "assay": {
+                                    "$ref": "sage.annotations-experimentalData.assay-0.0.15"
+                                },
+                                "dataType": {
+                                    "$ref": "sage.annotations-experimentalData.dataType-0.0.3"
+                                }
+                            },
+                            "required": [
+                                "assay",
+                                "dataType"
+                            ]
+                        },
+                        "if": {
+                            "properties": {
+                                "metadataType": {
+                                    "enum": [
+                                        "biospecimen",
+                                        "individual"
+                                    ],
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "metadataType"
+                            ]
+                        },
+                        "then": {
+                            "properties": {
+                                "dataType": {
+                                    "enum": [
+                                        "clinical"
+                                    ],
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "dataType"
+                            ]
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "metadataType": {
+                                    "enum": [
+                                        "biospecimen"
+                                    ],
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "metadataType"
+                            ]
+                        },
+                        "then": {
+                            "properties": {
+                                "isMultiSpecimen": {
+                                    "enum": [
+                                        true
+                                    ],
+                                    "type": "boolean"
+                                }
+                            },
+                            "required": [
+                                "isMultiSpecimen"
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "resourceType": {
+                        "enum": [
+                            "analysis"
+                        ],
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "resourceType"
+                ]
+            },
+            "then": {
+                "properties": {
+                    "analysisType": {
+                        "$ref": "sage.annotations-analysis.analysisType-0.0.9"
+                    }
+                },
+                "required": [
+                    "analysisType"
+                ]
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "resourceType": {
+                        "enum": [
+                            "experimentalData"
+                        ],
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "resourceType"
+                ]
+            },
+            "then": {
+                "allOf": [
+                    {
+                        "allOf": [
+                            {
+                                "properties": {
+                                    "isModelSystem": {
+                                        "$ref": "sage.annotations-neuro.isModelSystem-0.0.2"
+                                    }
+                                },
+                                "required": [
+                                    "isModelSystem"
+                                ]
+                            },
+                            {
+                                "if": {
+                                    "properties": {
+                                        "isModelSystem": {
+                                            "enum": [
+                                                true
+                                            ],
+                                            "type": "boolean"
+                                        }
+                                    },
+                                    "required": [
+                                        "isModelSystem"
+                                    ]
+                                },
+                                "then": {
+                                    "allOf": [
+                                        {
+                                            "properties": {
+                                                "modelSystemType": {
+                                                    "$ref": "sage.annotations-experimentalData.modelSystemType-0.0.2"
+                                                },
+                                                "species": {
+                                                    "$ref": "sage.annotations-experimentalData.species-0.0.2"
+                                                }
+                                            },
+                                            "required": [
+                                                "modelSystemType",
+                                                "species"
+                                            ]
+                                        },
+                                        {
+                                            "if": {
+                                                "properties": {
+                                                    "modelSystemType": {
+                                                        "enum": [
+                                                            "primary cell culture"
+                                                        ],
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "modelSystemType"
+                                                ]
+                                            },
+                                            "then": {
+                                                "properties": {
+                                                    "cellType": {
+                                                        "$ref": "sage.annotations-experimentalData.cellType-0.0.8"
+                                                    },
+                                                    "organ": {
+                                                        "$ref": "sage.annotations-experimentalData.organ-0.0.4"
+                                                    },
+                                                    "tissue": {
+                                                        "$ref": "sage.annotations-experimentalData.tissue-0.0.9"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "cellType",
+                                                    "organ",
+                                                    "tissue"
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "if": {
+                                                "properties": {
+                                                    "modelSystemType": {
+                                                        "enum": [
+                                                            "cerebral organoid",
+                                                            "iPSC",
+                                                            "organoid"
+                                                        ],
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "modelSystemType"
+                                                ]
+                                            },
+                                            "then": {
+                                                "properties": {
+                                                    "cellType": {
+                                                        "$ref": "sage.annotations-experimentalData.cellType-0.0.8"
+                                                    },
+                                                    "differentiationMethod": {
+                                                        "$ref": "sage.annotations-experimentalData.differentiationMethod-0.0.2"
+                                                    },
+                                                    "sourceCell": {
+                                                        "$ref": "sage.annotations-experimentalData.sourceCell-0.0.3"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "cellType",
+                                                    "differentiationMethod",
+                                                    "sourceCell"
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "if": {
+                                                "properties": {
+                                                    "modelSystemType": {
+                                                        "enum": [
+                                                            "immortalized cell line"
+                                                        ],
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "modelSystemType"
+                                                ]
+                                            },
+                                            "then": {
+                                                "properties": {
+                                                    "cellType": {
+                                                        "$ref": "sage.annotations-experimentalData.cellType-0.0.8"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "cellType"
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "if": {
+                                                "properties": {
+                                                    "modelSystemType": {
+                                                        "enum": [
+                                                            "animal"
+                                                        ],
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "modelSystemType"
+                                                ]
+                                            },
+                                            "then": {
+                                                "properties": {
+                                                    "organ": {
+                                                        "$ref": "sage.annotations-experimentalData.organ-0.0.4"
+                                                    },
+                                                    "tissue": {
+                                                        "$ref": "sage.annotations-experimentalData.tissue-0.0.9"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "organ",
+                                                    "tissue"
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "if": {
+                                                "properties": {
+                                                    "consortium": {
+                                                        "enum": [
+                                                            "MODEL-AD"
+                                                        ],
+                                                        "type": "string"
+                                                    },
+                                                    "species": {
+                                                        "enum": [
+                                                            "Mouse"
+                                                        ],
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "consortium",
+                                                    "species"
+                                                ]
+                                            },
+                                            "then": {
+                                                "properties": {
+                                                    "modelSystemName": {
+                                                        "$ref": "sage.annotations-neuro.modelSystemName-0.0.6"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "modelSystemName"
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "if": {
+                                    "properties": {
+                                        "species": {
+                                            "enum": [
+                                                "Human"
+                                            ],
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "species"
+                                    ]
+                                },
+                                "then": {
+                                    "properties": {
+                                        "organ": {
+                                            "$ref": "sage.annotations-experimentalData.organ-0.0.4"
+                                        },
+                                        "tissue": {
+                                            "$ref": "sage.annotations-experimentalData.tissue-0.0.9"
+                                        }
+                                    },
+                                    "required": [
+                                        "organ",
+                                        "tissue"
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "properties": {
+                            "assay": {
+                                "$ref": "sage.annotations-experimentalData.assay-0.0.15"
+                            },
+                            "dataSubtype": {
+                                "$ref": "sage.annotations-experimentalData.dataSubtype-0.0.2"
+                            },
+                            "dataType": {
+                                "$ref": "sage.annotations-experimentalData.dataType-0.0.3"
+                            },
+                            "isMultiSpecimen": {
+                                "$ref": "sage.annotations-experimentalData.isMultiSpecimen-0.0.2"
+                            },
+                            "platform": {
+                                "$ref": "sage.annotations-experimentalData.platform-0.0.16"
+                            }
+                        },
+                        "required": [
+                            "assay",
+                            "dataType",
+                            "dataSubtype",
+                            "isMultiSpecimen",
+                            "platform"
+                        ]
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "dataType": {
+                                    "enum": [
+                                        "chromatinActivity",
+                                        "epigenetics"
+                                    ],
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "dataType"
+                            ]
+                        },
+                        "then": {
+                            "allOf": [
+                                {
+                                    "allOf": [
+                                        {
+                                            "properties": {
+                                                "isMultiSpecimen": {
+                                                    "$ref": "sage.annotations-experimentalData.isMultiSpecimen-0.0.2"
+                                                }
+                                            },
+                                            "required": [
+                                                "isMultiSpecimen"
+                                            ]
+                                        },
+                                        {
+                                            "if": {
+                                                "properties": {
+                                                    "isMultiSpecimen": {
+                                                        "enum": [
+                                                            false
+                                                        ]
+                                                    }
+                                                },
+                                                "required": [
+                                                    "isMultiSpecimen"
+                                                ]
+                                            },
+                                            "then": {
+                                                "properties": {
+                                                    "individualID": {
+                                                        "$ref": "sage.annotations-experimentalData.individualID-0.0.2"
+                                                    },
+                                                    "sex": {
+                                                        "$ref": "sage.annotations-experimentalData.sex-0.0.2"
+                                                    },
+                                                    "specimenID": {
+                                                        "$ref": "sage.annotations-experimentalData.specimenID-0.0.2"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "individualID",
+                                                    "sex",
+                                                    "specimenID"
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "if": {
+                                        "properties": {
+                                            "assay": {
+                                                "enum": [
+                                                    "ATACseq",
+                                                    "HI-C"
+                                                ],
+                                                "type": "string"
+                                            }
+                                        },
+                                        "required": [
+                                            "assay"
+                                        ]
+                                    },
+                                    "then": {
+                                        "properties": {
+                                            "libraryPrep": {
+                                                "$ref": "sage.annotations-ngs.libraryPrep-0.0.7"
+                                            },
+                                            "readLength": {
+                                                "$ref": "sage.annotations-ngs.readLength-0.0.2"
+                                            },
+                                            "runType": {
+                                                "$ref": "sage.annotations-ngs.runType-0.0.2"
+                                            }
+                                        },
+                                        "required": [
+                                            "libraryPrep",
+                                            "readLength",
+                                            "runType"
+                                        ]
+                                    }
+                                },
+                                {
+                                    "if": {
+                                        "properties": {
+                                            "assay": {
+                                                "enum": [
+                                                    "ChIPSeq"
+                                                ],
+                                                "type": "string"
+                                            }
+                                        },
+                                        "required": [
+                                            "assay"
+                                        ]
+                                    },
+                                    "then": {
+                                        "properties": {
+                                            "assayTarget": {
+                                                "$ref": "sage.annotations-experimentalData.assayTarget-0.0.6"
+                                            },
+                                            "libraryPrep": {
+                                                "$ref": "sage.annotations-ngs.libraryPrep-0.0.7"
+                                            },
+                                            "readLength": {
+                                                "$ref": "sage.annotations-ngs.readLength-0.0.2"
+                                            },
+                                            "runType": {
+                                                "$ref": "sage.annotations-ngs.runType-0.0.2"
+                                            }
+                                        },
+                                        "required": [
+                                            "assayTarget",
+                                            "libraryPrep",
+                                            "readLength",
+                                            "runType"
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "dataType": {
+                                    "enum": [
+                                        "geneExpression"
+                                    ],
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "dataType"
+                            ]
+                        },
+                        "then": {
+                            "allOf": [
+                                {
+                                    "allOf": [
+                                        {
+                                            "properties": {
+                                                "isMultiSpecimen": {
+                                                    "$ref": "sage.annotations-experimentalData.isMultiSpecimen-0.0.2"
+                                                }
+                                            },
+                                            "required": [
+                                                "isMultiSpecimen"
+                                            ]
+                                        },
+                                        {
+                                            "if": {
+                                                "properties": {
+                                                    "isMultiSpecimen": {
+                                                        "enum": [
+                                                            false
+                                                        ]
+                                                    }
+                                                },
+                                                "required": [
+                                                    "isMultiSpecimen"
+                                                ]
+                                            },
+                                            "then": {
+                                                "properties": {
+                                                    "individualID": {
+                                                        "$ref": "sage.annotations-experimentalData.individualID-0.0.2"
+                                                    },
+                                                    "sex": {
+                                                        "$ref": "sage.annotations-experimentalData.sex-0.0.2"
+                                                    },
+                                                    "specimenID": {
+                                                        "$ref": "sage.annotations-experimentalData.specimenID-0.0.2"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "individualID",
+                                                    "sex",
+                                                    "specimenID"
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "if": {
+                                        "properties": {
+                                            "assay": {
+                                                "enum": [
+                                                    "rnaSeq",
+                                                    "scRNAseq"
+                                                ],
+                                                "type": "string"
+                                            }
+                                        },
+                                        "required": [
+                                            "assay"
+                                        ]
+                                    },
+                                    "then": {
+                                        "properties": {
+                                            "libraryPrep": {
+                                                "$ref": "sage.annotations-ngs.libraryPrep-0.0.7"
+                                            },
+                                            "nucleicAcidSource": {
+                                                "$ref": "sage.annotations-ngs.nucleicAcidSource-0.0.3"
+                                            },
+                                            "readLength": {
+                                                "$ref": "sage.annotations-ngs.readLength-0.0.2"
+                                            },
+                                            "runType": {
+                                                "$ref": "sage.annotations-ngs.runType-0.0.2"
+                                            }
+                                        },
+                                        "required": [
+                                            "libraryPrep",
+                                            "nucleicAcidSource",
+                                            "readLength",
+                                            "runType"
+                                        ]
+                                    }
+                                },
+                                {
+                                    "if": {
+                                        "properties": {
+                                            "assay": {
+                                                "enum": [
+                                                    "nanostring"
+                                                ],
+                                                "type": "string"
+                                            }
+                                        },
+                                        "required": [
+                                            "assay"
+                                        ]
+                                    },
+                                    "then": {
+                                        "properties": {
+                                            "libraryPrep": {
+                                                "$ref": "sage.annotations-ngs.libraryPrep-0.0.7"
+                                            }
+                                        },
+                                        "required": [
+                                            "libraryPrep"
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "dataType": {
+                                    "enum": [
+                                        "genomicVariants"
+                                    ]
+                                }
+                            },
+                            "required": [
+                                "dataType"
+                            ]
+                        },
+                        "then": {
+                            "allOf": [
+                                {
+                                    "allOf": [
+                                        {
+                                            "properties": {
+                                                "isMultiSpecimen": {
+                                                    "$ref": "sage.annotations-experimentalData.isMultiSpecimen-0.0.2"
+                                                }
+                                            },
+                                            "required": [
+                                                "isMultiSpecimen"
+                                            ]
+                                        },
+                                        {
+                                            "if": {
+                                                "properties": {
+                                                    "isMultiSpecimen": {
+                                                        "enum": [
+                                                            false
+                                                        ]
+                                                    }
+                                                },
+                                                "required": [
+                                                    "isMultiSpecimen"
+                                                ]
+                                            },
+                                            "then": {
+                                                "properties": {
+                                                    "individualID": {
+                                                        "$ref": "sage.annotations-experimentalData.individualID-0.0.2"
+                                                    },
+                                                    "sex": {
+                                                        "$ref": "sage.annotations-experimentalData.sex-0.0.2"
+                                                    },
+                                                    "specimenID": {
+                                                        "$ref": "sage.annotations-experimentalData.specimenID-0.0.2"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "individualID",
+                                                    "sex",
+                                                    "specimenID"
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "properties": {
+                                        "libraryPrep": {
+                                            "$ref": "sage.annotations-ngs.libraryPrep-0.0.7"
+                                        },
+                                        "nucleicAcidSource": {
+                                            "$ref": "sage.annotations-ngs.nucleicAcidSource-0.0.3"
+                                        },
+                                        "readLength": {
+                                            "$ref": "sage.annotations-ngs.readLength-0.0.2"
+                                        },
+                                        "runType": {
+                                            "$ref": "sage.annotations-ngs.runType-0.0.2"
+                                        }
+                                    },
+                                    "required": [
+                                        "libraryPrep",
+                                        "nucleicAcidSource",
+                                        "readLength",
+                                        "runType"
+                                    ]
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "dataType": {
+                                    "enum": [
+                                        "image"
+                                    ],
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "dataType"
+                            ]
+                        },
+                        "then": {
+                            "allOf": [
+                                {
+                                    "allOf": [
+                                        {
+                                            "properties": {
+                                                "isMultiSpecimen": {
+                                                    "$ref": "sage.annotations-experimentalData.isMultiSpecimen-0.0.2"
+                                                }
+                                            },
+                                            "required": [
+                                                "isMultiSpecimen"
+                                            ]
+                                        },
+                                        {
+                                            "if": {
+                                                "properties": {
+                                                    "isMultiSpecimen": {
+                                                        "enum": [
+                                                            false
+                                                        ],
+                                                        "type": "boolean"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "isMultiSpecimen"
+                                                ]
+                                            },
+                                            "then": {
+                                                "properties": {
+                                                    "individualID": {
+                                                        "$ref": "sage.annotations-experimentalData.individualID-0.0.2"
+                                                    },
+                                                    "sex": {
+                                                        "$ref": "sage.annotations-experimentalData.sex-0.0.2"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "individualID",
+                                                    "sex"
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "dataType": {
+                                    "enum": [
+                                        "immunoassay",
+                                        "metabolomics"
+                                    ],
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "dataType"
+                            ]
+                        },
+                        "then": {
+                            "allOf": [
+                                {
+                                    "allOf": [
+                                        {
+                                            "properties": {
+                                                "isMultiSpecimen": {
+                                                    "$ref": "sage.annotations-experimentalData.isMultiSpecimen-0.0.2"
+                                                }
+                                            },
+                                            "required": [
+                                                "isMultiSpecimen"
+                                            ]
+                                        },
+                                        {
+                                            "if": {
+                                                "properties": {
+                                                    "isMultiSpecimen": {
+                                                        "enum": [
+                                                            false
+                                                        ]
+                                                    }
+                                                },
+                                                "required": [
+                                                    "isMultiSpecimen"
+                                                ]
+                                            },
+                                            "then": {
+                                                "properties": {
+                                                    "individualID": {
+                                                        "$ref": "sage.annotations-experimentalData.individualID-0.0.2"
+                                                    },
+                                                    "sex": {
+                                                        "$ref": "sage.annotations-experimentalData.sex-0.0.2"
+                                                    },
+                                                    "specimenID": {
+                                                        "$ref": "sage.annotations-experimentalData.specimenID-0.0.2"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "individualID",
+                                                    "sex",
+                                                    "specimenID"
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "dataType": {
+                                    "enum": [
+                                        "metagenomics"
+                                    ],
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "dataType"
+                            ]
+                        },
+                        "then": {
+                            "allOf": [
+                                {
+                                    "allOf": [
+                                        {
+                                            "properties": {
+                                                "isMultiSpecimen": {
+                                                    "$ref": "sage.annotations-experimentalData.isMultiSpecimen-0.0.2"
+                                                }
+                                            },
+                                            "required": [
+                                                "isMultiSpecimen"
+                                            ]
+                                        },
+                                        {
+                                            "if": {
+                                                "properties": {
+                                                    "isMultiSpecimen": {
+                                                        "enum": [
+                                                            false
+                                                        ]
+                                                    }
+                                                },
+                                                "required": [
+                                                    "isMultiSpecimen"
+                                                ]
+                                            },
+                                            "then": {
+                                                "properties": {
+                                                    "individualID": {
+                                                        "$ref": "sage.annotations-experimentalData.individualID-0.0.2"
+                                                    },
+                                                    "sex": {
+                                                        "$ref": "sage.annotations-experimentalData.sex-0.0.2"
+                                                    },
+                                                    "specimenID": {
+                                                        "$ref": "sage.annotations-experimentalData.specimenID-0.0.2"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "individualID",
+                                                    "sex",
+                                                    "specimenID"
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "properties": {
+                                        "assayTarget": {
+                                            "$ref": "sage.annotations-experimentalData.assayTarget-0.0.6"
+                                        },
+                                        "libraryPrep": {
+                                            "$ref": "sage.annotations-ngs.libraryPrep-0.0.7"
+                                        },
+                                        "readLength": {
+                                            "$ref": "sage.annotations-ngs.readLength-0.0.2"
+                                        },
+                                        "runType": {
+                                            "$ref": "sage.annotations-ngs.runType-0.0.2"
+                                        }
+                                    },
+                                    "required": [
+                                        "assayTarget",
+                                        "libraryPrep",
+                                        "readLength",
+                                        "runType"
+                                    ]
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "if": {
+                            "properties": {
+                                "dataType": {
+                                    "enum": [
+                                        "proteomics"
+                                    ],
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "dataType"
+                            ]
+                        },
+                        "then": {
+                            "allOf": [
+                                {
+                                    "allOf": [
+                                        {
+                                            "properties": {
+                                                "isMultiSpecimen": {
+                                                    "$ref": "sage.annotations-experimentalData.isMultiSpecimen-0.0.2"
+                                                }
+                                            },
+                                            "required": [
+                                                "isMultiSpecimen"
+                                            ]
+                                        },
+                                        {
+                                            "if": {
+                                                "properties": {
+                                                    "isMultiSpecimen": {
+                                                        "enum": [
+                                                            false
+                                                        ]
+                                                    }
+                                                },
+                                                "required": [
+                                                    "isMultiSpecimen"
+                                                ]
+                                            },
+                                            "then": {
+                                                "properties": {
+                                                    "individualID": {
+                                                        "$ref": "sage.annotations-experimentalData.individualID-0.0.2"
+                                                    },
+                                                    "sex": {
+                                                        "$ref": "sage.annotations-experimentalData.sex-0.0.2"
+                                                    },
+                                                    "specimenID": {
+                                                        "$ref": "sage.annotations-experimentalData.specimenID-0.0.2"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "individualID",
+                                                    "sex",
+                                                    "specimenID"
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "if": {
+                                        "properties": {
+                                            "assay": {
+                                                "enum": [
+                                                    "TMT quantitation"
+                                                ],
+                                                "type": "string"
+                                            }
+                                        },
+                                        "required": [
+                                            "assay"
+                                        ]
+                                    },
+                                    "then": {
+                                        "properties": {
+                                            "batch": {
+                                                "$ref": "sage.annotations-batch.batch-0.0.2"
+                                            },
+                                            "batchChannel": {
+                                                "$ref": "sage.annotations-batch.batchChannel-0.0.2"
+                                            }
+                                        },
+                                        "required": [
+                                            "batch",
+                                            "batchChannel"
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}
+
