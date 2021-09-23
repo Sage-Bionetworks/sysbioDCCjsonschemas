@@ -162,6 +162,7 @@ subschema_isMultiSpecimen_specimen: &isMultiSpecimen_Specimen
       if:
         properties:
           isMultiSpecimen:
+            type: boolean
             enum:
               - false
         required:
@@ -176,9 +177,9 @@ subschema_isMultiSpecimen_specimen: &isMultiSpecimen_Specimen
           - sex
           - specimenID
 
-main:
+main-schema:
   $schema: http://json-schema.org/draft-07/schema#
-  $id: nkauer-ad.main-0.0.5
+  $id: sysbio.annotation-ad.main-0.0.1
   description: "SysBio AD annotations schema"
   type: object
   properties:
