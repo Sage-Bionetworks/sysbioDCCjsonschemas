@@ -45,6 +45,9 @@
         "samplingAge": {
             "$ref": "sage.annotations-experimentalData.samplingAge"
         },
+        "samplingAgeUnits": {
+            "$ref": "sage.annotations-experimentalData.samplingAgeUnits"
+        },
         "sampleStatus": {
             "$ref": "sage.annotations-experimentalData.sampleStatus"
         }
