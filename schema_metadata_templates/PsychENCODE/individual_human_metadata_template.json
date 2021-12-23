@@ -51,6 +51,9 @@
         "familyHistory": {
             "$ref": "sage.annotations-clinical.familyHistory"
         },
+        "familyHistoryDetails":{
+            "$ref": "sage.annotations-clinical.familyHistoryDetails"
+        },
         "ageOnset": {
             "$ref": "sage.annotations-clinical.ageOnset"
         },
@@ -86,6 +89,9 @@
         },
         "postmortemTox": {
             "$ref": "sage.annotations-clinical.postmortemTox"
+        },
+        "postmortemToxDetails": {
+            "$ref": "sage.annotations-clinical.postmortemToxDetails"
         },
         "postmortemToxSource": {
             "$ref": "sage.annotations-clinical.postmortemToxSource"
