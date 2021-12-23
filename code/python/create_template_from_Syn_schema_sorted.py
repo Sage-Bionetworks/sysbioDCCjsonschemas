@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 """
-Program: create_template_from_Syn_schema.py
+Program: create_template_from_Syn_schema_sorted.py
 
 Purpose: Use a JSON schema registered in Synapse to generate either csv file
          templates or an Excel workbook containing template worksheets.  The
