@@ -4,8 +4,9 @@
 Program: create_template_from_Syn_schema_sorted.py
 
 Purpose: Use a JSON schema registered in Synapse to generate either csv file
-         templates or an Excel workbook containing template worksheets.  The
-         following will be generated as either separate files (csv) or
+         templates or an Excel workbook containing template worksheets. The 
+         output column order aligns with that in template json file. 
+         The following will be generated as either separate files (csv) or
          worksheets within the workbook (Excel):
          - a blank template to use for data entry
          - a dictionary defining the columns in the template
