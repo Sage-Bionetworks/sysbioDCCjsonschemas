@@ -16,11 +16,12 @@ Input parameters: Full name of the registered schema, including
                       organization
                   Full pathname to the output template file
                   Desired output - either csv or excel
-
+                  Full pathname for the template json file in 
+                  schema_metadata_templates folder
 Outputs: csv template files or Excel workbook
 
 Execution: create_template_from_Syn_schema.py <JSON schema name>
-             <output file> <csv/excel>
+             <output file> <csv/excel> <template_json>
 """
 
 import argparse
@@ -28,6 +29,8 @@ import os
 import pandas as pd
 import synapseclient
 import schemaTools
+import json 
+from collections import OrderedDict
 
 def template_csv(template_file_name, template_df, dictionary_df, values_df):
     """
@@ -118,12 +121,19 @@ def main():
                         help="Full pathname for the output file")
     parser.add_argument("type_of_output", type=str,
                         help="Type of output (csv or excel)")
-
+    parser.add_argument("template_json", type=str,
+                        help="Full pathname for the template json file in schema_metadata_templates folder")
     args = parser.parse_args()
 
     json_schema = syn.restGET(f"/schema/type/registered/{args.json_schema_name}")
     definitions_df, values_df = schemaTools.get_Syn_definitions_values(json_schema, syn)
+    #re-order the columns as template json file
+    with open(args.template_json, 'r') as f:
+        template = json.load(f, object_pairs_hook=OrderedDict)
+        order_series = pd.Series(template['properties'].keys())
     definitions_df = definitions_df[["key", "description"]]
+    definitions_df = definitions_df.set_index('key')
+    definitions_df = definitions_df.loc[order_series].reset_index()
     template_df = pd.DataFrame(columns=definitions_df["key"].tolist())
 
     if args.type_of_output == "csv":
