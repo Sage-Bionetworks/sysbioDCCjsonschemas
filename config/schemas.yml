@@ -125,3 +125,7 @@ sysbio.metadataTemplates-pec.manifest:
         schema_name: "template_manifest.xlsx"
         PsychENCODE: "syn20729790"
         
+sysbio.metadataTemplates-modelad.individual.animal:
+        schema_name: "template_individual_animal_model-ad.xlsx"
+        AD: "syn21084071"
+        
