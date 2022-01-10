@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
 
 """
-Program: create_template_from_Syn_schema_sorted.py
+Program: create_template_from_Syn_schema.py
 
 Purpose: Use a JSON schema registered in Synapse to generate either csv file
-         templates or an Excel workbook containing template worksheets. The 
-         output column order aligns with that in template json file. 
-         The following will be generated as either separate files (csv) or
+         templates or an Excel workbook containing template worksheets.  The
+         following will be generated as either separate files (csv) or
          worksheets within the workbook (Excel):
          - a blank template to use for data entry
          - a dictionary defining the columns in the template
@@ -17,12 +16,11 @@ Input parameters: Full name of the registered schema, including
                       organization
                   Full pathname to the output template file
                   Desired output - either csv or excel
-                  Full pathname for the template json file in 
-                  schema_metadata_templates folder
+                  Config_file - /home/ec2-user/sysbioDCCjsonschemas/config/schemas.yml including all registered schemas
 Outputs: csv template files or Excel workbook
 
 Execution: create_template_from_Syn_schema.py <JSON schema name>
-             <output file> <csv/excel> <template_json>
+             <output file> <csv/excel> <config_file>
 """
 import argparse
 import os
@@ -30,8 +28,8 @@ import pandas as pd
 import synapseclient
 from synapseclient.entity import File
 import schemaTools
-import json 
-from collections import OrderedDict
+import yaml
+import pdb
 
 def prGreen(messages:str):
     print(f"\33[32m {messages} \33[0m")
@@ -126,19 +124,13 @@ def main():
                         help="Full pathname for the output file")
     parser.add_argument("type_of_output", type=str,
                         help="Type of output (csv or excel)")
-    parser.add_argument("template_json", type=str,
-                        help="Full pathname for the template json file in schema_metadata_templates folder")
+    parser.add_argument("config_file", type=argparse.FileType("r"),
+                               help="Full pathname for the YAML config file")
     args = parser.parse_args()
 
     json_schema = syn.restGET(f"/schema/type/registered/{args.json_schema_name}")
     definitions_df, values_df = schemaTools.get_Syn_definitions_values(json_schema, syn)
-    #re-order the columns as template json file
-    with open(args.template_json, 'r') as f:
-        template = json.load(f, object_pairs_hook=OrderedDict)
-        order_series = pd.Series(template['properties'].keys())
     definitions_df = definitions_df[["key", "description"]]
-    definitions_df = definitions_df.set_index('key')
-    definitions_df = definitions_df.loc[order_series].reset_index()
     template_df = pd.DataFrame(columns=definitions_df["key"].tolist())
     #get the parent SynapseID for each template based on schemas.yml
     schema_dict = yaml.safe_load(args.config_file)
