@@ -127,5 +127,5 @@ sysbio.metadataTemplates-pec.manifest:
         
 sysbio.metadataTemplates-modelad.individual.animal:
         schema_name: "template_individual_animal_model-ad.xlsx"
-        AD: "syn21084071"
+        AD: "syn18512044"
         
