@@ -24,16 +24,19 @@ Outputs: csv template files or Excel workbook
 Execution: create_template_from_Syn_schema.py <JSON schema name>
              <output file> <csv/excel> <template_json>
 """
-
 import argparse
 import os
 import pandas as pd
 import synapseclient
+from synapseclient.entity import File
 import schemaTools
 import json 
 from collections import OrderedDict
 
-def template_csv(template_file_name, template_df, dictionary_df, values_df):
+def prGreen(messages:str):
+    print(f"\33[32m {messages} \33[0m")
+
+def template_csv(template_file_name, template_df, dictionary_df, values_df, syn, parent):
     """
     Function: template_csv
 
@@ -61,21 +64,21 @@ def template_csv(template_file_name, template_df, dictionary_df, values_df):
     dictionary_file_name = (base_file_name + "_dictionary" +
                             base_file_ext)
     values_file_name = (base_file_name + "_values" + base_file_ext)
+    for parent_id in parent: 
+        # Create and store a template file.
+        template_df.to_csv(template_file_name, index=False)
+        prGreen(f'Saving template in {parent_id}')
+        syn.store(File(template_file_name, parent=parent_id))
+        # Create and store a dictionary file
+        dictionary_df.to_csv(dictionary_file_name, index=False)
+        prGreen(f'Saving dictionary in {parent_id}')
+        syn.store(File(dictionary_file_name, parent=parent_id))
+        # Create and store a values file
+        values_df.to_csv(values_file_name, index=False)
+        prGreen(f'Saving values in {parent_id}')
+        syn.store(File(values_file_name, parent=parent_id))
 
-    # Create a template file.
-    with open(template_file_name, "w") as template_file:
-        template_df.to_csv(template_file, index=False)
-
-    # Create a dictionary file
-    with open(dictionary_file_name, "w") as dictionary_file:
-        dictionary_df.to_csv(dictionary_file, index=False)
-
-    # Create a values file
-    with open(values_file_name, "w") as values_file:
-        values_df.to_csv(values_file, index=False)
-
-
-def template_excel(workbook_name, template_df, dictionary_df, values_df):
+def template_excel(workbook_name, template_df, dictionary_df, values_df,syn, parent):
     """
     Function: template_excel
 
@@ -106,9 +109,10 @@ def template_excel(workbook_name, template_df, dictionary_df, values_df):
 
     # Create a values worksheet
     values_df.to_excel(workbook_writer, index=False, sheet_name="Values")
-
     workbook_writer.save()
-
+    for parent_id in parent: 
+        prGreen(f'Save template in {parent_id}')
+        syn.store(File(workbook_name,parent=parent_id))
 
 def main():
 
@@ -136,12 +140,14 @@ def main():
     definitions_df = definitions_df.set_index('key')
     definitions_df = definitions_df.loc[order_series].reset_index()
     template_df = pd.DataFrame(columns=definitions_df["key"].tolist())
-
+    #get the parent SynapseID for each template based on schemas.yml
+    schema_dict = yaml.safe_load(args.config_file)
+    schema_dict = schema_dict[args.json_schema_name]
+    parent = [value for key, value in schema_dict.items() if key != 'schema_name']
     if args.type_of_output == "csv":
-        template_csv(args.output_file, template_df, definitions_df, values_df)
+        template_csv(args.output_file, template_df, definitions_df, values_df, syn, parent)
     elif args.type_of_output == "excel":
-        template_excel(args.output_file, template_df, definitions_df, values_df)
-
+        template_excel(args.output_file, template_df, definitions_df, values_df, syn, parent)
 
 if __name__ == "__main__":
     main()

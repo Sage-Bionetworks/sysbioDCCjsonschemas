@@ -21,7 +21,7 @@ sysbio.metadataTemplates-assay.ATACSeq:
 
 sysbio.metadataTemplates-assay.autorad:
         schema_name: "template_assay_autorad.xlsx"
-        AD: "syn22087295"
+        AD: "syn18512044"
 
 sysbio.metadataTemplates-assay.bisulfiteSeq:
         schema_name: "template_assay_bisulfiteSeq.xlsx"
@@ -49,7 +49,7 @@ sysbio.metadataTemplates-assay.methylationArray:
 
 sysbio.metadataTemplates-assay.MRI:
         schema_name: "template_assay_MRI.xlsx"
-        AD: "syn22087332"
+        AD: "syn18512044"
 
 sysbio.metadataTemplates-assay.nanostring:
         schema_name: "template_assay_nanostring.xlsx"
@@ -57,7 +57,7 @@ sysbio.metadataTemplates-assay.nanostring:
 
 sysbio.metadataTemplates-assay.PET:
         schema_name: "template_assay_PET.xlsx"
-        AD: "syn22087299"
+        AD: "syn18512044"
 
 sysbio.metadataTemplates-assay.rnaArray:
         schema_name: "template_assay_rnaArray.xlsx"
