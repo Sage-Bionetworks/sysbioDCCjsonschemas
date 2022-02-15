@@ -12,15 +12,13 @@ Purpose: Use a JSON schema registered in Synapse to generate either csv file
          - a listing of allowable values for columns that use a controlled
            vocabulary list
 
-Input parameters: Full name of the registered schema, including
-                      organization
-                  Full pathname to the output template file
-                  Desired output - either csv or excel
-                  Config_file - /home/ec2-user/sysbioDCCjsonschemas/config/schemas.yml including all registered schemas
-Outputs: csv template files or Excel workbook
+Input parameters: json_schema_name - Full name of the registered schema, i.e. schema id
+                  config_file - schemas.yml that includes all registered schemas, e.g. /home/ec2-user/sysbioDCCjsonschemas/config/schemas.yml 
+                  template_json - Optional. Specify it when you want to sort the output template as the json file. 
+                                  Full pathname for the template json file in the schema_metadata_templates folder. 
+Outputs: a csv template files or Excel workbook in the Consortium specific metadata folder
 
-Execution: create_template_from_Syn_schema.py <JSON schema name>
-             <output file> <csv/excel> <config_file>
+Execution: create_template_from_Syn_schema.py <json_schema_name> <config_file> <template_json>
 """
 import argparse
 import os
@@ -29,12 +27,13 @@ import synapseclient
 from synapseclient.entity import File
 import schemaTools
 import yaml
-import pdb
+import json 
+from collections import OrderedDict
 
-def prGreen(messages:str):
-    print(f"\33[32m {messages} \33[0m")
+def prGreen(skk:str) -> str:
+    print("\033[92m {}\033[00m" .format(skk))
 
-def template_csv(template_file_name, template_df, dictionary_df, values_df, syn, parent):
+def template_csv(template_file_name, template_file_ext, template_df, dictionary_df, values_df, syn, parent):
     """
     Function: template_csv
 
@@ -47,10 +46,11 @@ def template_csv(template_file_name, template_df, dictionary_df, values_df, syn,
                    used for columns in the "_template" file
 
     Arguments:
-        template_file_name: Name of the template file to output. The dictionary
+        template_file_name - Name of the template file to output. The dictionary
                             and values files will append "_dictionary" and
                             "_values", respectively, after the file name and
                             before the ".csv" extension.
+        template_file_ext - the file extension of the template file
         template_df - An empty pandas dataframe with the column names being
                       the desired template columns
         dictionary_df - A pandas dataframe containing the definition
@@ -58,10 +58,10 @@ def template_csv(template_file_name, template_df, dictionary_df, values_df, syn,
         values_df - A pandas dataframe of the values lists used by columns
                     in the template
     """
-    base_file_name, base_file_ext = os.path.splitext(template_file_name)
-    dictionary_file_name = (base_file_name + "_dictionary" +
-                            base_file_ext)
-    values_file_name = (base_file_name + "_values" + base_file_ext)
+    dictionary_file_name = (template_file_name + "_dictionary." +
+                            template_file_ext)
+    values_file_name = (template_file_name + "_values." + template_file_ext)
+    template_file_name = (template_file_name + '.' + template_file_ext)
     for parent_id in parent: 
         # Create and store a template file.
         template_df.to_csv(template_file_name, index=False)
@@ -76,7 +76,7 @@ def template_csv(template_file_name, template_df, dictionary_df, values_df, syn,
         prGreen(f'Saving values in {parent_id}')
         syn.store(File(values_file_name, parent=parent_id))
 
-def template_excel(workbook_name, template_df, dictionary_df, values_df,syn, parent):
+def template_excel(template_file_name, template_df, dictionary_df, values_df,syn, parent):
     """
     Function: template_excel
 
@@ -89,7 +89,7 @@ def template_excel(workbook_name, template_df, dictionary_df, values_df,syn, par
                          for columns in the "Template" worksheet
 
     Arguments:
-        workbook_name: Name of the workbook to output
+        template_file_name: Name of the workbook to output
         template_df - An empty pandas dataframe with the column names being
                       the desired template columns
         dictionary_df - A pandas dataframe containing the definition
@@ -97,7 +97,7 @@ def template_excel(workbook_name, template_df, dictionary_df, values_df,syn, par
         values_df - A pandas dataframe of the values lists used by columns
                     in the template
     """
-    workbook_writer = pd.ExcelWriter(workbook_name, engine="xlsxwriter")
+    workbook_writer = pd.ExcelWriter(template_file_name, engine="xlsxwriter")
 
     # Create a template worksheet.
     template_df.to_excel(workbook_writer, index=False, sheet_name="Template")
@@ -110,7 +110,7 @@ def template_excel(workbook_name, template_df, dictionary_df, values_df,syn, par
     workbook_writer.save()
     for parent_id in parent: 
         prGreen(f'Save template in {parent_id}')
-        syn.store(File(workbook_name,parent=parent_id))
+        syn.store(File(template_file_name, parent=parent_id))
 
 def main():
 
@@ -118,28 +118,39 @@ def main():
     syn.login(silent=True)
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("json_schema_name", type=str,
-                        help="Full name for the registered JSON schema")
-    parser.add_argument("output_file", type=str,
-                        help="Full pathname for the output file")
-    parser.add_argument("type_of_output", type=str,
-                        help="Type of output (csv or excel)")
+    parser.add_argument("json_schema_name", type=str,  
+                        help="Registered JSON schema id")
     parser.add_argument("config_file", type=argparse.FileType("r"),
                                help="Full pathname for the YAML config file")
+    parser.add_argument("template_json", type=str, nargs='?',
+                        help="Optional. Full pathname for the template json file in schema_metadata_templates folder. ")
     args = parser.parse_args()
 
     json_schema = syn.restGET(f"/schema/type/registered/{args.json_schema_name}")
     definitions_df, values_df = schemaTools.get_Syn_definitions_values(json_schema, syn)
-    definitions_df = definitions_df[["key", "description"]]
-    template_df = pd.DataFrame(columns=definitions_df["key"].tolist())
-    #get the parent SynapseID for each template based on schemas.yml
+    if args.template_json is not None:
+        #re-order the columns as template json file
+        with open(args.template_json, 'r') as f:
+            template = json.load(f, object_pairs_hook=OrderedDict)
+            order_series = pd.Series(template['properties'].keys())
+        definitions_df = definitions_df[["key", "description"]]
+        definitions_df = definitions_df.set_index('key')
+        definitions_df = definitions_df.loc[order_series].reset_index()
+        template_df = pd.DataFrame(columns=definitions_df["key"].tolist())
+    else: 
+        definitions_df = definitions_df[["key", "description"]]
+        template_df = pd.DataFrame(columns=definitions_df["key"].tolist())
+    #get the parent SynapseID and template file name for each template based on schemas.yml
     schema_dict = yaml.safe_load(args.config_file)
     schema_dict = schema_dict[args.json_schema_name]
     parent = [value for key, value in schema_dict.items() if key != 'schema_name']
-    if args.type_of_output == "csv":
-        template_csv(args.output_file, template_df, definitions_df, values_df, syn, parent)
-    elif args.type_of_output == "excel":
-        template_excel(args.output_file, template_df, definitions_df, values_df, syn, parent)
+    template_file_name = schema_dict['schema_name']
+    template_file_ext = template_file_name.rsplit('.',1)[1]
+    if template_file_ext == "csv":
+       template_file_name = template_file_name.rsplit('.',1)[0]
+       template_csv(template_file_name, template_file_ext, template_df, definitions_df, values_df, syn, parent)
+    elif template_file_ext == "xlsx":
+        template_excel(template_file_name, template_df, definitions_df, values_df, syn, parent)
 
 if __name__ == "__main__":
     main()
