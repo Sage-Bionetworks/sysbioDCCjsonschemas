@@ -14,7 +14,7 @@ Proposed value: <value>
 - Definition:
 - Source: 
 
-(Optional) Linked issues, contributor requests, or other information: <more info> 
+_(Optional)_ Linked issues, contributor requests, or other information: <more info> 
 
 **To do:**
 - [ ] data coordinator provides value, definition, and source in this issue, then assigns to relevant DCC curator
