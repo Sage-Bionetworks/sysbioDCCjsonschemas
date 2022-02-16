@@ -13,7 +13,9 @@ assignees: pitviper6
 - Description: 
 - Source: 
 
-_If type = enumerated string, request controlled values below or in a separate VALUE issue linked here._
+_(Optional)_ 
+- Linked issues, contributor requests, or other information: <more info> 
+- If type = enumerated string, request controlled values below or in a separate VALUE issue linked here: <link>
 
 **To do:**
 - [ ] data coordinator provides term, definition, and source in this issue, then assigns to relevant DCC curator
