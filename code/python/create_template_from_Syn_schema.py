@@ -14,7 +14,7 @@ Purpose: Use a JSON schema registered in Synapse to generate either csv file
 
 Input parameters: json_schema_name - Full name of the registered schema, i.e. schema id
                   config_file - schemas.yml that includes all registered schemas, e.g. /home/ec2-user/sysbioDCCjsonschemas/config/schemas.yml 
-                  template_json - Optional. Specify it when you want to sort the output template as the json file. 
+                  template_json - Optional. Specify it when you want the output template columns to match the order of the terms as they appear in a json file. 
                                   Full pathname for the template json file in the schema_metadata_templates folder. 
 Outputs: a csv template files or Excel workbook in the Consortium specific metadata folder
 
