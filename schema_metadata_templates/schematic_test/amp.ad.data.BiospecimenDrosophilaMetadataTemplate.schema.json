@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/BiospecimenDrosophilaMetadataTemplate",
+  "title": "BiospecimenDrosophilaMetadataTemplate",
+  "type": "object",
+  "properties": {
+    "nIndividuals": {},
+    "specimenID": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "tissueWeight": {},
+    "nMale": {},
+    "Component": {},
+    "bodyPart": {
+      "enum": [
+        "head",
+        ""
+      ]
+    },
+    "genotype": {},
+    "temperature": {},
+    "ageDays": {},
+    "nFemale": {},
+    "nucleicAcidSource": {
+      "enum": [
+        "sorted nuclei",
+        "mitochondria",
+        "cfDNA",
+        "bulk cell",
+        "single cell",
+        "single nucleus",
+        "bulk nuclei",
+        "sorted cells",
+        ""
+      ]
+    }
+  },
+  "required": [
+    "specimenID"
+  ]
+}

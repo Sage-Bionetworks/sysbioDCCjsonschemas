@@ -1,0 +1,119 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/AssayMRIMetadataTemplate",
+  "title": "AssayMRIMetadataTemplate",
+  "type": "object",
+  "properties": {
+    "contrastAgent": {},
+    "platform": {
+      "enum": [
+        "Bruker Avance III",
+        "Illumina_Infinium-HumanMethylation450-BeadChip",
+        "DNBSEQ",
+        "GAIIx",
+        "AffymetrixU133AB",
+        "PsychChip",
+        "Biocrates p180",
+        "triple quadrupole",
+        "Illumina_Omni5-Quad",
+        "Illumina NovaSeq 6000",
+        "orbitrap",
+        "PacBioRSII",
+        "Illumina_Omni5M",
+        "Illumina_Omni2.5-8_v1.3",
+        "IlluminaHumanHT-12_V3_0_R1",
+        "Orbitrap Fusion Lumos",
+        "HiSeq4000",
+        "Q Exactive Plus",
+        "quadrupole time-of-flight",
+        "Infinium Omni2.5Exome-8 v1.4",
+        "ddSEQ Single-Cell Isolator",
+        "IlluminaHumanMethylation450",
+        "Infinium Omni2.5Exome-8 v1.5",
+        "Illumina MouseWG-6 v2.0 expression beadchip",
+        "NextSeq500",
+        "MiSeq",
+        "Affy5.0",
+        "Biograph mCT",
+        "IlluminaMethylationEPIC",
+        "Xevo TQ-S",
+        "HiSeqX",
+        "Olink Target 96",
+        "AffymetrixU133Plus2",
+        "PacBio Sequel II",
+        "Q Exactive HF",
+        "HiSeq2000",
+        "Affymetrix Human Gene 1.0 ST Array",
+        "LTQOrbitrapXL",
+        "Illumina_HumanOmni1-Quadv1.0",
+        "time-of-flight",
+        "Agilent44Karray",
+        "Illumina_Omni2pt5M",
+        "Illumina_Omni2.5-8_v1.1",
+        "Xevo G2 QTOF",
+        "Infinium HumanOmniExpressExome",
+        "Infinium Omni2.5Exome-8 v1.1",
+        "NanostringnCounter_MouseADPanel",
+        "Affy6.0",
+        "confocalImaging",
+        "HiSeq1000",
+        "HiSeq3000",
+        "Perlegen300Karray",
+        "IlluminaNovaseq6000",
+        "IlluminaHumanHap650Yv3_A",
+        "Infinium Omni2.5Exome-8 v1.3",
+        "OrbiTrap Fusion",
+        "Illumina_h650",
+        "Illumina_1M",
+        "Illumina_Omni2.5-8",
+        "Bionano Irys",
+        "IlluminaMiSeq",
+        "IlluminaInfiniumGSAMD-24v2-0",
+        "InfiniumPsychArrayBeadChip",
+        "Signa Premier AIR 3T",
+        "IlluminaHumanHap300",
+        "IlluminaWholeGenomeDASL",
+        "NanostringnCounter",
+        "Simoa HD-1 Analyzer",
+        "HiSeq2500",
+        "Q Exactive",
+        "BGISEQ-500",
+        "SequenomMultiplex"
+      ]
+    },
+    "MRItype": {
+      "enum": [
+        "DTI",
+        "structural",
+        "functional",
+        ""
+      ]
+    },
+    "individualID": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "ageAssessment": {},
+    "ageAssessmentUnits": {
+      "enum": [
+        "PCW",
+        "days",
+        "years",
+        "gestational weeks",
+        "weeks",
+        "months",
+        ""
+      ]
+    },
+    "filename": {},
+    "scanID": {},
+    "Component": {},
+    "fieldStrength": {}
+  },
+  "required": [
+    "platform",
+    "individualID"
+  ]
+}

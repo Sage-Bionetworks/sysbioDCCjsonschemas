@@ -8,6 +8,7 @@ The metadata templates are located in the schema_metadata_templates folder and a
 - **shared:** Any new templates or additions to existing should be reviewed with the SysBio DCC to see if they meet everyone's needs. If all consortia in the SysBio DCC agree to the template, then it should be in the shared folder.
 - **AD:** The AD folder contains all the templates specific to the AD consortium.
 - **PsychENCODE:** The PsychENCODE folder contains all the templates specific to the PsychENCODE consortium.
+- ** schematic_test:** Test JSON schemas output from a data model csv and converted with schematic
 
 ## Annotation Schema
 
@@ -20,6 +21,8 @@ Annotation schema can be found in the schema_annotations folder and are organize
 There are python scripts in the code/python folder for generating metadata templates and annotation tables based on the metadata template schemas registered in Synapse.
 
 **NOTE:** The scripts in this repository assume the latest versions of all JSON schema are registered. If you have added or changed a schema, ensure the schema has been registered before running the scripts.
+
+schematic_workflow contains code used to generate the data models, JSON and xlsx templates in schema_metadata_templates/schematic_test.
 
 #### Annotations Table
 
