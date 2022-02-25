@@ -1,3 +1,5 @@
 
 *.pyc
 code/python/~$manifest_test.xlsx
+.DS_Store
+
