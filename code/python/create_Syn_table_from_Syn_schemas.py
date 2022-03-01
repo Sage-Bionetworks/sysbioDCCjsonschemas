@@ -36,10 +36,11 @@ from synapseclient import Column, Schema, Table
 import schemaTools
 import json
 
+
 # secrets
-#secrets = json.loads(os.getenv("SCHEDULED_JOB_SECRETS"))
-#auth_token = secrets["PAT"]
-auth_token = os.getenv("SYNAPSE_PAT")
+secrets = json.loads(os.getenv("SCHEDULED_JOB_SECRETS"))
+auth_token = secrets["PAT"]
+
 
 def process_schema(config_file, consortium, syn):
     """
