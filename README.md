@@ -3,7 +3,7 @@ This repository holds the JSON schemas for the Systems Biology (SysBio) DCC.
 
 ## Metadata Templates
 
-Metadata templates created by [schematic](https://github.com/Sage-Bionetworks/schematic/) are stored in `schematic_workflow`. This directory contains the data model csv and its derived jsonld schema. The `json` and `xlsx` directories contain individual schemas and template sheets, respectively. The `code` directory contains the scripts for creating these files.
+Metadata templates created by [schematic](https://github.com/Sage-Bionetworks/schematic/) are stored in `schematic_schemas`. This directory contains the data model csv and its derived jsonld schema. The `json` and `xlsx` directories contain individual schemas and template sheets, respectively. The `code` directory contains the scripts for creating these files.
 
 The metadata templates are located in the schema_metadata_templates folder and are organized by consortium.
 
