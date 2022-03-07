@@ -12,14 +12,8 @@
         "species": {
             "$ref": "sage.annotations-experimentalData.species"
         },
-        "reportedGender": {
-            "$ref": "sage.annotations-demographics.reportedGender"
-        },
         "sex": {
             "$ref": "sage.annotations-experimentalData.sex"
-        },
-        "sexChromosome": {
-            "$ref": "sage.annotations-clinical.sexChromosome"
         },
         "race": {
             "$ref": "sage.annotations-demographics.race"
@@ -33,29 +27,11 @@
         "apoeGenotype": {
             "$ref": "sage.annotations-clinical.apoeGenotype"
         },
-        "genotypeInferredAncestry": {
-            "$ref": "sage.annotations-clinical.genotypeInferredAncestry"
-        },
-        "familialRelationship": {
-            "$ref": "sage.annotations-demographics.familialRelationship"
-        },
-        "primaryDiagnosis": {
+        "diagnosis": {
             "$ref": "sage.annotations-experimentalData.diagnosis"
         },
-        "primaryDiagnosisDetail": {
-            "$ref": "sage.annotations-experimentalData.diagnosisDetail"
-        },
-        "otherDiagnosis": {
-            "$ref": "sage.annotations-experimentalData.diagnosis"
-        },
-        "otherDiagnosisDetail": {
-            "$ref": "sage.annotations-experimentalData.diagnosisDetail"
-        },
-        "otherMedicalDX": {
-            "$ref": "sage.annotations-experimentalData.otherMedicalDX"
-        },
-        "otherMedicalDXDetail": {
-            "$ref": "sage.annotations-experimentalData.diagnosisDetail"
+        "diagnosisCriteria": {
+            "$ref": "sage.annotations-experimentalData.diagnosisCriteria"
         },
         "ageDeath": {
             "$ref": "sage.annotations-demographics.ageDeath"
@@ -71,18 +47,6 @@
         },
         "PMI": {
             "$ref": "sage.annotations-neuro.PMI"
-        },
-        "PMICertain": {
-            "$ref": "sage.annotations-neuro.PMICertain"
-        },
-        "familyHistory": {
-            "$ref": "sage.annotations-clinical.familyHistory"
-        },
-        "ageOnset": {
-            "$ref": "sage.annotations-clinical.ageOnset"
-        },
-        "neuropathDescription": {
-            "$ref": "sage.annotations-clinical.neuropathDescription"
         },
         "Braak": {
             "$ref": "sage.annotations-clinical.Braak"

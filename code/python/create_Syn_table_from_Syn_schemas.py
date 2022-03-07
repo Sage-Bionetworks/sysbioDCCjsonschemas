@@ -34,6 +34,12 @@ import pandas as pd
 import synapseclient
 from synapseclient import Column, Schema, Table
 import schemaTools
+import json
+
+
+# secrets
+secrets = json.loads(os.getenv("SCHEDULED_JOB_SECRETS"))
+auth_token = secrets["PAT"]
 
 
 def process_schema(config_file, consortium, syn):
@@ -178,7 +184,12 @@ def main():
     args = parser.parse_args()
 
     dccv_syn = synapseclient.Synapse()
-    dccv_syn.login(silent=True)
+
+    # login to Synapse with auth token from secrets if provided, or with local config if not
+    if auth_token is not None:
+        dccv_syn.login(authToken=auth_token)
+    else:
+        dccv_syn.login()
 
     args.func(args, dccv_syn)
 
