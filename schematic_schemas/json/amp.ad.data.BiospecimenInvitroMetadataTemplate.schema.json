@@ -1,0 +1,260 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/BiospecimenInvitroMetadataTemplate",
+  "title": "BiospecimenInvitroMetadataTemplate",
+  "type": "object",
+  "properties": {
+    "specimenIdSource": {},
+    "Component": {},
+    "specimenID": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "samplingAge": {},
+    "cellType": {
+      "enum": [
+        "iPSC-derived astrocytes",
+        "NCX NES",
+        "polygonal",
+        "schwann",
+        "immune cell",
+        "GABAergic neurons",
+        "A549",
+        "peripheral blood mononuclear cell",
+        "Embryonic stem cells",
+        "arachnoid",
+        "Meningioma",
+        "CD8+ T-Cells",
+        "Schwann cell precusor",
+        "SH-SY5Y",
+        "epithelial-like",
+        "microglia",
+        "iPSC",
+        "epithelial",
+        "iPSC-derived neuronal progenitor cell",
+        "macrophages",
+        "CD138+",
+        "CNON",
+        "monocytes",
+        "astrocytes",
+        "NeuN+",
+        "B-lymphocytes",
+        "oligodendrocyte",
+        "neuron",
+        "round",
+        "neural progenitor cell",
+        "monocyte-derived microglia",
+        "Schwannoma",
+        "GLUtamatergic neurons",
+        "iPSC-derived telencephalic organoids",
+        "iPSC-derived glia",
+        "iPSC-derived neuron",
+        "lymphoblast",
+        "lymphoblastoid cell line",
+        "NeuN-",
+        "fibroblast",
+        "dopaminergic neurons",
+        ""
+      ]
+    },
+    "modelSystemType": {
+      "enum": [
+        "cerebral organoid",
+        "iPSC",
+        "primary cell culture",
+        "animal",
+        "organoid",
+        "immortalized cell line",
+        ""
+      ]
+    },
+    "sourceCell": {
+      "enum": [
+        "astrocytes",
+        "cord blood stem cells",
+        "B-lymphocytes",
+        "lymphoblast",
+        "peripheral blood mononuclear cell",
+        "iPSC",
+        "Embryonic stem cells",
+        "fibroblast",
+        ""
+      ]
+    },
+    "treatmentType": {
+      "enum": [
+        "verubecestat",
+        "control",
+        "Abeta42 oligomer",
+        "levetiracetam",
+        "clozapine",
+        "placebo",
+        "haloperidol",
+        "Abeta42 fibril",
+        ""
+      ]
+    },
+    "individualID": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "terminalDifferentiationPoint": {},
+    "samplingAgeUnits": {
+      "enum": [
+        "months",
+        "years",
+        "PCW",
+        "gestational weeks",
+        "weeks",
+        "days",
+        ""
+      ]
+    },
+    "nucleicAcidSource": {
+      "enum": [
+        "cfDNA",
+        "sorted cells",
+        "single cell",
+        "bulk cell",
+        "bulk nuclei",
+        "mitochondria",
+        "sorted nuclei",
+        "single nucleus",
+        ""
+      ]
+    },
+    "differentiationMethod": {
+      "enum": [
+        "directed differentiation",
+        "Ngn2 induction",
+        ""
+      ]
+    },
+    "reprogrammingMethod": {
+      "enum": [
+        "episomal vectors",
+        "Sendai virus",
+        "CytoTune iPS 2.0 Sendai Reprogramming Kit",
+        ""
+      ]
+    },
+    "passage": {},
+    "assay": {
+      "enum": [
+        "pharmacokinetics",
+        "locomotor activation behavior",
+        "autoradiography",
+        "rnaSeq",
+        "mirnaSeq",
+        "exomeSeq",
+        "Biocrates Bile Acids",
+        "HiChIPseq",
+        "HPLC-MSMS",
+        "Positron Emission Tomography",
+        "DNA optical mapping",
+        "FIA-MSMS",
+        "Metabolon",
+        "open field test",
+        "Laser Speckle Imaging",
+        "liquid chromatography-electrochemical detection",
+        "Vernier Caliper",
+        "polymeraseChainReaction",
+        "snrnaSeq",
+        "label free mass spectrometry",
+        "Ribo-Seq",
+        "Real Time PCR",
+        "high content screen",
+        "LTP",
+        "whole-cell patch clamp",
+        "jumpingLibrary",
+        "FitBark",
+        "scale",
+        "westernBlot",
+        "in vivo bioluminescence",
+        "spontaneous alternation",
+        "mRNAcounts",
+        "TMT quantitation",
+        "rotarod performance test",
+        "Immunocytochemistry",
+        "RPPA",
+        "wheel running",
+        "atomicForceMicroscopy",
+        "ChIPSeq",
+        "ATACSeq",
+        "HPLC",
+        "LC-SRM",
+        "microRNAcounts",
+        "ELISA",
+        "von Frey test",
+        "Biocrates p180",
+        "contextual conditioning behavior",
+        "wholeGenomeSeq",
+        "MRI",
+        "m6A-rnaSeq",
+        "STARRSeq",
+        "Sanger sequencing",
+        "active avoidance learning behavior",
+        "oxBS-Seq",
+        "scCGIseq",
+        "Nightingale NMR",
+        "Genotyping",
+        "brightfieldMicroscopy",
+        "Zeno Electronic Walkway",
+        "sandwich ELISA",
+        "MudPIT",
+        "elevated T maze apparatus method",
+        "16SrRNAseq",
+        "bisulfiteSeq",
+        "CITESeq",
+        "anxiety-related behavior",
+        "LC-MS",
+        "scrnaSeq",
+        "elevated plus maze test",
+        "memory behavior",
+        "LC-MSMS",
+        "questionnaire",
+        "SiMoA",
+        "mirnaArray",
+        "frailty assessment",
+        "kinesthetic behavior",
+        "novelty response behavior",
+        "immunohistochemistry",
+        "lncrnaSeq",
+        "snpArray",
+        "MDMS-SL",
+        "UPLC-ESI-QTOF-MS",
+        "proximity extension assay",
+        "rnaArray",
+        "cellViabilityAssay",
+        "Blood Chemistry Measurement",
+        "methylationArray",
+        "Baker Lipidomics",
+        "Biocrates Q500",
+        "errBisulfiteSeq",
+        "pharmacodynamics",
+        "HI-C",
+        "nextGenerationTargetedSequencing",
+        "MIB/MS",
+        "scwholeGenomeSeq",
+        "NOMe-Seq",
+        "photograph",
+        "scirnaSeq",
+        "UPLC-MSMS",
+        "electrochemiluminescence",
+        "LFP",
+        "ISOSeq",
+        "tractionForceMicroscopy",
+        "immunofluorescence"
+      ]
+    }
+  },
+  "required": [
+    "specimenID",
+    "individualID",
+    "assay"
+  ]
+}

@@ -1,0 +1,173 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/IndividualHumanMetadataTemplate",
+  "title": "IndividualHumanMetadataTemplate",
+  "type": "object",
+  "properties": {
+    "Component": {},
+    "individualID": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    },
+    "sex": {
+      "enum": [
+        "male",
+        "female"
+      ]
+    },
+    "CERAD": {},
+    "familialRelationship": {
+      "enum": [
+        "son",
+        "offspring",
+        "mother",
+        "parent",
+        "daughter",
+        "sibling",
+        "father",
+        ""
+      ]
+    },
+    "brainWeight": {},
+    "ageDeath": {},
+    "Braak": {},
+    "pH": {},
+    "genotypeInferredAncestry": {},
+    "yearsEducation": {},
+    "otherMedicalDXDetail": {},
+    "PMI": {},
+    "PMICertain": {},
+    "otherMedicalDX": {},
+    "sexChromosome": {},
+    "otherDiagnosisDetail": {},
+    "otherDiagnosis": {},
+    "primaryDiagnosisDetail": {},
+    "causeDeath": {},
+    "mannerDeath": {
+      "enum": [
+        "natural causes",
+        "homicide",
+        "suicide",
+        "undetermined",
+        "accident",
+        ""
+      ]
+    },
+    "reportedGender": {
+      "enum": [
+        "male",
+        "female",
+        "unknown",
+        ""
+      ]
+    },
+    "primaryDiagnosis": {},
+    "neuropathDescription": {},
+    "apoeGenotype": {
+      "enum": [
+        "34",
+        "22",
+        "24",
+        "44",
+        "33",
+        "23",
+        ""
+      ]
+    },
+    "individualIdSource": {
+      "enum": [
+        "LivingBrainProject_MSSM",
+        "Sestan",
+        "NDRI",
+        "UCI_TMF",
+        "BEB_Miller",
+        "UCSF",
+        "XCell Science",
+        "PGP",
+        "UW-CDL",
+        "JAX",
+        "Pritzker",
+        "Pitt",
+        "Mayo Clinic",
+        "IU",
+        "Penn",
+        "Novogenix",
+        "NICHD",
+        "MSSM",
+        "Yale",
+        "Oxford",
+        "UM-BTB",
+        "SMRI",
+        "Rush",
+        "Einstein",
+        "StemExpress",
+        "ABN",
+        "NIMH-HBCC",
+        "HBTRC",
+        "NYBB",
+        "ABR",
+        "BannerSun",
+        "LIBD",
+        "Newcastle",
+        "MayoBrainBank",
+        "ADNI",
+        "Geschwind",
+        "Clotomics_PAIKEA_MSSM",
+        "TAA",
+        "Emory",
+        "Vaccarino",
+        ""
+      ]
+    },
+    "ethnicity": {},
+    "familyHistory": {},
+    "species": {
+      "enum": [
+        "Human",
+        "Rat",
+        "Rhesus macaque",
+        "Mouse",
+        "Sus scrofa",
+        "Drosophila melanogaster",
+        "Gallus gallus",
+        "Pan troglodytes"
+      ]
+    },
+    "ageOnset": {},
+    "ageDeathUnits": {
+      "enum": [
+        "months",
+        "years",
+        "days",
+        "gestational weeks",
+        "weeks",
+        "PCW",
+        ""
+      ]
+    },
+    "race": {
+      "enum": [
+        "Native Hawaiian or Other Pacific Islander",
+        "Black or African American",
+        "Asian",
+        "American Indian or Alaska Native",
+        "White",
+        ""
+      ]
+    },
+    "parent": {
+      "not": {
+        "type": "null"
+      },
+      "minLength": 1
+    }
+  },
+  "required": [
+    "individualID",
+    "sex",
+    "species",
+    "parent"
+  ]
+}
