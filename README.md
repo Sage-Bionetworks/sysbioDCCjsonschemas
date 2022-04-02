@@ -1,16 +1,6 @@
 # sysbioDCCjsonschemas
 This repository holds the JSON schemas for the Systems Biology (SysBio) DCC.
 
-## Metadata Templates
-
-Metadata templates created by [schematic](https://github.com/Sage-Bionetworks/schematic/) are stored in `schematic_schemas`. This directory contains the data model csv and its derived jsonld schema. The `json` and `xlsx` directories contain individual schemas and template sheets, respectively. The `code` directory contains the scripts for creating these files.
-
-The metadata templates are located in the schema_metadata_templates folder and are organized by consortium.
-
-- **shared:** Any new templates or additions to existing should be reviewed with the SysBio DCC to see if they meet everyone's needs. If all consortia in the SysBio DCC agree to the template, then it should be in the shared folder.
-- **AD:** The AD folder contains all the templates specific to the AD consortium.
-- **PsychENCODE:** The PsychENCODE folder contains all the templates specific to the PsychENCODE consortium.
-
 ## Annotation Schema
 
 Annotation schema can be found in the schema_annotations folder and are organized by consortium.
@@ -22,6 +12,27 @@ Annotation schema can be found in the schema_annotations folder and are organize
 There are python scripts in the code/python folder for generating metadata templates and annotation tables based on the metadata template schemas registered in Synapse.
 
 **NOTE:** The scripts in this repository assume the latest versions of all JSON schema are registered. If you have added or changed a schema, ensure the schema has been registered before running the scripts.
+
+The annotation table can be created with a single command. Example:
+
+```bash
+python3 code/python/create_Syn_table_from_Syn_schemas.py \
+  --config_file config/schemas.yml \
+  --consortium PsychENCODE \
+  new_table \
+  --parent_synapse_id syn21786765 \
+  --synapse_table_name pec_annots
+```
+
+The annotation table can be updated with a single command. Example:
+
+```bash
+python3 code/python/create_Syn_table_from_Syn_schemas.py \
+  --config_file config/schemas.yml \
+  --consortium PsychENCODE \
+  overwrite_table \
+  --table_synapse_id syn20981788 \
+```
 
 #### Annotations Table
 
@@ -38,15 +49,57 @@ Parameters:
   - For`overwrite_table`
     - `--table_synapse_id <synID>`: synID of table to overwrite.
 
-#### Generate Metadata Template
+## Metadata Templates
+The metadata templates are located in the schema_metadata_templates folder and are organized by consortium.
 
-create_template_from_Syn_schema.py will generate either a .csv or .xlsx metadata template based on a registered metadata schema. Note that this script will not upload the file to Synapse automatically.
+- **shared:** Any new templates or additions to existing should be reviewed with the SysBio DCC to see if they meet everyone's needs. If all consortia in the SysBio DCC agree to the template, then it should be in the shared folder.
+- **AD:** The AD folder contains all the templates specific to the AD consortium.
+- **PsychENCODE:** The PsychENCODE folder contains all the templates specific to the PsychENCODE consortium.
+- **1kD:** The 1kD folder contains all the templates specific to the 1kD consortium.
+
+#### Generate Metadata Template
+Currently, there are two approaches to generate metadata templates. 
+
+1. Generate the metadata template(s) using registered schames.
+
+create_template_from_Syn_schema.py will generate either a .csv or .xlsx metadata template based on a registered metadata schema. 
 
 Parameters:
 
 - `<registered schema id>`: id of the registered metadata schema, including organization (e.g. sysbio.metadataTemplates_assay.STARRSeq).
-- `<output file path>`: Full path to the where the template file should be output.
-- `csv`  OR `excel`: Choose output as .csv (csv) or .xlsx (excel). A csv file will only include a header with the metadata keys. An excel file will include three sheets: one with a header of metadata keys, one with a dictionary of key descriptions, and one with a dictionary of allowed values plus their descriptions.
+- `<config file>`: Full path to the schemas.yml that includes all registered schemas, e.g. /home/ec2-user/sysbioDCCjsonschemas/config/schemas.yml 
+- `<template json>`: Optional. Full path for the template json file in the schema_metadata_templates folder. Specify it when you want the output template columns to match the order of the terms as they appear in a json file. 
+
+#### Code
+   ```bash
+   python3 create_template_from_Syn_schema.py \
+     sysbio.metadataTemplates-pec.manifest \
+     /home/ec2-user/sysbioDCCjsonschemas/config/schemas.yml \
+     /home/ec2-user/sysbioDCCjsonschemas/schema_metadata_templates/PsychENCODE/manifest_metadata_template.json
+   ```
+
+2. Generate the metadata template(s) using schematic workflow.
+
+Metadata templates created by [schematic](https://github.com/Sage-Bionetworks/schematic/) are stored in `schematic_schemas`. This directory contains the data model csv and its derived jsonld schema. The `json` and `xlsx` directories contain individual schemas and template sheets, respectively. The `code` directory contains the scripts for creating these files.
+
+Here is a step-by-step instructions on how to generate interactive excel metadata using schematic. 
+1. Update data.model.csv data model by hand. Example: 1kD.data.model.csv.
+
+2. Prerequisites: Make sure you have a minimal model and a credentials json file in your repository. 
+
+3. Convert data model to json schema (jsonld). Example:
+schematic schema convert --base_schema ./minimal.model.jsonld ./1kD.data.model.csv
+
+4. Create a google sheet template and json for each data type.
+schematic manifest --config config.yml get -s -oa -p ./1kD.data.model.jsonld -t IndividualHumanMetadataTemplate1kD -dt IndividualHumanMetadataTemplate1kD
+
+5. Manually download all the google sheets as excel. Using the google drive API would be clutch.
+
+6. Upload all the excel templates to Synapse, AD, PEC and 1kD.
+
+7. Register the json schemas to synapse by tinkering with register-schemas.py for each schema. (haven't test yet)
+
+**NOTE:** Don't forget to commit and push the newly generated data model, model jsonld, json schema(s), excel template(s) to this repository.
 
 ### Docker
 
@@ -100,33 +153,5 @@ The docker container opens in bash at the top level of the sysbioDCCjsonschemas 
 
 4. Run the scripts needed (see below), with the desired parameters, using python3.
 
-##### Annotation Table
 
-The annotation table can be updated with a single command. Example:
 
-```bash
-python3 code/python/create_Syn_table_from_Syn_schemas.py \
-  --config_file config/schemas.yml \
-  --consortium PsychENCODE \
-  new_table \
-  --parent_synapse_id syn21786765 \
-  --synapse_table_name pec_annots
-```
-
-##### Generate Metadata Template
-
-Since the metadata template script does not upload the template to Synapse, there is an extra step.
-
-1. Generate the metadata template(s). Example:
-
-   ```bash
-   python3 create_template_from_Syn_schema.py \
-     sysbio.metadataTemplates-assay.STARRSeq \
-     template_assay_STARRSeq.xlsx excel
-   ```
-
-2. Store the metadata template in Synapse. Example:
-
-   ```bash
-   synapse store --parentid syn20729790 template_assay_STARRSeq.xlsx
-   ```

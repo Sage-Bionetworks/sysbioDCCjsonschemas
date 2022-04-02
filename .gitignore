@@ -2,4 +2,6 @@
 *.pyc
 code/python/~$manifest_test.xlsx
 .DS_Store
-
+.synapseConfig
+schematic_schemas/code/config.yml
+credentials.json
