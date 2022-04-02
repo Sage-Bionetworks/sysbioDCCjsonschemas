@@ -12,13 +12,13 @@ Purpose: Use a JSON schema registered in Synapse to generate either csv file
          - a listing of allowable values for columns that use a controlled
            vocabulary list
 
-Input parameters: json_schema_name - Full name of the registered schema, i.e. schema id
+Input parameters: registered_schema_id - Full name of the registered schema, i.e. schema id
                   config_file - schemas.yml that includes all registered schemas, e.g. /home/ec2-user/sysbioDCCjsonschemas/config/schemas.yml 
                   template_json - Optional. Specify it when you want the output template columns to match the order of the terms as they appear in a json file. 
                                   Full pathname for the template json file in the schema_metadata_templates folder. 
 Outputs: a csv template files or Excel workbook in the Consortium specific metadata folder
 
-Execution: create_template_from_Syn_schema.py <json_schema_name> <config_file> <template_json>
+Execution: create_template_from_Syn_schema.py <registered_schema_id> <config_file> <template_json>
 """
 import argparse
 import os
@@ -118,7 +118,7 @@ def main():
     syn.login(silent=True)
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("json_schema_name", type=str,  
+    parser.add_argument("registered_schema_id", type=str,  
                         help="Registered JSON schema id")
     parser.add_argument("config_file", type=argparse.FileType("r"),
                                help="Full pathname for the YAML config file")
@@ -126,7 +126,7 @@ def main():
                         help="Optional. Full pathname for the template json file in schema_metadata_templates folder. ")
     args = parser.parse_args()
 
-    json_schema = syn.restGET(f"/schema/type/registered/{args.json_schema_name}")
+    json_schema = syn.restGET(f"/schema/type/registered/{args.registered_schema_id}")
     definitions_df, values_df = schemaTools.get_Syn_definitions_values(json_schema, syn)
     if args.template_json is not None:
         #re-order the columns as template json file
@@ -142,7 +142,7 @@ def main():
         template_df = pd.DataFrame(columns=definitions_df["key"].tolist())
     #get the parent SynapseID and template file name for each template based on schemas.yml
     schema_dict = yaml.safe_load(args.config_file)
-    schema_dict = schema_dict[args.json_schema_name]
+    schema_dict = schema_dict[args.registered_schema_id]
     parent = [value for key, value in schema_dict.items() if key != 'schema_name']
     template_file_name = schema_dict['schema_name']
     template_file_ext = template_file_name.rsplit('.',1)[1]
