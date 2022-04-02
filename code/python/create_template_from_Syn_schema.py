@@ -16,7 +16,7 @@ Input parameters: json_schema_name - Full name of the registered schema, i.e. sc
                   config_file - schemas.yml that includes all registered schemas, e.g. /home/ec2-user/sysbioDCCjsonschemas/config/schemas.yml 
                   template_json - Optional. Specify it when you want the output template columns to match the order of the terms as they appear in a json file. 
                                   Full pathname for the template json file in the schema_metadata_templates folder. 
-Outputs: an Excel workbook in the Consortium specific metadata folder
+Outputs: a csv template files or Excel workbook in the Consortium specific metadata folder
 
 Execution: create_template_from_Syn_schema.py <json_schema_name> <config_file> <template_json>
 """
