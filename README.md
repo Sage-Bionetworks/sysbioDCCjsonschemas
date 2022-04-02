@@ -85,7 +85,7 @@ Metadata templates created by [schematic](https://github.com/Sage-Bionetworks/sc
 Here is a step-by-step instructions on how to generate interactive excel metadata using schematic. 
 1. Update data.model.csv data model by hand. Example: 1kD.data.model.csv.
 
-2. Prerequisites: Make sure you have a minimal model and a credentials json file in your repository. 
+2. Prerequisites: Make sure you have a [minimal.model.jsonld](https://github.com/imCORE-DCC/data_model/blob/production/minimal.model.jsonld) and a [credentials.json](https://www.synapse.org/#!Synapse:syn23643259) file in your repository. 
 
 3. Convert data model to json schema (jsonld). Example:
 schematic schema convert --base_schema ./minimal.model.jsonld ./1kD.data.model.csv
