@@ -89,10 +89,16 @@ Here is a step-by-step instructions on how to generate interactive excel metadat
 2. Prerequisites: Make sure you have a [minimal.model.jsonld](https://github.com/imCORE-DCC/data_model/blob/production/minimal.model.jsonld) and a [credentials.json](https://www.synapse.org/#!Synapse:syn23643259) file in your repository. 
 
 3. Convert data model to json schema (jsonld). Example:
+
+```bash
 schematic schema convert --base_schema ./minimal.model.jsonld ./1kD.data.model.csv
+```
 
 4. Create a google sheet template and json for each data type.
+
+```bash
 schematic manifest --config config.yml get -s -oa -p ./1kD.data.model.jsonld -t IndividualHumanMetadataTemplate1kD -dt IndividualHumanMetadataTemplate1kD
+```
 
 5. Manually download all the google sheets as excel. Using the google drive API would be clutch.
 
