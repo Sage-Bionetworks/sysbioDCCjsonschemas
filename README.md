@@ -81,7 +81,10 @@ Parameters:
 
 2. Generate the metadata template(s) using schematic workflow.
 
-Metadata templates created by [schematic](https://github.com/Sage-Bionetworks/schematic/) are stored in `schematic_schemas`. This directory contains the data model csv and its derived jsonld schema. The `json` and `xlsx` directories contain individual schemas and template sheets, respectively. The `code` directory contains the scripts for creating these files.
+Metadata templates created by [schematic](https://github.com/Sage-Bionetworks/schematic/) are stored in `schematic_schemas`. This directory contains the data model csv and its derived jsonld schema. The `json` and `xlsx` directories contain individual schemas and template sheets, respectively. The `code` directory contains the scripts for creating these files. If you can't initialize mode of authentication for schematic with the default command, try 
+```bash
+schematic init --config config.yml --auth token
+```
 
 Here is a step-by-step instructions on how to generate interactive excel metadata using schematic. 
 1. Update data.model.csv data model by hand. Example: [1kD.data.model.csv](https://www.synapse.org/#!Synapse:syn28777861).
