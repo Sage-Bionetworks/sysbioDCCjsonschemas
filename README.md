@@ -94,13 +94,13 @@ Here is a step-by-step instructions on how to generate interactive excel metadat
 schematic schema convert --base_schema ./minimal.model.jsonld ./1kD.data.model.csv
 ```
 
-4. Create a google sheet template and json for each data type.
+4. Create a google sheet template and json for each data type.Example:
 
 ```bash
 schematic manifest --config config.yml get -s -oa -p ./1kD.data.model.jsonld -t IndividualHumanMetadataTemplate1kD -dt IndividualHumanMetadataTemplate1kD
 ```
 
-5. Manually download all the google sheets as excel. Using the google drive API would be clutch.
+5. Manually download all the google sheets as excel ([example google sheet](https://docs.google.com/spreadsheets/d/1mn2XgPhE9a4FnTvKZqZIumOsJhCRNjSYOYqtXg3nShU/edit#gid=0)). Using the google drive API would be clutch.
 
 6. Upload all the excel templates to Synapse, AD, PEC and 1kD.
 
