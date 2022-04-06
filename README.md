@@ -94,11 +94,12 @@ Here is a step-by-step instructions on how to generate interactive excel metadat
 schematic schema convert --base_schema ./minimal.model.jsonld ./1kD.data.model.csv
 ```
 
-4. Create a google sheet template and json for each data type.Example:
+4. Create a google sheet template and json for each data type. Example:
 
 ```bash
 schematic manifest --config config.yml get -s -oa -p ./1kD.data.model.jsonld -t IndividualHumanMetadataTemplate1kD -dt IndividualHumanMetadataTemplate1kD
 ```
+Check definition of arguments [here](https://github.com/Sage-Bionetworks/schematic/blob/ecf9d2013cbe4ebdea0cd887823ff8f45634405d/schematic/manifest/commands.py#:~:text=def%20manifest-,(,-ctx%2C%20config)%3A%20%20%23%20use).
 
 5. Manually download all the google sheets as excel ([example google sheet](https://docs.google.com/spreadsheets/d/1mn2XgPhE9a4FnTvKZqZIumOsJhCRNjSYOYqtXg3nShU/edit#gid=0)). Using the google drive API would be clutch.
 
