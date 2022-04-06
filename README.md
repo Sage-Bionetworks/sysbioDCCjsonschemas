@@ -7,11 +7,24 @@ Annotation schema can be found in the schema_annotations folder and are organize
 
 - **AD:** The AD annotation schema is not currently set on any projects and will be updated to a new format.
 
-## Code
+#### Annotations Table
 
 There are python scripts in the code/python folder for generating metadata templates and annotation tables based on the metadata template schemas registered in Synapse.
 
 **NOTE:** The scripts in this repository assume the latest versions of all JSON schema are registered. If you have added or changed a schema, ensure the schema has been registered before running the scripts.
+
+*create_Syn_table_from_Syn_schemas.py* will generate a Synapse table of all terms found in a set of metadata templates. The set is determined by consortium using the config file (config/schemas.yml). There are options to create a new table or overwrite an existing table.
+
+Parameters:
+
+- `--config_file <YAML file>`: Path to the config file.
+- `--consortium <consortium>`: The consortium to create the table for; will only gather terms in registered templates for that consortium.
+- `new_table`  OR `overwrite_table`: Choose to create a new table or overwrite an existing table.
+  - For `new_table`
+    - `--parent_synapse_id <synID>`: synID for project that table should be created in.
+    - `--synapse_table_name <table name>`: Name for the new table.
+  - For`overwrite_table`
+    - `--table_synapse_id <synID>`: synID of table to overwrite.
 
 The annotation table can be created with a single command. Example:
 
@@ -34,20 +47,8 @@ python3 code/python/create_Syn_table_from_Syn_schemas.py \
   --table_synapse_id syn20981788 \
 ```
 
-#### Annotations Table
 
-create_Syn_table_from_Syn_schemas.py will generate a Synapse table of all terms found in a set of metadata templates. The set is determined by consortium using the config file (config/schemas.yml). There are options to create a new table or overwrite an existing table.
 
-Parameters:
-
-- `--config_file <YAML file>`: Path to the config file.
-- `--consortium <consortium>`: The consortium to create the table for; will only gather terms in registered templates for that consortium.
-- `new_table`  OR `overwrite_table`: Choose to create a new table or overwrite an existing table.
-  - For `new_table`
-    - `--parent_synapse_id <synID>`: synID for project that table should be created in.
-    - `--synapse_table_name <table name>`: Name for the new table.
-  - For`overwrite_table`
-    - `--table_synapse_id <synID>`: synID of table to overwrite.
 
 ## Metadata Templates
 The metadata templates are located in the schema_metadata_templates folder and are organized by consortium.
