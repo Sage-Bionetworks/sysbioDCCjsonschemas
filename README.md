@@ -15,6 +15,8 @@ There are python scripts in the code/python folder for generating metadata templ
 
 *create_Syn_table_from_Syn_schemas.py* will generate a Synapse table of all terms found in a set of metadata templates. The set is determined by consortium using the config file (config/schemas.yml). There are options to create a new table or overwrite an existing table.
 
+Synapse credentials: This script can be used with a SCHEDULED_JOB product in the AWS service catalog by providing a Synapse PAT as a scheduled job secret. The script looks for a secret passed in from the scheduled job, and if no secret is found, uses any provided local Synapse credentials to log in. 
+
 Parameters:
 
 - `--config_file <YAML file>`: Path to the config file.
