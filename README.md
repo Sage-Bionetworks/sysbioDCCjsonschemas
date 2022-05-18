@@ -93,24 +93,31 @@ Here is a step-by-step instructions on how to generate interactive excel metadat
 
 2. Prerequisites: Make sure you have a [minimal.model.jsonld](https://github.com/imCORE-DCC/data_model/blob/production/minimal.model.jsonld) and a [credentials.json](https://www.synapse.org/#!Synapse:syn23643259) file in your repository. 
 
-3. Convert data model to json schema (jsonld). Example:
+3. Create and activate a virtual environment within which you can install the package:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+4. Convert data model to json schema (jsonld). Example:
 
 ```bash
 schematic schema convert --base_schema ./minimal.model.jsonld ./1kD.data.model.csv
 ```
 
-4. Create a google sheet template and json for each data type. Example:
+5. Create a google sheet template and json for each data type. Example:
 
 ```bash
 schematic manifest --config config.yml get -s -oa -p ./1kD.data.model.jsonld -t IndividualHumanMetadataTemplate1kD -dt IndividualHumanMetadataTemplate1kD
 ```
 Check definition of arguments [here](https://github.com/Sage-Bionetworks/schematic/blob/ecf9d2013cbe4ebdea0cd887823ff8f45634405d/schematic/manifest/commands.py#:~:text=def%20manifest-,(,-ctx%2C%20config)%3A%20%20%23%20use).
 
-5. Manually download all the google sheets as excel ([example google sheet](https://docs.google.com/spreadsheets/d/1mn2XgPhE9a4FnTvKZqZIumOsJhCRNjSYOYqtXg3nShU/edit#gid=0)). Using the google drive API would be clutch.
+6. Manually download all the google sheets as excel ([example google sheet](https://docs.google.com/spreadsheets/d/1mn2XgPhE9a4FnTvKZqZIumOsJhCRNjSYOYqtXg3nShU/edit#gid=0)). Using the google drive API would be clutch.
 
-6. Upload all the excel templates to Synapse, AD, PEC and 1kD.
+7. Upload all the excel templates to Synapse, AD, PEC and 1kD.
 
-7. Register the json schemas to synapse by tinkering with register-schemas.py for each schema. (haven't test yet)
+8. Register the json schemas to synapse by tinkering with register-schemas.py for each schema. (haven't test yet)
 
 **NOTE:** Don't forget to commit and push the newly generated data model, model jsonld, json schema(s), excel template(s) to this repository.
 
