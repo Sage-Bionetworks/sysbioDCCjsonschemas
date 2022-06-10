@@ -5,3 +5,4 @@ code/python/~$manifest_test.xlsx
 .synapseConfig
 schematic_schemas/code/config.yml
 credentials.json
+schematic_service_account_creds.json
