@@ -1,0 +1,3 @@
+[submodule "schematic_dev"]
+	path = schematic_dev
+	url = git@github.com:Sage-Bionetworks/schematic.git

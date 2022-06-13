@@ -83,21 +83,30 @@ Parameters:
 
 2. Generate the metadata template(s) using schematic workflow.
 
-Metadata templates created by [schematic](https://github.com/Sage-Bionetworks/schematic/) are stored in `schematic_schemas`. This directory contains the data model csv and its derived jsonld schema. The `json` and `xlsx` directories contain individual schemas and template sheets, respectively. The `code` directory contains the scripts for creating these files. If you can't initialize mode of authentication for schematic with the default command, try 
-```bash
-schematic init --config config.yml --auth token
-```
+The [schematic](https://github.com/Sage-Bionetworks/schematic/) develop branch has been pulled as a submodule in this repository and named as schematic_dev. Follow the instructions below to set up development environment on your local. 
+
+  1. Install poetry
+    
+      ```bash
+      curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+      ```
+    
+  2. Save poetry directory (export PATH=“$HOME/.poetry/bin:$PATH”) to .bashrc so you don’t have to source it when you reboot the terminal. 
+    
+  3. Follow the instructions [here](https://github.com/Sage-Bionetworks/schematic/tree/develop#:~:text=Start%20the%20virtual,require%20human%20authorization) to start virtual environment, install dependencies, and fill in credential files.
+    
+*Metadata templates created by [schematic](https://github.com/Sage-Bionetworks/schematic/) are stored in `schematic_schemas`. This directory contains the data model csv and its derived jsonld schema. The `json` and `xlsx` directories contain individual schemas and template sheets, respectively. The `code` directory contains the scripts for creating these files. (**deprecated** since it does not inlucde the most recent changes in schematic develop branch)*
 
 Here is a step-by-step instructions on how to generate interactive excel metadata using schematic. 
-1. Update data.model.csv data model by hand. Example: [1kD.data.model.csv](https://www.synapse.org/#!Synapse:syn28777861).
+1. Update data.model.csv data model by hand. Example: [1kD.data.model.csv](https://www.synapse.org/#!Synapse:syn28777861). 
+    **Note** the only checks that are performed within Google Sheets is against the specified valid values and the regex match validation rule. 
 
 2. Prerequisites: Make sure you have a [minimal.model.jsonld](https://github.com/imCORE-DCC/data_model/blob/production/minimal.model.jsonld) and a [credentials.json](https://www.synapse.org/#!Synapse:syn23643259) file in your repository. 
 
 3. Create and activate a virtual environment within which you can install the package:
 
 ```bash
-python3 -m venv .venv
-source .venv/bin/activate
+poetry shell
 ```
 
 4. Convert data model to json schema (jsonld). Example:
@@ -111,6 +120,7 @@ schematic schema convert --base_schema ./minimal.model.jsonld ./1kD.data.model.c
 ```bash
 schematic manifest --config config.yml get -s -oa -p ./1kD.data.model.jsonld -t IndividualHumanMetadataTemplate1kD -dt IndividualHumanMetadataTemplate1kD
 ```
+
 Check definition of arguments [here](https://github.com/Sage-Bionetworks/schematic/blob/ecf9d2013cbe4ebdea0cd887823ff8f45634405d/schematic/manifest/commands.py#:~:text=def%20manifest-,(,-ctx%2C%20config)%3A%20%20%23%20use).
 
 6. Manually download all the google sheets as excel ([example google sheet](https://docs.google.com/spreadsheets/d/1mn2XgPhE9a4FnTvKZqZIumOsJhCRNjSYOYqtXg3nShU/edit#gid=0)). Using the google drive API would be clutch.
@@ -119,7 +129,7 @@ Check definition of arguments [here](https://github.com/Sage-Bionetworks/schemat
 
 8. Register the json schemas to synapse by tinkering with register-schemas.py for each schema. (haven't test yet)
 
-**NOTE:** Don't forget to commit and push the newly generated data model, model jsonld, json schema(s), excel template(s) to this repository.
+**NOTE:** Don't forget to commit and push the newly generated data model, model jsonld, json schema(s), excel template(s) to the `schematic_schemas` repo.
 
 ### Docker
 
