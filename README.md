@@ -101,7 +101,7 @@ Here is a step-by-step instructions on how to generate interactive excel metadat
 1. Update data.model.csv data model by hand. Example: [1kD.data.model.csv](https://www.synapse.org/#!Synapse:syn28777861). 
     **Note** the only checks that are performed within Google Sheets is against the specified valid values and the regex match validation rule. 
 
-2. Prerequisites: Make sure you have a [minimal.model.jsonld](https://github.com/imCORE-DCC/data_model/blob/production/minimal.model.jsonld) and a [credentials.json](https://www.synapse.org/#!Synapse:syn23643259) file in your repository. 
+2. Prerequisites: Make sure you have a [minimal.model.jsonld](https://github.com/imCORE-DCC/data_model/blob/production/minimal.model.jsonld) and a [service_account_creds.json](https://github.com/Sage-Bionetworks/schematic#:~:text=To%20obtain%20schematic_service_account_creds,yml%20%2D%2Dauth%20service_account) file in your repository. 
 
 3. Create and activate a virtual environment within which you can install the package:
 
