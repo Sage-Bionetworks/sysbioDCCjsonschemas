@@ -7,3 +7,4 @@ credentials.json
 schematic_service_account_creds.json
 .Rproj.user
 sysbioDCCjsonschemas.Rproj
+.venv/*
