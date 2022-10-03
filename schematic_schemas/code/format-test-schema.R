@@ -1,6 +1,9 @@
 library(here)
 library(tidyverse)
 library(glue)
+library(googlesheets4)
+library(googledrive)
+library(synapser)
 
 # read in large csv file that Anthony made
 big_model <- read_csv(here("schematic_schemas", "amp.ad.data.model.csv"))
@@ -30,4 +33,7 @@ test_schema <- big_model %>%
 # write csv
 write_csv(test_schema, here("schematic_schemas", "model-ad-schematic-test-schema-v1.csv"), na = "")
 
-  
+# write googlesheet
+gs4_create("model-ad-schematic-test-schema-v1", sheets = test_schema)
+
+
