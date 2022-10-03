@@ -8,3 +8,5 @@ schematic_service_account_creds.json
 .Rproj.user
 sysbioDCCjsonschemas.Rproj
 .venv/*
+schematic_schemas/code/service_account_creds.json
+schematic_schemas/code/token.pickle
